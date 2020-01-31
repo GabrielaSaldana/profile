@@ -18,9 +18,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install Packages
       run: npm install
-    - name: Deploy to GH Pages
-      run: |
-        git config --global user.email "ela.ri.bag@gmail.com"
-        git config --global user.name "GabrielaSaldana"
-        git remote set-url origin https://deploy@github.com/GabrielaSaldana/profile.git
-        npm run deploy
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: build
