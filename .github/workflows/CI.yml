@@ -22,5 +22,5 @@ jobs:
       run: |
         git config --global user.email "ela.ri.bag@gmail.com"
         git config --global user.name "GabrielaSaldana"
-        git remote set-url origin https://c278ebb341e0e711bb6e0eb8d2ad6a7a7a12c20a@github.com/GabrielaSaldana/profile.git
+        git remote set-url origin https://deploy@github.com/GabrielaSaldana/profile.git
         npm run deploy
