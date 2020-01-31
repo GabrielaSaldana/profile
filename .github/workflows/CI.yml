@@ -1,6 +1,9 @@
-name: Node.js CI
+name: Node.js CI MasterDeployCI
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -20,7 +23,11 @@ jobs:
     - name: Install Packages
       run: npm install
     - name: Deploy to GH Pages
-      run: npm run deploy
+      run: |
+        git config --global user.email "ela.ri.bag@gmail.com"
+        git config --global user.name "GabrielaSaldana"
+        git remote set-url origin https://6e36d374b3317217de3b272d9835890213d9cb09>@github.com/GabrielaSaldana/profile.git
+        npm run deploy
     - name: Updating Domain
       run: echo "Update domain"
       env:
