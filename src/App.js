@@ -1,6 +1,5 @@
 import React from "react";
 // import logo from "./logo.svg";
-import "./App.css";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/core/styles";
 import theme from "./theme";
@@ -13,6 +12,11 @@ import Presentation from "./components/Presentation";
 import Contact from "./components/Contact";
 import TimeLine from "./components/TimeLine";
 import Projects from "./components/Projects";
+import Fab from "@material-ui/core/Fab";
+import Zoom from "@material-ui/core/Zoom";
+import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import Toolbar from "@material-ui/core/Toolbar";
+import { KeyboardArrowUp } from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -22,10 +26,43 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.primary
+  },
+  upButton: {
+    paddingLeft: theme.spacing(1.2)
   }
 }));
 
-function App() {
+function ScrollTop(props) {
+  const classes = useStyles();
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 100
+  });
+
+  const handleClick = event => {
+    const anchor = (event.target.ownerDocument || document).querySelector(
+      "#back-to-top-anchor"
+    );
+
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
+  return (
+    <Zoom in={trigger}>
+      <div
+        className={classes.upButton}
+        onClick={handleClick}
+        role="presentation"
+      >
+        {props.children}
+      </div>
+    </Zoom>
+  );
+}
+
+function App(props) {
   const classes = useStyles();
 
   return (
@@ -34,6 +71,7 @@ function App() {
         <Grid container spacing={2}>
           <Grid item xs={3}>
             <Paper className={classes.paper}>
+              <Toolbar id="back-to-top-anchor" />
               <Persona />
               <Index />
             </Paper>
@@ -45,8 +83,21 @@ function App() {
               <About />
               <TimeLine />
               <Projects />
+              <Projects />
+              <Projects />
+              <Projects />
+              <Projects />
             </Paper>
           </Grid>
+          <ScrollTop {...props}>
+            <Fab
+              color="secondary"
+              size="medium"
+              aria-label="scroll back to top"
+            >
+              <KeyboardArrowUp />
+            </Fab>
+          </ScrollTop>
         </Grid>
       </div>
     </MuiThemeProvider>
