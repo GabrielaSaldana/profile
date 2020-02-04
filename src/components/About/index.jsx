@@ -1,9 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    color: theme.palette.secondary.main
+    color: theme.extendedPalette.purpleContrast.main
   }
 }));
 
@@ -12,7 +13,7 @@ function About() {
 
   return (
     <div className={classes.root}>
-      <code>GABS PROFILE</code>
+      <code><Typography variant="h1">GABS PROFILE</Typography></code>
     </div>
   );
 }

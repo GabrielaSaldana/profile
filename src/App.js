@@ -24,13 +24,13 @@ function App() {
 
   return (
     <MuiThemeProvider theme={theme}>
-      <div>
+      <div className={classes.root}>
         <Grid container spacing={2}>
           <Grid item xs={3}>
             <Paper className={classes.paper}><About /></Paper>
           </Grid>
           <Grid item xs={9}>
-            <Paper className={classes.paper}>xs=9</Paper>
+            <Paper className={classes.paper}><About /></Paper>
           </Grid>
         </Grid>
       </div>
