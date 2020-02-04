@@ -44,3 +44,4 @@ This application is hosted under Github Pages architecture, see more about [gith
 ### Theming
 
 This app uses Material UI as standard for styling and layout.
+More info about: [Material UI](https://material-ui.com/)

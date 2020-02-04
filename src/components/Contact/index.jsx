@@ -17,7 +17,7 @@ function Contact() {
   return (
     <div className={classes.root}>
       <Typography variant="h1">
-        <Grid container spacing={24}>
+        <Grid container>
           <Grid item xs={3}>
             <code>Button to download my CV as PDF,</code>
           </Grid>
