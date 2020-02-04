@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -11,24 +10,21 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function About() {
+function TimeLine() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Grid container>
-        <Grid item xs={4}>
-          <code>Who am I?</code>
-        </Grid>
-        <Grid item xs={4}>
-          <code>Anime!</code>
-        </Grid>
-        <Grid item xs={4}>
-          <code>Plants</code>
-        </Grid>
-      </Grid>
+      <Typography variant="h1">
+        My professional career, since University
+        <br />
+        .
+        <br />
+        .
+        <br />
+      </Typography>
     </div>
   );
 }
 
-export default About;
+export default TimeLine;
