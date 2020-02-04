@@ -1,0 +1,39 @@
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    color: theme.extendedPalette.purpleContrast.main,
+    border: "1px solid grey",
+    margin: theme.spacing(1)
+  }
+}));
+
+function Contact() {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <Typography variant="h1">
+        <Grid container spacing={24}>
+          <Grid item xs={3}>
+            <code>Button to download my CV as PDF,</code>
+          </Grid>
+          <Grid item xs={3}>
+            <code>Email</code>
+          </Grid>
+          <Grid item xs={3}>
+            <code>Linkedin</code>
+          </Grid>
+          <Grid item xs={3}>
+            <code>Phone Number</code>
+          </Grid>
+        </Grid>
+      </Typography>
+    </div>
+  );
+}
+
+export default Contact;

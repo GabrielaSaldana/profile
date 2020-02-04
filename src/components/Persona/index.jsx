@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -11,24 +10,16 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function About() {
+function Persona() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Grid container>
-        <Grid item xs={4}>
-          <code>Who am I?</code>
-        </Grid>
-        <Grid item xs={4}>
-          <code>Anime!</code>
-        </Grid>
-        <Grid item xs={4}>
-          <code>Plants</code>
-        </Grid>
-      </Grid>
+      <code>
+        <Typography variant="h1">GABS IMAGE</Typography>
+      </code>
     </div>
   );
 }
 
-export default About;
+export default Persona;
