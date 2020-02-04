@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    color: theme.extendedPalette.purpleContrast.main,
+    color: theme.palette.text.primary,
     border: "1px solid grey",
     margin: theme.spacing(1)
   }

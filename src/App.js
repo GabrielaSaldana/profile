@@ -1,6 +1,5 @@
 import React from "react";
 // import logo from "./logo.svg";
-import "./App.css";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/core/styles";
 import theme from "./theme";
@@ -44,6 +43,10 @@ function App() {
               <Contact />
               <About />
               <TimeLine />
+              <Projects />
+              <Projects />
+              <Projects />
+              <Projects />
               <Projects />
             </Paper>
           </Grid>

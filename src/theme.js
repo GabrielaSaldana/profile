@@ -14,79 +14,101 @@ import {
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: indigo["A200"] //#536dfe
+      main: indigo["A200"], //#536dfe
+      light: indigo["100"] //#c5cae9
     },
     secondary: {
-      main: orange["A400"] //#ff9100
+      main: orange["A400"], //#ff9100
+      light: orange["100"] // #ffe0b2
     },
     text: {
-      primary: grey["800"], // #424242
-      secondary: grey["600"] //#616161
+      primary: grey["700"], //#616161
+      secondary: grey["500"] //#9e9e9e
     }
   },
   extendedPalette: {
     redContrast: {
-      main: red["400"] //#ef5350
+      main: red["400"], //#ef5350
+      light: red["100"] //#ffcdd2
     },
     cyanContrast: {
-      main: cyan["400"] //#26c6da
+      main: cyan["400"], //#26c6da
+      light: cyan["100"] //#b2ebf2
     },
     pinkContrast: {
-      main: pink["A100"] //#ff80ab
+      main: pink["A100"], //#ff80ab
+      light: pink["100"] //#f8bbd0
     },
     greenContrast: {
-      main: green["A400"] //#00e676 
+      main: green["A400"], //#00e676
+      light: green["100"] //#c8e6c9
     },
     yellowContrast: {
-      main: yellow["A700"] //#ffd600
+      main: yellow["A700"], //#ffd600
+      light: yellow["100"] //#fff9c4
     },
     purpleContrast: {
       main: deepPurple["300"], //#9575cd
+      light: deepPurple["100"] //#d1c4e9
     }
   },
   typography: {
-    fontFamily: 'Fresca, sansSerif',
+    fontFamily: "Noto Sans, sansSerif",
 
     body1: {
       fontSize: 14,
-      fontWeight: 500,
+      fontWeight: 500
     },
     body2: {
       fontSize: 12,
-      fontWeight: 500,
+      fontWeight: 500
     },
 
     button: {
       fontSize: 14,
-      fontWeight: 'bold',
+      fontWeight: "bold",
       lineHeight: 1.3,
-      textTransform: 'none',
+      textTransform: "none"
     },
 
     h1: {
       fontSize: 24,
-      fontWeight: 'bold',
+      fontWeight: "bold"
     },
     h2: {
       fontSize: 24,
-      fontWeight: 500,
+      fontWeight: 500
     },
     h3: {
       fontSize: 18,
-      fontWeight: 'bold',
+      fontWeight: "bold"
     },
     h4: {
       fontSize: 16,
-      fontWeight: 900,
+      fontWeight: 900
     },
     h5: {
-      fontSize: 14,
+      fontSize: 14
     },
     h6: {
       fontSize: 12,
-      fontWeight: 'bold',
-    },
+      fontWeight: "bold"
+    }
   },
+  shape: {
+    borderRadius: 9,
+  },
+  overrides: {
+    MuiLinearProgress: {
+      root: {
+        paddingLeft: '10px',
+        paddingRight: '10px',
+        paddingBottom: '10px',
+        paddingTop: 'unset',
+        borderRadius: 9,
+      },
+    },
+  }
 });
 
 export default theme;
