@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     height: "100%"
   },
   scrollableSide: {
-    marginLeft: "25%"
+    marginLeft: "18%"
   }
 }));
 
@@ -75,15 +75,15 @@ function App(props) {
   return (
     <MuiThemeProvider theme={theme}>
       <div className={classes.root}>
-        <Grid container spacing={2}>
-          <Grid item xs={3} className={classes.stickyMenu}>
-            <div className={classes.paper}>
+        <Grid container>
+          <Grid item xs={2} className={classes.stickyMenu}>
+            <Paper className={classes.paper}>
               <Toolbar id="back-to-top-anchor" />
               <Persona />
               <Index />
-            </div>
+            </Paper>
           </Grid>
-          <Grid item xs={9} className={classes.scrollableSide}>
+          <Grid item xs={10} className={classes.scrollableSide}>
             <Paper className={classes.paper}>
               <Presentation />
               <Contact />
