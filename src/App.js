@@ -29,6 +29,13 @@ const useStyles = makeStyles(theme => ({
   },
   upButton: {
     paddingLeft: theme.spacing(1.2)
+  },
+  stickyMenu: {
+    position: "fixed",
+    height: "100%"
+  },
+  scrollableSide: {
+    marginLeft: "25%"
   }
 }));
 
@@ -69,14 +76,14 @@ function App(props) {
     <MuiThemeProvider theme={theme}>
       <div className={classes.root}>
         <Grid container spacing={2}>
-          <Grid item xs={3}>
-            <Paper className={classes.paper}>
+          <Grid item xs={3} className={classes.stickyMenu}>
+            <div className={classes.paper}>
               <Toolbar id="back-to-top-anchor" />
               <Persona />
               <Index />
-            </Paper>
+            </div>
           </Grid>
-          <Grid item xs={9}>
+          <Grid item xs={9} className={classes.scrollableSide}>
             <Paper className={classes.paper}>
               <Presentation />
               <Contact />
