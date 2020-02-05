@@ -14,7 +14,7 @@ function About() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div id="about" className={classes.root}>
       <Grid container>
         <Grid item xs={4}>
           <code>Who am I?</code>

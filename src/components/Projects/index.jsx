@@ -21,7 +21,7 @@ function Projects() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div id="projects" className={classes.root}>
       <Typography variant="h1">
         <Grid container>
           <Grid item xs={4}>
