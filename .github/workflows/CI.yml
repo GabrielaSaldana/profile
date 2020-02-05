@@ -1,23 +1,30 @@
-name: Deploy to GitHub Pages
+name: MasterDeployCI
 on:
   push:
     branches:
       - master
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x]
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-
-    - name: Build
-      run: |
-        npm install
-        npm run-script build
-
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build
+        node-version: ${{ matrix.node-version }}
+      
+    - name: Install Packages
+      run: npm install
+    - name: Deploy to GH Pages
+      env: 
+        PERSONAL_DEPLOY_ACCESS_TOKEN: ${{ secrets.PERSONAL_DEPLOY_ACCESS_TOKEN }}
+      run: |
+        git config user.email "ela.ri.bag@gmail.com"
+        git config user.name "GabrielaSaldana"
+        git remote set-url origin https://${PERSONAL_DEPLOY_ACCESS_TOKEN}@github.com/GabrielaSaldana/profile.git
+        npm run deploy
+    - name: Updating Domain
+      run: echo "Domain updated"
