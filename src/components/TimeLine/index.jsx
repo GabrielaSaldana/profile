@@ -14,7 +14,7 @@ function TimeLine() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div id="timeline" className={classes.root}>
       <Typography variant="h1">
         My professional career, since University
         <br />

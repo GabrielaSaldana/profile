@@ -6,7 +6,16 @@ const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.text.primary,
     border: "1px solid grey",
-    margin: theme.spacing(1)
+    margin: theme.spacing(1),
+    padding: theme.spacing(1),
+    textAlign: "center"
+  },
+  anchor: {
+    color: theme.extendedPalette.purpleContrast.main,
+    textDecoration: "none",
+    "&:hover": {
+      color: theme.extendedPalette.greenContrast.main
+    }
   }
 }));
 
@@ -15,9 +24,21 @@ function Index() {
 
   return (
     <div className={classes.root}>
-      <Typography variant="h1">
-        Index <br /> . <br /> . <br /> . <br />
-      </Typography>
+      <a className={classes.anchor} href="#about">
+        <Typography variant="h3" gutterBottom>
+          About
+        </Typography>
+      </a>
+      <a className={classes.anchor} href="timeline">
+        <Typography variant="h3" gutterBottom>
+          Timeline
+        </Typography>
+      </a>
+      <a className={classes.anchor} href="projects">
+        <Typography variant="h3" gutterBottom>
+          Projects
+        </Typography>
+      </a>
     </div>
   );
 }

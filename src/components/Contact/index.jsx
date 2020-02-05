@@ -15,7 +15,7 @@ function Contact() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div id="contact" className={classes.root}>
       <Typography variant="h1">
         <Grid container>
           <Grid item xs={3}>

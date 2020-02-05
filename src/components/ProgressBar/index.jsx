@@ -28,7 +28,7 @@ const myAttributes = [
     value: 80
   },
   {
-    name: "self-taught person",
+    name: "self-taught",
     value: 100
   },
   {
@@ -52,12 +52,8 @@ function ProgressBar() {
           alignItems="center"
         >
           <Grid item xs={6}>
-            <Typography
-              variant="body2"
-              gutterBottom
-              className={classes.attributeLabels}
-            >
-              {attribute.name}
+            <Typography variant="body2" gutterBottom>
+              <code className={classes.attributeLabels}>{attribute.name}</code>
             </Typography>
           </Grid>
           <Grid item xs>

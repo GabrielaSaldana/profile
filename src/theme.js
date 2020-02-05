@@ -50,6 +50,9 @@ const theme = createMuiTheme({
     purpleContrast: {
       main: deepPurple["300"], //#9575cd
       light: deepPurple["100"] //#d1c4e9
+    },
+    greyContrast: {
+      main: grey["100"] //#F2F3F7
     }
   },
   typography: {
@@ -95,19 +98,16 @@ const theme = createMuiTheme({
       fontWeight: "bold"
     }
   },
-  shape: {
-    borderRadius: 9,
-  },
   overrides: {
     MuiLinearProgress: {
       root: {
-        paddingLeft: '10px',
-        paddingRight: '10px',
-        paddingBottom: '10px',
-        paddingTop: 'unset',
-        borderRadius: 9,
-      },
-    },
+        paddingLeft: "10px",
+        paddingRight: "10px",
+        paddingBottom: "10px",
+        paddingTop: "unset",
+        borderRadius: 9
+      }
+    }
   }
 });
 
