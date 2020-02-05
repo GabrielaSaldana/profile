@@ -7,8 +7,9 @@ import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.text.primary,
-    border: "1px solid grey",
-    margin: theme.spacing(0.5)
+    margin: theme.spacing(1),
+    padding: theme.spacing(1),
+    textAlign: "left"
   },
   attributeLabels: {
     textAlign: "left",
@@ -51,7 +52,7 @@ function ProgressBar() {
           justify="flex-start"
           alignItems="center"
         >
-          <Grid item xs={6}>
+          <Grid item xs={5}>
             <Typography variant="body2" gutterBottom>
               <code className={classes.attributeLabels}>{attribute.name}</code>
             </Typography>

@@ -11,7 +11,9 @@ import Index from "./components/Index";
 import Presentation from "./components/Presentation";
 import Contact from "./components/Contact";
 import TimeLine from "./components/TimeLine";
+import ProgressBar from "./components/ProgressBar";
 import Projects from "./components/Projects";
+import ProfileImage from "./components/ProfileImage";
 import Fab from "@material-ui/core/Fab";
 import Zoom from "@material-ui/core/Zoom";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
@@ -32,7 +34,8 @@ const useStyles = makeStyles(theme => ({
   },
   stickyMenu: {
     position: "fixed",
-    height: "100%"
+    height: "100%",
+    backgroundColor: "#F2F3F7"
   },
   scrollableSide: {
     marginLeft: "18%"
@@ -77,11 +80,13 @@ function App(props) {
       <div className={classes.root}>
         <Grid container>
           <Grid item xs={2} className={classes.stickyMenu}>
-            <Paper className={classes.paper}>
+            <div className={classes.paper}>
               <Toolbar id="back-to-top-anchor" />
-              <Persona />
+              <ProfileImage />
               <Index />
-            </Paper>
+              <Persona />
+              <ProgressBar />
+            </div>
           </Grid>
           <Grid item xs={10} className={classes.scrollableSide}>
             <Paper className={classes.paper}>
