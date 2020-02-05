@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - 
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,11 +20,11 @@ jobs:
       run: npm install
     - name: Deploy to GH Pages
       env: 
-        GITHUB_TOKEN: ${{ secrets.github_token }}
-        DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        PERSONAL_DEPLOY_ACCESS_TOKEN: ${{ secrets.PERSONAL_DEPLOY_ACCESS_TOKEN }}
       run: |
         git config user.email "ela.ri.bag@gmail.com"
         git config user.name "GabrielaSaldana"
+        git remote set-url origin https://${PERSONAL_DEPLOY_ACCESS_TOKEN}@github.com/GabrielaSaldana/profile.git
         npm run deploy
     - name: Updating Domain
       run: echo "Domain updated"
