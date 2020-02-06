@@ -107,6 +107,11 @@ const theme = createMuiTheme({
         paddingTop: "unset",
         borderRadius: 9
       }
+    },
+    MuiSvgIcon: {
+      root: {
+        fontSize: "2rem"
+      }
     }
   }
 });
