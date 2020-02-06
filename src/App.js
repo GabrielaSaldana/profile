@@ -10,7 +10,6 @@ import Index from "./components/Index";
 import Presentation from "./components/Presentation";
 import Contact from "./components/Contact";
 import TimeLine from "./components/TimeLine";
-import ProgressBar from "./components/ProgressBar";
 import Projects from "./components/Projects";
 import ProfileImage from "./components/ProfileImage";
 import Fab from "@material-ui/core/Fab";
@@ -84,7 +83,6 @@ function App(props) {
               <ProfileImage />
               <Index />
               <Persona />
-              <ProgressBar />
             </div>
           </Grid>
           <Grid item xs={10} className={classes.scrollableSide}>
