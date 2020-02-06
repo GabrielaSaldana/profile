@@ -18,15 +18,15 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     width: "100%",
-    marginTop: theme.spacing(2),
-    borderRadius: "4%"
+    height: "68%",
+    borderRadius: "4%",
   },
   paper: {
     padding: theme.spacing(1),
     height: theme.spacing(34)
   },
   textBox: {
-    height: theme.spacing(12)
+    height: "30%"
   }
 }));
 
@@ -51,8 +51,7 @@ function About() {
             <Typography className={classes.textBox}>
               I'm a Software Engineer by alma mater, but curious enough to be
               interested in design, management, processes and the Software
-              environment as a whole. I'm amazed by the progress we as a human
-              species have mad so far in the recent years.
+              environment as a whole.
             </Typography>
             <img src={Systems} className={classes.image} alt="Systems" />
           </Paper>
