@@ -10,11 +10,12 @@ import Plants from "../../images/plants.png";
 const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.text.primary,
-    borderTop: "1px solid",
-    borderTopColor: theme.extendedPalette.yellowContrast.main,
     margin: theme.spacing(1),
     padding: theme.spacing(1),
-    textAlign: "justify"
+    textAlign: "justify",
+    borderWidth: "3px",
+    borderStyle: "solid",
+    borderImage: "linear-gradient(to bottom, red, rgba(0, 0, 0, 0)) 1 100%"
   },
   image: {
     width: "100%",
