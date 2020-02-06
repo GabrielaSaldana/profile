@@ -1,5 +1,4 @@
 import React from "react";
-// import logo from "./logo.svg";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/core/styles";
 import theme from "./theme";
