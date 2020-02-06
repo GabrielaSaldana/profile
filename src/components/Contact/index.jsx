@@ -10,7 +10,6 @@ import LinkedinOutlineIcon from "../../icons/LinkedinOutlineIcon";
 const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.text.primary,
-    border: "1px solid grey",
     margin: theme.spacing(1)
   },
   anchor: {
