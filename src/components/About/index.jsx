@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     width: "100%",
-    height: "68%",
+    height: "64%",
     borderRadius: "4%",
   },
   paper: {
@@ -27,7 +27,8 @@ const useStyles = makeStyles(theme => ({
     height: theme.spacing(34)
   },
   textBox: {
-    height: "30%"
+    height: "30%",
+    margin: theme.spacing(1)
   }
 }));
 

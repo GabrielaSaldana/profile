@@ -6,7 +6,6 @@ import ProgressBar from "../ProgressBar";
 const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.text.primary,
-    margin: theme.spacing(1),
     padding: theme.spacing(1)
   },
   description: {

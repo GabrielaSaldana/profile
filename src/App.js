@@ -20,7 +20,6 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1
   },
   paper: {
-    padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.primary
   },
@@ -36,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     marginLeft: "18%"
   },
   fab: {
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   },
   toolBar: {
     minHeight: theme.spacing(1)
@@ -80,7 +79,7 @@ function App(props) {
             <Fab
               color="secondary"
               aria-label="go to the top"
-              lassName={classes.fab}
+              className={classes.fab}
             >
               <a href="#back-to-top-anchor" className={classes.linkButton}>^</a>
             </Fab>
