@@ -13,10 +13,7 @@ import TimeLine from "./components/TimeLine";
 import Projects from "./components/Projects";
 import ProfileImage from "./components/ProfileImage";
 import Fab from "@material-ui/core/Fab";
-import Zoom from "@material-ui/core/Zoom";
-import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Toolbar from "@material-ui/core/Toolbar";
-import { KeyboardArrowUp } from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -37,38 +34,19 @@ const useStyles = makeStyles(theme => ({
   },
   scrollableSide: {
     marginLeft: "18%"
+  },
+  fab: {
+    margin: theme.spacing.unit
+  },
+  toolBar: {
+    minHeight: theme.spacing(1)
+  },
+  linkButton: {
+    color: "#ffffff",
+    textDecoration: "none",
+    fontSize: "1.5rem"
   }
 }));
-
-function ScrollTop(props) {
-  const classes = useStyles();
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 100
-  });
-
-  const handleClick = event => {
-    const anchor = (event.target.ownerDocument || document).querySelector(
-      "#back-to-top-anchor"
-    );
-
-    if (anchor) {
-      anchor.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
-  };
-
-  return (
-    <Zoom in={trigger}>
-      <div
-        className={classes.upButton}
-        onClick={handleClick}
-        role="presentation"
-      >
-        {props.children}
-      </div>
-    </Zoom>
-  );
-}
 
 function App(props) {
   const classes = useStyles();
@@ -79,7 +57,6 @@ function App(props) {
         <Grid container>
           <Grid item xs={2} className={classes.stickyMenu}>
             <div className={classes.paper}>
-              <Toolbar id="back-to-top-anchor" />
               <ProfileImage />
               <Index />
               <Persona />
@@ -87,6 +64,7 @@ function App(props) {
           </Grid>
           <Grid item xs={10} className={classes.scrollableSide}>
             <Paper className={classes.paper}>
+              <Toolbar id="back-to-top-anchor" className={classes.toolBar} />
               <Presentation />
               <Contact />
               <About />
@@ -98,15 +76,15 @@ function App(props) {
               <Projects />
             </Paper>
           </Grid>
-          <ScrollTop {...props}>
+          <div>
             <Fab
               color="secondary"
-              size="medium"
-              aria-label="scroll back to top"
+              aria-label="go to the top"
+              lassName={classes.fab}
             >
-              <KeyboardArrowUp />
+              <a href="#back-to-top-anchor" className={classes.linkButton}>^</a>
             </Fab>
-          </ScrollTop>
+          </div>
         </Grid>
       </div>
     </MuiThemeProvider>
