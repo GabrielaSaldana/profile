@@ -16,10 +16,10 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary
   },
   backgrounBar: {
-    backgroundColor: theme.extendedPalette.cyanContrast.light
+    backgroundColor: theme.palette.primary.light
   },
   mainColorBar: {
-    backgroundColor: theme.extendedPalette.cyanContrast.main
+    backgroundColor: theme.palette.primary.main
   }
 }));
 
