@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import PlaceIcon from "@material-ui/icons/Place";
 import Avatar from "@material-ui/core/Avatar";
-import { useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -101,20 +100,19 @@ const historyCheckpoints = [
 
 function TimeLine() {
   const classes = useStyles();
-  const theme = useTheme();
 
   return (
     <div id="timeline" className={classes.root}>
       <div className={classes.description}>
-        <Typography variant="body" color={theme.palette.text.primary}>
+        <Typography color="textPrimary">
           HIGHLIGHTS
         </Typography>
-        <Typography variant="h2" color={theme.palette.text.primary}>
+        <Typography variant="h2" color="textPrimary">
           TIMELINE
         </Typography>
       </div>
-      {historyCheckpoints.map(checkpoint => (
-        <>
+      {historyCheckpoints.map((checkpoint, index) => (
+        <div key={index}>
           <Avatar className={classes.checkPoint}>
             <PlaceIcon />
           </Avatar>
@@ -124,7 +122,6 @@ function TimeLine() {
               <div style={{ display: "flex" }}>
                 <Typography variant="h2">{checkpoint.title}</Typography>
                 <Typography
-                  variant="body"
                   className={classes.date}
                   color="secondary"
                 >
@@ -134,7 +131,7 @@ function TimeLine() {
               <div className={classes.description}>{checkpoint.desc}</div>
             </div>
           </div>
-        </>
+        </div>
       ))}
     </div>
   );
