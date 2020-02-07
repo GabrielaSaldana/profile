@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   },
   timeItem: {
     height: "fit-content",
-    width: "70%",
+    width: "80%",
     backgroundColor: theme.extendedPalette.greyContrast.main,
     marginLeft: theme.spacing(3),
     padding: theme.spacing(2)
@@ -77,8 +77,7 @@ const historyCheckpoints = [
         After getting my Bachelor in Science on Systems Engineering degree, I
         decided to look for a job and meanwhile freelance myself, I designed and
         developed a web Application for an train management enterprise, I
-        created a management tool for their train's reports, thanks to that they
-        could move from paper to pdfs and automatic email sents.
+        created a management tool for their train's reports.
       </Typography>
     )
   },
@@ -89,10 +88,9 @@ const historyCheckpoints = [
       <Typography>
         I am pursuing my under-graduation studies with major in Systems
         Engineering at the Instituto Politecnico Nacional. I was parto of the
-        algorith club for a shrt period of time studying mainly competitive
-        programming, I got attracted by politics and joined a course of IT
-        management and risk management, finally I decided to get into deep on
-        front end development and REST APIs.
+        algorith club studying mainly competitive programming, I joined a course
+        of IT management and risk management, finally I decided to get into deep
+        on front end development and REST APIs.
       </Typography>
     )
   }
@@ -104,9 +102,7 @@ function TimeLine() {
   return (
     <div id="timeline" className={classes.root}>
       <div className={classes.description}>
-        <Typography color="textPrimary">
-          HIGHLIGHTS
-        </Typography>
+        <Typography color="textPrimary">HIGHLIGHTS</Typography>
         <Typography variant="h2" color="textPrimary">
           TIMELINE
         </Typography>
@@ -121,10 +117,7 @@ function TimeLine() {
             <div className={classes.timeItem}>
               <div style={{ display: "flex" }}>
                 <Typography variant="h2">{checkpoint.title}</Typography>
-                <Typography
-                  className={classes.date}
-                  color="secondary"
-                >
+                <Typography className={classes.date} color="secondary">
                   {checkpoint.date}
                 </Typography>
               </div>
