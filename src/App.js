@@ -62,16 +62,12 @@ function App(props) {
             </div>
           </Grid>
           <Grid item xs={10} className={classes.scrollableSide}>
-            <Paper className={classes.paper}>
+            <Paper className={classes.paper} style={{padding: "8px"}}>
               <Toolbar id="back-to-top-anchor" className={classes.toolBar} />
               <Presentation />
               <Contact />
               <About />
               <TimeLine />
-              <Projects />
-              <Projects />
-              <Projects />
-              <Projects />
               <Projects />
             </Paper>
           </Grid>

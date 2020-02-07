@@ -29,7 +29,6 @@ function Contact() {
       <Grid container>
         <Grid item xs={3}>
           <IconButton
-            className={classes.button}
             aria-label="Download CV"
             color="primary"
           >
@@ -39,7 +38,6 @@ function Contact() {
         </Grid>
         <Grid item xs={3}>
           <IconButton
-            className={classes.button}
             aria-label="Email"
             color="primary"
           >
@@ -49,7 +47,6 @@ function Contact() {
         </Grid>
         <Grid item xs={3}>
           <IconButton
-            className={classes.button}
             aria-label="Linkedin"
             color="primary"
           >
