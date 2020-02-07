@@ -28,12 +28,12 @@ function Index() {
           About
         </Typography>
       </a>
-      <a className={classes.anchor} href="timeline">
+      <a className={classes.anchor} href="#timeline">
         <Typography variant="h3" gutterBottom>
           Timeline
         </Typography>
       </a>
-      <a className={classes.anchor} href="projects">
+      <a className={classes.anchor} href="#projects">
         <Typography variant="h3" gutterBottom>
           Projects
         </Typography>

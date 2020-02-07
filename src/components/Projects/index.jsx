@@ -5,11 +5,12 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
+import { Link } from "react-router-dom";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import VisibilityOutlinedIcon from "@material-ui/icons/VisibilityOutlined";
-import IconButton from "@material-ui/core/IconButton";
 import Palm from "../../images/palms.jpg";
+import routes from "../../routes/routes";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -26,19 +27,28 @@ const useStyles = makeStyles(theme => ({
   },
   media: {
     height: 140
+  },
+  seeMore: {
+    color: theme.extendedPalette.purpleContrast.main,
+    "&:hover": {
+      color: theme.extendedPalette.greenContrast.main
+    }
   }
 }));
 
 const portfolio = [
   {
+    project_id: "1",
     title: "Project 1",
     desc: "This project is regarding payments"
   },
   {
+    project_id: "2",
     title: "Project 2",
     desc: "This project is regarding payments"
   },
   {
+    project_id: "3",
     title: "Project 3",
     desc: "This project is regarding payments"
   }
@@ -73,9 +83,14 @@ function Projects() {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <IconButton aria-label="see more" color="primary">
+                <Link
+                  className={classes.seeMore}
+                  to={routes.projectDetail({
+                    projectId: project.project_id
+                  })}
+                >
                   <VisibilityOutlinedIcon fontSize="large" />
-                </IconButton>
+                </Link>
               </CardActions>
             </Card>
           </Grid>
