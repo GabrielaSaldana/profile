@@ -1,75 +1,91 @@
 import React from "react";
+import { MuiThemeProvider } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/core/styles";
+import theme from "../../theme";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
-import { Typography } from "@material-ui/core";
-import Naruto from "../../images/naruto.jpg";
-import Systems from "../../images/systems.png";
-import Plants from "../../images/plants.png";
+import About from "../About";
+import Persona from "../Persona";
+import Index from "../Index";
+import Presentation from "../Presentation";
+import Contact from "../Contact";
+import TimeLine from "../TimeLine";
+import Projects from "../Projects";
+import ProfileImage from "../ProfileImage";
+import Fab from "@material-ui/core/Fab";
+import Toolbar from "@material-ui/core/Toolbar";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    color: theme.palette.text.primary,
-    margin: theme.spacing(1),
-    padding: theme.spacing(1),
-    textAlign: "justify",
-    borderWidth: "3px",
-    borderStyle: "solid",
-    borderImage: "linear-gradient(to bottom, red, rgba(0, 0, 0, 0)) 1 100%"
-  },
-  image: {
-    width: "100%",
-    height: "64%",
-    borderRadius: "4%"
+    flexGrow: 1
   },
   paper: {
-    padding: theme.spacing(1),
-    height: theme.spacing(34)
+    textAlign: "center",
+    color: theme.palette.text.primary
   },
-  textBox: {
-    height: "30%",
+  upButton: {
+    paddingLeft: theme.spacing(1.2)
+  },
+  stickyMenu: {
+    position: "fixed",
+    height: "100%",
+    backgroundColor: "#F2F3F7"
+  },
+  scrollableSide: {
+    marginLeft: "18%"
+  },
+  fab: {
     margin: theme.spacing(1)
+  },
+  toolBar: {
+    minHeight: theme.spacing(1)
+  },
+  linkButton: {
+    color: "#ffffff",
+    textDecoration: "none",
+    fontSize: "1.5rem"
   }
 }));
 
-function About() {
+function Main() {
   const classes = useStyles();
 
   return (
-    <div id="about" className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={4}>
-          <Paper className={classes.paper}>
-            <Typography className={classes.textBox}>
-              Many people know my addiction to anime, the japanese culture amaze
-              me, the order they have, teh automation they have in their public
-              services and their loyalty to their culture.
-            </Typography>
-            <img src={Naruto} className={classes.image} alt="Naruto" />
-          </Paper>
+    <MuiThemeProvider theme={theme}>
+      <div className={classes.root}>
+        <Grid container>
+          <Grid item xs={2} className={classes.stickyMenu}>
+            <div className={classes.paper}>
+              <ProfileImage />
+              <Index />
+              <Persona />
+            </div>
+          </Grid>
+          <Grid item xs={10} className={classes.scrollableSide}>
+            <Paper className={classes.paper} style={{ padding: "8px" }}>
+              <Toolbar id="back-to-top-anchor" className={classes.toolBar} />
+              <Presentation />
+              <Contact />
+              <About />
+              <TimeLine />
+              <Projects />
+            </Paper>
+          </Grid>
+          <div>
+            <Fab
+              color="secondary"
+              aria-label="go to the top"
+              className={classes.fab}
+            >
+              <a href="#back-to-top-anchor" className={classes.linkButton}>
+                ^
+              </a>
+            </Fab>
+          </div>
         </Grid>
-        <Grid item xs={4}>
-          <Paper className={classes.paper}>
-            <Typography className={classes.textBox}>
-              I'm a Software Engineer by alma mater, but curious enough to be
-              interested in design, management, processes and the Software
-              environment as a whole.
-            </Typography>
-            <img src={Systems} className={classes.image} alt="Systems" />
-          </Paper>
-        </Grid>
-        <Grid item xs={4}>
-          <Paper className={classes.paper}>
-            <Typography className={classes.textBox}>
-              If you can take care of a plant, then, you can take care of
-              yourself. My hobby is to raise my plants.
-            </Typography>
-            <img src={Plants} className={classes.image} alt="Plants" />
-          </Paper>
-        </Grid>
-      </Grid>
-    </div>
+      </div>
+    </MuiThemeProvider>
   );
 }
 
-export default About;
+export default Main;
