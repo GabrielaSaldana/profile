@@ -36,7 +36,6 @@ const myAttributes = [
     value: 90
   }
 ];
-console.log(myAttributes);
 
 function ProgressBar() {
   const classes = useStyles();

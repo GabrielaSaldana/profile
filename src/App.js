@@ -10,9 +10,27 @@ import routes from "./routes/routes";
 import Persona from "./components/Persona";
 import Index from "./components/Index";
 import ProfileImage from "./components/ProfileImage";
+import Toolbar from "@material-ui/core/Toolbar";
+import { useLocation } from "react-router";
 
 const Main = lazy(() => import("./components/Main"));
 const ProjectDetail = lazy(() => import("./components/ProjectDetail"));
+
+const FabButton = ({ classes }) => {
+  let location = useLocation();
+  const { pathname } = location;
+  if (!pathname.includes("projects")) {
+    return (
+      <Fab color="secondary" aria-label="go to the top" className={classes.fab}>
+        <a href="#back-to-top-anchor" className={classes.linkButton}>
+          ^
+        </a>
+      </Fab>
+    );
+  } else {
+    return "";
+  }
+};
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -40,6 +58,9 @@ const useStyles = makeStyles(theme => ({
     color: "#ffffff",
     textDecoration: "none",
     fontSize: "1.5rem"
+  },
+  toolBar: {
+    minHeight: theme.spacing(1)
   }
 }));
 
@@ -60,6 +81,7 @@ function App() {
                 </div>
               </Grid>
               <Grid item xs={10} className={classes.scrollableSide}>
+                <Toolbar id="back-to-top-anchor" className={classes.toolBar} />
                 <Switch>
                   <Route
                     path={routes.projectDetail({ projectId: ":projectId" })}
@@ -70,15 +92,7 @@ function App() {
                 </Switch>
               </Grid>
               <div>
-                <Fab
-                  color="secondary"
-                  aria-label="go to the top"
-                  className={classes.fab}
-                >
-                  <a href="#back-to-top-anchor" className={classes.linkButton}>
-                    ^
-                  </a>
-                </Fab>
+                <FabButton classes={classes} />
               </div>
             </Grid>
           </Suspense>
