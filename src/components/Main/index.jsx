@@ -21,7 +21,7 @@ function Main() {
   const classes = useStyles();
 
   return (
-    <Paper className={classes.paper} style={{ padding: "8px" }}>
+    <Paper id="main" className={classes.paper} style={{ padding: "8px" }}>
       <Toolbar id="back-to-top-anchor" className={classes.toolBar} />
       <Contact />
       <About />

@@ -6,7 +6,39 @@ import { useParams } from "react-router-dom";
 import portfolio from "../../portfolio";
 
 const useStyles = makeStyles(theme => ({
-
+  root: {
+    marginTop: "12px",
+    width: "auto",
+    marginLeft: theme.spacing(1)
+  },
+  mainImg: {
+    height: theme.spacing(70),
+    backgroundColor: theme.extendedPalette.redContrast.light
+  },
+  summary: {
+    height: theme.spacing(60),
+    backgroundColor: theme.extendedPalette.purpleContrast.light
+  },
+  goals: {
+    height: theme.spacing(60),
+    backgroundColor: theme.extendedPalette.pinkContrast.light
+  },
+  reserach: {
+    height: theme.spacing(60),
+    backgroundColor: theme.extendedPalette.greenContrast.light
+  },
+  customer: {
+    height: theme.spacing(60),
+    backgroundColor: theme.extendedPalette.cyanContrast.light
+  },
+  prototyping: {
+    height: theme.spacing(60),
+    backgroundColor: theme.extendedPalette.yellowContrast.light
+  },
+  learnings: {
+    height: theme.spacing(60),
+    backgroundColor: theme.extendedPalette.greyContrast.main
+  }
 }));
 
 function ProjectDetail() {
@@ -20,9 +52,28 @@ function ProjectDetail() {
   console.log(result);
 
   return (
-    <div id="details" className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid container item xs={12} spacing={3}>
+    <div id="details">
+      <Grid container spacing={3} className={classes.root}>
+        <Grid
+          id="mainImg"
+          container
+          item
+          xs={12}
+          spacing={3}
+          className={classes.mainImg}
+        >
+          <Grid item xs={12}>
+            <div>{result.title}</div>
+          </Grid>
+        </Grid>
+        <Grid
+          id="summary"
+          container
+          item
+          xs={12}
+          spacing={3}
+          className={classes.summary}
+        >
           <Grid item xs={6}>
             <div>{result.title}</div>
           </Grid>
@@ -30,10 +81,14 @@ function ProjectDetail() {
             <div>Problem Description</div>
           </Grid>
         </Grid>
-        <Grid item xs={12}>
-          <div>Main Image</div>
-        </Grid>
-        <Grid container item xs={12} spacing={3}>
+        <Grid
+          id="goals"
+          container
+          item
+          xs={12}
+          spacing={3}
+          className={classes.goals}
+        >
           <Grid item xs={6}>
             <div>Project Goals Title</div>
           </Grid>
@@ -41,7 +96,14 @@ function ProjectDetail() {
             <Paper>Project Goals</Paper>
           </Grid>
         </Grid>
-        <Grid container item xs={12} spacing={3}>
+        <Grid
+          id="research"
+          container
+          item
+          xs={12}
+          spacing={3}
+          className={classes.reserach}
+        >
           <Grid item xs={6}>
             <div>Research Methods Title</div>
           </Grid>
@@ -49,7 +111,14 @@ function ProjectDetail() {
             <Paper>Research Methods</Paper>
           </Grid>
         </Grid>
-        <Grid container item xs={12} spacing={3}>
+        <Grid
+          id="customer"
+          container
+          item
+          xs={12}
+          spacing={3}
+          className={classes.customer}
+        >
           <Grid item xs={6}>
             <div>Customer MindSet Title</div>
           </Grid>
@@ -57,7 +126,14 @@ function ProjectDetail() {
             <Paper>Customer MindSet</Paper>
           </Grid>
         </Grid>
-        <Grid container item xs={12} spacing={3}>
+        <Grid
+          id="prototyping"
+          container
+          item
+          xs={12}
+          spacing={3}
+          className={classes.prototyping}
+        >
           <Grid item xs={6}>
             <div>Prototyping Title</div>
           </Grid>
@@ -65,7 +141,14 @@ function ProjectDetail() {
             <Paper>Prototyping</Paper>
           </Grid>
         </Grid>
-        <Grid container item xs={12} spacing={3}>
+        <Grid
+          id="learnings"
+          container
+          item
+          xs={12}
+          spacing={3}
+          className={classes.learnings}
+        >
           <Grid item xs={6}>
             <div>Learnings Title</div>
           </Grid>
