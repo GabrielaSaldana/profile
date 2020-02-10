@@ -48,7 +48,7 @@ function App() {
 
   return (
     <MuiThemeProvider theme={theme}>
-      <Router>
+      <Router basename="/">
         <div className={classes.root}>
           <Suspense fallback={<CircularProgress />}>
             <Grid container>
@@ -65,7 +65,6 @@ function App() {
                   <Route
                     path={routes.projectDetail({ projectId: ":projectId" })}
                     component={ProjectDetail}
-                    exact
                   />
                 </Switch>
               </Grid>
