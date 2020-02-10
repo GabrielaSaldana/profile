@@ -33,7 +33,7 @@ function Index() {
           Timeline
         </Typography>
       </a>
-      <a className={classes.anchor} href="#projects">
+      <a className={classes.anchor} href="#portfolio">
         <Typography variant="h3" gutterBottom>
           Projects
         </Typography>
