@@ -5,7 +5,6 @@ import About from "../About";
 import Contact from "../Contact";
 import TimeLine from "../TimeLine";
 import Projects from "../Projects";
-import Toolbar from "@material-ui/core/Toolbar";
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -22,7 +21,6 @@ function Main() {
 
   return (
     <Paper id="main" className={classes.paper} style={{ padding: "8px" }}>
-      <Toolbar id="back-to-top-anchor" className={classes.toolBar} />
       <Contact />
       <About />
       <TimeLine />
