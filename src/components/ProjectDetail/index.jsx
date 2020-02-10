@@ -6,9 +6,7 @@ import { useParams } from "react-router-dom";
 import portfolio from "../../portfolio";
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1
-  },
+
 }));
 
 function ProjectDetail() {
@@ -22,46 +20,58 @@ function ProjectDetail() {
   console.log(result);
 
   return (
-    <div className={classes.root}>
+    <div id="details" className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}> Project Description</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>Problem Description</Paper>
+        <Grid container item xs={12} spacing={3}>
+          <Grid item xs={6}>
+            <div>{result.title}</div>
+          </Grid>
+          <Grid item xs={6}>
+            <div>Problem Description</div>
+          </Grid>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>Main Image</Paper>
+          <div>Main Image</div>
         </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>Project Goals Title</Paper>
+        <Grid container item xs={12} spacing={3}>
+          <Grid item xs={6}>
+            <div>Project Goals Title</div>
+          </Grid>
+          <Grid item xs={6}>
+            <Paper>Project Goals</Paper>
+          </Grid>
         </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>Project Goals</Paper>
+        <Grid container item xs={12} spacing={3}>
+          <Grid item xs={6}>
+            <div>Research Methods Title</div>
+          </Grid>
+          <Grid item xs={6}>
+            <Paper>Research Methods</Paper>
+          </Grid>
         </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>Research Methods Title</Paper>
+        <Grid container item xs={12} spacing={3}>
+          <Grid item xs={6}>
+            <div>Customer MindSet Title</div>
+          </Grid>
+          <Grid item xs={6}>
+            <Paper>Customer MindSet</Paper>
+          </Grid>
         </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>Research Methods</Paper>
+        <Grid container item xs={12} spacing={3}>
+          <Grid item xs={6}>
+            <div>Prototyping Title</div>
+          </Grid>
+          <Grid item xs={6}>
+            <Paper>Prototyping</Paper>
+          </Grid>
         </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>Customer MindSet Title</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>Customer MindSet</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>Prototyping Title</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>Prototyping</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>Learnings Title</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>Learnings</Paper>
+        <Grid container item xs={12} spacing={3}>
+          <Grid item xs={6}>
+            <div>Learnings Title</div>
+          </Grid>
+          <Grid item xs={6}>
+            <Paper>Learnings</Paper>
+          </Grid>
         </Grid>
       </Grid>
     </div>
