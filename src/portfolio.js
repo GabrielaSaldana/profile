@@ -9,13 +9,13 @@ const portfolio = [
     project_id: "2",
     title: "Project 2",
     desc: "This project is regarding payments",
-    image: require("./images/palms.jpg")
+    image: require("./images/mountain.jpg")
   },
   {
     project_id: "3",
     title: "Project 3",
     desc: "This project is regarding payments",
-    image: require("./images/palms.jpg")
+    image: require("./images/topview.jpg")
   }
 ];
 

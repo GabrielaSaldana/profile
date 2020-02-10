@@ -4,12 +4,14 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import { useParams } from "react-router-dom";
 import portfolio from "../../portfolio";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   root: {
     marginTop: "12px",
     width: "auto",
-    marginLeft: theme.spacing(1)
+    marginLeft: theme.spacing(1),
+    color: theme.palette.text.primary
   },
   mainImg: {
     height: theme.spacing(70),
@@ -49,8 +51,6 @@ function ProjectDetail() {
     return obj.project_id === projectId;
   });
 
-  console.log(result);
-
   return (
     <div id="details">
       <Grid container spacing={3} className={classes.root}>
@@ -63,7 +63,11 @@ function ProjectDetail() {
           className={classes.mainImg}
         >
           <Grid item xs={12}>
-            <div>{result.title}</div>
+            <img
+              src={result.image}
+              alt={result.title}
+              style={{ maxWidth: "100%", maxHeight: "100%" }}
+            />
           </Grid>
         </Grid>
         <Grid
@@ -75,10 +79,10 @@ function ProjectDetail() {
           className={classes.summary}
         >
           <Grid item xs={6}>
-            <div>{result.title}</div>
+            <Typography variant="h1">{result.title}</Typography>
           </Grid>
           <Grid item xs={6}>
-            <div>Problem Description</div>
+            <Typography>Problem Description</Typography>
           </Grid>
         </Grid>
         <Grid
@@ -90,10 +94,12 @@ function ProjectDetail() {
           className={classes.goals}
         >
           <Grid item xs={6}>
-            <div>Project Goals Title</div>
+            <Typography>Project Goals Title</Typography>
           </Grid>
           <Grid item xs={6}>
-            <Paper>Project Goals</Paper>
+            <Paper>
+              <Typography>Project Goals</Typography>
+            </Paper>
           </Grid>
         </Grid>
         <Grid
@@ -105,10 +111,12 @@ function ProjectDetail() {
           className={classes.reserach}
         >
           <Grid item xs={6}>
-            <div>Research Methods Title</div>
+            <Typography>Research Methods Title</Typography>
           </Grid>
           <Grid item xs={6}>
-            <Paper>Research Methods</Paper>
+            <Paper>
+              <Typography>Research Methods</Typography>
+            </Paper>
           </Grid>
         </Grid>
         <Grid
@@ -120,10 +128,12 @@ function ProjectDetail() {
           className={classes.customer}
         >
           <Grid item xs={6}>
-            <div>Customer MindSet Title</div>
+            <Typography>Customer MindSet Title</Typography>
           </Grid>
           <Grid item xs={6}>
-            <Paper>Customer MindSet</Paper>
+            <Paper>
+              <Typography>Customer MindSet</Typography>
+            </Paper>
           </Grid>
         </Grid>
         <Grid
@@ -135,10 +145,12 @@ function ProjectDetail() {
           className={classes.prototyping}
         >
           <Grid item xs={6}>
-            <div>Prototyping Title</div>
+            <Typography>Prototyping Title</Typography>
           </Grid>
           <Grid item xs={6}>
-            <Paper>Prototyping</Paper>
+            <Paper>
+              <Typography>Prototyping</Typography>
+            </Paper>
           </Grid>
         </Grid>
         <Grid
@@ -150,10 +162,12 @@ function ProjectDetail() {
           className={classes.learnings}
         >
           <Grid item xs={6}>
-            <div>Learnings Title</div>
+            <Typography>Learnings Title</Typography>
           </Grid>
           <Grid item xs={6}>
-            <Paper>Learnings</Paper>
+            <Paper>
+              <Typography>Learnings</Typography>
+            </Paper>
           </Grid>
         </Grid>
       </Grid>

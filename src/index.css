@@ -15,3 +15,7 @@ code {
 #me {
   animation: mymove 1s linear;
 }
+
+html {
+  scroll-behavior: smooth;
+}

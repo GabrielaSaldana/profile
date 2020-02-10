@@ -50,7 +50,7 @@ function Projects() {
   const classes = useStyles();
 
   return (
-    <div id="projects" className={classes.root}>
+    <div id="portfolio" className={classes.root}>
       <div className={classes.description}>
         <Typography color="textPrimary">HIGHLIGHT</Typography>
         <Typography variant="h2" color="textPrimary">
