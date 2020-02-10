@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import VisibilityOutlinedIcon from "@material-ui/icons/VisibilityOutlined";
-import Palm from "../../images/palms.jpg";
 import routes from "../../routes/routes";
+import portfolio from "../../portfolio";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -46,24 +46,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const portfolio = [
-  {
-    project_id: "1",
-    title: "Project 1",
-    desc: "This project is regarding payments"
-  },
-  {
-    project_id: "2",
-    title: "Project 2",
-    desc: "This project is regarding payments"
-  },
-  {
-    project_id: "3",
-    title: "Project 3",
-    desc: "This project is regarding payments"
-  }
-];
-
 function Projects() {
   const classes = useStyles();
 
@@ -83,7 +65,7 @@ function Projects() {
                 <CardActionArea>
                   <CardMedia
                     className={classes.media}
-                    image={Palm}
+                    image={project.image}
                     title={project.title}
                   />
                   <CardContent>
