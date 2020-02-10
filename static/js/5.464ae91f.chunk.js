@@ -1,0 +1,2 @@
+(this.webpackJsonpprofile=this.webpackJsonpprofile||[]).push([[5],{125:function(e,t,r){"use strict";r.r(t);var n=r(0),o=r.n(n),a=r(79),i=Object(a.a)((function(e){return{root:{flexGrow:1}}}));t.default=function(){var e=i();return o.a.createElement("div",{className:e.root},"Details")}}}]);
+//# sourceMappingURL=5.464ae91f.chunk.js.map
