@@ -61,11 +61,12 @@ function App() {
               </Grid>
               <Grid item xs={10} className={classes.scrollableSide}>
                 <Switch>
-                  <Route exact path={routes.home()} component={Main} />
                   <Route
                     path={routes.projectDetail({ projectId: ":projectId" })}
+                    exact
                     component={ProjectDetail}
                   />
+                  <Route path={routes.home()} component={Main} />
                 </Switch>
               </Grid>
               <div>

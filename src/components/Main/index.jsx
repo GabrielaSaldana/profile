@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import About from "../About";
-import Presentation from "../Presentation";
 import Contact from "../Contact";
 import TimeLine from "../TimeLine";
 import Projects from "../Projects";
@@ -24,7 +23,6 @@ function Main() {
   return (
     <Paper className={classes.paper} style={{ padding: "8px" }}>
       <Toolbar id="back-to-top-anchor" className={classes.toolBar} />
-      <Presentation />
       <Contact />
       <About />
       <TimeLine />
