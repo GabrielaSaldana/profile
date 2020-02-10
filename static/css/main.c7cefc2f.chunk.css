@@ -1,2 +1,0 @@
-code{font-family:source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace}@-webkit-keyframes mymove{0%{-webkit-transform:scale(.8);transform:scale(.8)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes mymove{0%{-webkit-transform:scale(.8);transform:scale(.8)}to{-webkit-transform:scale(1);transform:scale(1)}}#me{-webkit-animation:mymove 1s linear;animation:mymove 1s linear}
-/*# sourceMappingURL=main.c7cefc2f.chunk.css.map */
