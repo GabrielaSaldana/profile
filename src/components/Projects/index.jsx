@@ -14,12 +14,11 @@ import routes from "../../routes/routes";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    margin: theme.spacing(3)
+    padding: theme.spacing(4)
   },
-  paper: {
-    padding: theme.spacing(2),
-    margin: theme.spacing(1),
-    textAlign: "center",
+  description: {
+    textAlign: "left",
+    marginBottom: theme.spacing(2),
     color: theme.palette.text.secondary
   },
   card: {
@@ -32,6 +31,17 @@ const useStyles = makeStyles(theme => ({
     color: theme.extendedPalette.purpleContrast.main,
     "&:hover": {
       color: theme.extendedPalette.greenContrast.main
+    }
+  },
+  gradient: {
+    borderWidth: "3px",
+    borderStyle: "solid",
+    borderImage: "linear-gradient(to bottom, #26c6da, rgba(0, 0, 0, 0)) 1 100%",
+    [theme.breakpoints.up("xl")]: {
+      paddingLeft: theme.spacing(12)
+    },
+    [theme.breakpoints.down("lg")]: {
+      paddingLeft: theme.spacing(1)
     }
   }
 }));
@@ -59,43 +69,51 @@ function Projects() {
 
   return (
     <div id="projects" className={classes.root}>
-      <Grid container>
-        {portfolio.map((project, index) => (
-          <Grid item xs={4} key={index}>
-            <Card className={classes.card}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.media}
-                  image={Palm}
-                  title={project.title}
-                />
-                <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant="h2"
-                    style={{ textAlign: "left" }}
+      <div className={classes.description}>
+        <Typography color="textPrimary">HIGHLIGHT</Typography>
+        <Typography variant="h2" color="textPrimary">
+          PROJECTS
+        </Typography>
+      </div>
+      <div className={classes.gradient}>
+        <Grid container spacing={1}>
+          {portfolio.map((project, index) => (
+            <Grid item xs={4} key={index}>
+              <Card className={classes.card}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    image={Palm}
+                    title={project.title}
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      variant="h2"
+                      style={{ textAlign: "left" }}
+                    >
+                      {project.title}
+                    </Typography>
+                    <Typography component="p" style={{ textAlign: "left" }}>
+                      {project.desc}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Link
+                    className={classes.seeMore}
+                    to={routes.projectDetail({
+                      projectId: project.project_id
+                    })}
                   >
-                    {project.title}
-                  </Typography>
-                  <Typography component="p" style={{ textAlign: "left" }}>
-                    {project.desc}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Link
-                  className={classes.seeMore}
-                  to={routes.projectDetail({
-                    projectId: project.project_id
-                  })}
-                >
-                  <VisibilityOutlinedIcon fontSize="large" />
-                </Link>
-              </CardActions>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
+                    <VisibilityOutlinedIcon fontSize="large" />
+                  </Link>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </div>
     </div>
   );
 }

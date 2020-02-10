@@ -10,12 +10,9 @@ import Plants from "../../images/plants.png";
 const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.text.primary,
-    margin: theme.spacing(1),
+    margin: theme.spacing(4),
     padding: theme.spacing(1),
-    textAlign: "justify",
-    borderWidth: "3px",
-    borderStyle: "solid",
-    borderImage: "linear-gradient(to bottom, red, rgba(0, 0, 0, 0)) 1 100%"
+    textAlign: "justify"
   },
   image: {
     width: "100%",
@@ -29,6 +26,16 @@ const useStyles = makeStyles(theme => ({
   textBox: {
     height: "30%",
     margin: theme.spacing(1)
+  },
+  gradient: {
+    borderWidth: "3px",
+    borderStyle: "solid",
+    borderImage: "linear-gradient(to bottom, orange, rgba(0, 0, 0, 0)) 1 100%"
+  },
+  description: {
+    textAlign: "left",
+    marginBottom: theme.spacing(2),
+    color: theme.palette.text.secondary
   }
 }));
 
@@ -37,7 +44,13 @@ function About() {
 
   return (
     <div id="about" className={classes.root}>
-      <Grid container spacing={3}>
+      <div className={classes.description}>
+        <Typography color="textPrimary">THINGS YOU DON'T KNOW</Typography>
+        <Typography variant="h2" color="textPrimary">
+          ABOUT ME
+        </Typography>
+      </div>
+      <Grid container spacing={3} className={classes.gradient}>
         <Grid item xs={4}>
           <Paper className={classes.paper}>
             <Typography className={classes.textBox}>
