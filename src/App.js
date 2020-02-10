@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/core/styles";
 import Fab from "@material-ui/core/Fab";
