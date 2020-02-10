@@ -49,8 +49,8 @@ function App() {
   return (
     <MuiThemeProvider theme={theme}>
       <Router>
-        <Suspense fallback={<CircularProgress />}>
-          <div className={classes.root}>
+        <div className={classes.root}>
+          <Suspense fallback={<CircularProgress />}>
             <Grid container>
               <Grid item xs={2} className={classes.stickyMenu}>
                 <div className={classes.paper}>
@@ -61,7 +61,7 @@ function App() {
               </Grid>
               <Grid item xs={10} className={classes.scrollableSide}>
                 <Switch>
-                  <Route path={routes.home()} component={Main}/>
+                  <Route exact path={routes.home()} component={Main} />
                   <Route
                     path={routes.projectDetail({ projectId: ":projectId" })}
                     component={ProjectDetail}
@@ -81,8 +81,8 @@ function App() {
                 </Fab>
               </div>
             </Grid>
-          </div>
-        </Suspense>
+          </Suspense>
+        </div>
       </Router>
     </MuiThemeProvider>
   );
