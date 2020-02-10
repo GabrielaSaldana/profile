@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
+import { Link } from "react-router-dom";
 import CloudDownloadOutlinedIcon from "@material-ui/icons/CloudDownloadOutlined";
 import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
 import PhoneAndroidOutlinedIcon from "@material-ui/icons/PhoneAndroidOutlined";
@@ -28,28 +29,26 @@ function Contact() {
     <div id="contact" className={classes.root}>
       <Grid container>
         <Grid item xs={3}>
-          <IconButton
-            aria-label="Download CV"
-            color="primary"
-          >
+          <IconButton aria-label="Download CV" color="primary">
             <CloudDownloadOutlinedIcon fontSize="large" />
           </IconButton>
-          <code>Download my CV !</code>
+          <Link
+            to="/files/cv.pdf"
+            target="_blank"
+            download
+            className={classes.anchor}
+          >
+            <code>Download my CV !</code>
+          </Link>
         </Grid>
         <Grid item xs={3}>
-          <IconButton
-            aria-label="Email"
-            color="primary"
-          >
+          <IconButton aria-label="Email" color="primary">
             <EmailOutlinedIcon fontSize="large" />
           </IconButton>
           <code>gab.saldana95@gmail.com</code>
         </Grid>
         <Grid item xs={3}>
-          <IconButton
-            aria-label="Linkedin"
-            color="primary"
-          >
+          <IconButton aria-label="Linkedin" color="primary">
             <LinkedinOutlineIcon />
           </IconButton>
           <a
