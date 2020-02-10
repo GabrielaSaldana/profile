@@ -102,7 +102,7 @@ function TimeLine() {
   return (
     <div id="timeline" className={classes.root}>
       <div className={classes.description}>
-        <Typography color="textPrimary">HIGHLIGHTS</Typography>
+        <Typography color="textPrimary">IMPORTANT CHECKPOINTS</Typography>
         <Typography variant="h2" color="textPrimary">
           TIMELINE
         </Typography>
