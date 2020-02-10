@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import VisibilityOutlinedIcon from "@material-ui/icons/VisibilityOutlined";
-import Palm from "../../images/palms.jpg";
 import routes from "../../routes/routes";
 import portfolio from "../../portfolio";
 

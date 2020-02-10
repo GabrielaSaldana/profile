@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import { useParams } from "react-router-dom";
+import portfolio from "../../portfolio";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -13,6 +14,12 @@ const useStyles = makeStyles(theme => ({
 function ProjectDetail() {
   const classes = useStyles();
   const { projectId } = useParams();
+
+  const result = portfolio.find(obj => {
+    return obj.project_id === projectId;
+  });
+
+  console.log(result);
 
   return (
     <div className={classes.root}>
