@@ -113,6 +113,11 @@ const theme = createMuiTheme({
         fontSize: "2rem"
       }
     },
+    MuiPaper: {
+      rounded: {
+        borderRadius: "0px"
+      }
+    }
   }
 });
 
