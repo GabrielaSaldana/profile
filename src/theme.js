@@ -112,6 +112,14 @@ const theme = createMuiTheme({
       root: {
         fontSize: "2rem"
       }
+    },
+    MuiGrid: {
+      // Name of the component ⚛️ / style sheet
+      "spacing-xs-3": {
+        "& > $item": {
+          padding: 0
+        }
+      }
     }
   }
 });

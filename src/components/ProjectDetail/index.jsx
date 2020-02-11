@@ -5,6 +5,9 @@ import Grid from "@material-ui/core/Grid";
 import { useParams } from "react-router-dom";
 import portfolio from "../../portfolio";
 import { Typography } from "@material-ui/core";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import GpsFixedOutlinedIcon from "@material-ui/icons/GpsFixedOutlined";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -19,27 +22,37 @@ const useStyles = makeStyles(theme => ({
   },
   summary: {
     height: theme.spacing(60),
-    backgroundColor: theme.extendedPalette.purpleContrast.light
+    padding: "50px !important",
+    backgroundColor: theme.extendedPalette.redContrast.light
   },
   goals: {
     height: theme.spacing(60),
-    backgroundColor: theme.extendedPalette.pinkContrast.light
+    padding: "50px !important",
+    backgroundColor: theme.extendedPalette.redContrast.light
   },
   reserach: {
     height: theme.spacing(60),
-    backgroundColor: theme.extendedPalette.greenContrast.light
+    padding: "50px !important",
+    backgroundColor: theme.extendedPalette.redContrast.light
   },
   customer: {
     height: theme.spacing(60),
-    backgroundColor: theme.extendedPalette.cyanContrast.light
+    padding: "50px !important",
+    backgroundColor: theme.extendedPalette.redContrast.light
   },
   prototyping: {
     height: theme.spacing(60),
-    backgroundColor: theme.extendedPalette.yellowContrast.light
+    padding: "50px !important",
+    backgroundColor: theme.extendedPalette.redContrast.light
   },
   learnings: {
     height: theme.spacing(60),
-    backgroundColor: theme.extendedPalette.greyContrast.main
+    padding: "50px !important",
+    backgroundColor: theme.extendedPalette.redContrast.light
+  },
+  textDescription: {
+    textAlign: "justify",
+    fontSize: "1rem"
   }
 }));
 
@@ -79,10 +92,24 @@ function ProjectDetail() {
           className={classes.summary}
         >
           <Grid item xs={6}>
-            <Typography variant="h1">{result.title}</Typography>
+            <Typography variant="h1" gutterBottom style={{ height: "90px" }}>
+              {result.title}
+            </Typography>
+            <List>
+              <Typography>MY ROLE</Typography>
+              {result.my_role.map((role, index) => (
+                <ListItem key={index}>
+                  <Typography className={classes.textDescription}>
+                    {role}
+                  </Typography>
+                </ListItem>
+              ))}
+            </List>
           </Grid>
           <Grid item xs={6}>
-            <Typography>Problem Description</Typography>
+            <Typography className={classes.textDescription}>
+              {result.desc}
+            </Typography>
           </Grid>
         </Grid>
         <Grid
@@ -94,12 +121,21 @@ function ProjectDetail() {
           className={classes.goals}
         >
           <Grid item xs={6}>
-            <Typography>Project Goals Title</Typography>
+            <Typography variant="h1" gutterBottom style={{ height: "90px" }}>
+              Project Goals
+            </Typography>
           </Grid>
           <Grid item xs={6}>
-            <Paper>
-              <Typography>Project Goals</Typography>
-            </Paper>
+            <Grid container spacing={2}>
+              {result.goals.map((goal, index) => (
+                <Grid item xs={6} key={index}>
+                  <GpsFixedOutlinedIcon fontSize="large" color="primary" />
+                  <Typography className={classes.textDescription}>
+                    {goal}
+                  </Typography>
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
         <Grid
@@ -111,12 +147,21 @@ function ProjectDetail() {
           className={classes.reserach}
         >
           <Grid item xs={6}>
-            <Typography>Research Methods Title</Typography>
+            <Typography variant="h1" gutterBottom style={{ height: "90px" }}>
+              Research Methods
+            </Typography>
           </Grid>
           <Grid item xs={6}>
-            <Paper>
-              <Typography>Research Methods</Typography>
-            </Paper>
+            <Grid container spacing={2}>
+              {result.research.map((method, index) => (
+                <Grid item xs={6} key={index}>
+                  {method.icon}
+                  <Typography className={classes.textDescription}>
+                    {method.title}
+                  </Typography>
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
         <Grid
