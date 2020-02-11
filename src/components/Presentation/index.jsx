@@ -1,67 +1,28 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import TopView from "../../images/topview.jpg";
-import Palms from "../../images/palms.jpg";
-import Mountain from "../../images/mountain.jpg";
-import GridList from "@material-ui/core/GridList";
-import GridListTile from "@material-ui/core/GridListTile";
-import GridListTileBar from "@material-ui/core/GridListTileBar";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-  },
-  gridList: {
-    flexWrap: 'nowrap',
-    transform: 'translateZ(0)',
-  },
-  title: {
-    color: theme.extendedPalette.greyContrast.main,
-  },
-  titleBar: {
-    background:
-      'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
-  },
+  imagePaper: {
+    boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+    maxWidth: "100%",
+    maxHeight: "100%"
+  }
 }));
 
-const tileData = [
-  {
-    img: TopView,
-    title: "Nature is unbelievable"
-  },
-  {
-    img: Palms,
-    title: "Palms are great"
-  },
-  {
-    img: Mountain,
-    title: "Walk always right to the top"
-  }
-];
-
-function Presentation() {
+function Presentation(props) {
   const classes = useStyles();
+  const tileData = props.projects;
+  console.log(tileData);
 
   return (
-    <div className={classes.root}>
-      <GridList className={classes.gridList} cols={2.5}>
-        {tileData.map(tile => (
-          <GridListTile key={tile.img}>
-            <img src={tile.img} alt={tile.title} />
-            <GridListTileBar
-              title={tile.title}
-              classes={{
-                root: classes.titleBar,
-                title: classes.title
-              }}
-            />
-          </GridListTile>
-        ))}
-      </GridList>
-    </div>
+    <Grid container spacing={2}>
+      {tileData.map((item, index) => (
+        <Grid item xs={6} key={index}>
+          <img src={item.img} alt={item.title} className={classes.imagePaper} />
+        </Grid>
+      ))}
+    </Grid>
   );
 }
 

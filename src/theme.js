@@ -22,14 +22,14 @@ const theme = createMuiTheme({
       light: orange["100"] // #ffe0b2
     },
     text: {
-      primary: grey["700"], //#616161
-      secondary: grey["500"] //#9e9e9e
+      primary: grey["800"], //#424242
+      secondary: grey["600"] //#757575
     }
   },
   extendedPalette: {
     redContrast: {
       main: red["400"], //#ef5350
-      light: red["100"] //#ffcdd2
+      light: red["50"] //#ffebee
     },
     cyanContrast: {
       main: cyan["400"], //#26c6da
@@ -112,7 +112,7 @@ const theme = createMuiTheme({
       root: {
         fontSize: "2rem"
       }
-    }
+    },
   }
 });
 

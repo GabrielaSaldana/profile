@@ -1,10 +1,15 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import { useParams } from "react-router-dom";
 import portfolio from "../../portfolio";
 import { Typography } from "@material-ui/core";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import GpsFixedOutlinedIcon from "@material-ui/icons/GpsFixedOutlined";
+import Presentation from "../Presentation";
+import MenuBookOutlinedIcon from "@material-ui/icons/MenuBookOutlined";
+import FormatQuoteOutlinedIcon from "@material-ui/icons/FormatQuoteOutlined";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -17,29 +22,20 @@ const useStyles = makeStyles(theme => ({
     height: theme.spacing(70),
     backgroundColor: theme.extendedPalette.redContrast.light
   },
-  summary: {
+  redBackground: {
     height: theme.spacing(60),
-    backgroundColor: theme.extendedPalette.purpleContrast.light
+    padding: "100px !important",
+    backgroundColor: theme.extendedPalette.redContrast.light
   },
-  goals: {
-    height: theme.spacing(60),
-    backgroundColor: theme.extendedPalette.pinkContrast.light
+  textDescription: {
+    textAlign: "justify",
+    fontSize: "1rem"
   },
-  reserach: {
-    height: theme.spacing(60),
-    backgroundColor: theme.extendedPalette.greenContrast.light
-  },
-  customer: {
-    height: theme.spacing(60),
-    backgroundColor: theme.extendedPalette.cyanContrast.light
-  },
-  prototyping: {
-    height: theme.spacing(60),
-    backgroundColor: theme.extendedPalette.yellowContrast.light
-  },
-  learnings: {
-    height: theme.spacing(60),
-    backgroundColor: theme.extendedPalette.greyContrast.main
+  dotted: {
+    borderStyle: "dotted",
+    borderWidth: "1px",
+    padding: theme.spacing(1),
+    borderColor: "#9e9e9e"
   }
 }));
 
@@ -76,13 +72,35 @@ function ProjectDetail() {
           item
           xs={12}
           spacing={3}
-          className={classes.summary}
+          className={classes.redBackground}
         >
           <Grid item xs={6}>
-            <Typography variant="h1">{result.title}</Typography>
+            <Typography variant="h1" gutterBottom style={{ height: "90px" }}>
+              {result.title}
+            </Typography>
+            <List>
+              <Typography>MY ROLE</Typography>
+              {result.my_role.map((role, index) => (
+                <ListItem key={index}>
+                  <Typography
+                    className={classes.textDescription}
+                    color="secondary"
+                  >
+                    {role}
+                  </Typography>
+                </ListItem>
+              ))}
+            </List>
           </Grid>
           <Grid item xs={6}>
-            <Typography>Problem Description</Typography>
+            <div className={classes.dotted}>
+              <Typography
+                className={classes.textDescription}
+                color="textSecondary"
+              >
+                {result.desc}
+              </Typography>
+            </div>
           </Grid>
         </Grid>
         <Grid
@@ -91,15 +109,27 @@ function ProjectDetail() {
           item
           xs={12}
           spacing={3}
-          className={classes.goals}
+          className={classes.redBackground}
         >
           <Grid item xs={6}>
-            <Typography>Project Goals Title</Typography>
+            <Typography variant="h1" gutterBottom style={{ height: "90px" }}>
+              Project Goals
+            </Typography>
           </Grid>
           <Grid item xs={6}>
-            <Paper>
-              <Typography>Project Goals</Typography>
-            </Paper>
+            <Grid container spacing={2}>
+              {result.goals.map((goal, index) => (
+                <Grid item xs={6} key={index}>
+                  <GpsFixedOutlinedIcon fontSize="large" color="primary" />
+                  <Typography
+                    className={classes.textDescription}
+                    color="textSecondary"
+                  >
+                    {goal}
+                  </Typography>
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
         <Grid
@@ -108,15 +138,41 @@ function ProjectDetail() {
           item
           xs={12}
           spacing={3}
-          className={classes.reserach}
+          className={classes.redBackground}
         >
-          <Grid item xs={6}>
-            <Typography>Research Methods Title</Typography>
+          <Grid item xs={8}>
+            <div className={classes.dotted} style={{ marginBottom: "2rem" }}>
+              <Typography
+                className={classes.textDescription}
+                color="textSecondary"
+              >
+                {result.research_desc}
+              </Typography>
+            </div>
+            <Grid container spacing={2}>
+              {result.research.map((method, index) => (
+                <Grid item xs={6} key={index}>
+                  {method.icon}
+                  <Typography
+                    className={classes.textDescription}
+                    color="textSecondary"
+                  >
+                    {method.title}
+                  </Typography>
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
-          <Grid item xs={6}>
-            <Paper>
-              <Typography>Research Methods</Typography>
-            </Paper>
+          <Grid item xs={4}>
+            <Typography
+              variant="h1"
+              style={{
+                height: "90px",
+                textAlign: "center"
+              }}
+            >
+              Research Methods
+            </Typography>
           </Grid>
         </Grid>
         <Grid
@@ -125,15 +181,33 @@ function ProjectDetail() {
           item
           xs={12}
           spacing={3}
-          className={classes.customer}
+          className={classes.redBackground}
         >
-          <Grid item xs={6}>
-            <Typography>Customer MindSet Title</Typography>
+          <Grid item xs={4}>
+            <Typography variant="h1" gutterBottom style={{ height: "90px" }}>
+              Customer MindSet
+            </Typography>
           </Grid>
-          <Grid item xs={6}>
-            <Paper>
-              <Typography>Customer MindSet</Typography>
-            </Paper>
+          <Grid item xs={8}>
+            <Grid container spacing={2}>
+              {result.customer.map((mindset, index) => (
+                <Grid item xs={6} key={index}>
+                  <Typography
+                    variant="h3"
+                    style={{ marginBottom: "2rem" }}
+                    color="secondary"
+                  >
+                    {mindset.title}
+                  </Typography>
+                  <Typography
+                    className={classes.textDescription}
+                    color="textSecondary"
+                  >
+                    {mindset.desc}
+                  </Typography>
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
         <Grid
@@ -142,15 +216,20 @@ function ProjectDetail() {
           item
           xs={12}
           spacing={3}
-          className={classes.prototyping}
+          className={classes.redBackground}
+          style={{ height: "100%" }}
         >
-          <Grid item xs={6}>
-            <Typography>Prototyping Title</Typography>
+          <Grid item xs={9}>
+            <Presentation projects={result.prototyping} />
           </Grid>
-          <Grid item xs={6}>
-            <Paper>
-              <Typography>Prototyping</Typography>
-            </Paper>
+          <Grid item xs={3}>
+            <Typography
+              variant="h1"
+              gutterBottom
+              style={{ height: "90px", textAlign: "center" }}
+            >
+              Prototyping
+            </Typography>
           </Grid>
         </Grid>
         <Grid
@@ -159,15 +238,41 @@ function ProjectDetail() {
           item
           xs={12}
           spacing={3}
-          className={classes.learnings}
+          className={classes.redBackground}
         >
-          <Grid item xs={6}>
-            <Typography>Learnings Title</Typography>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper>
-              <Typography>Learnings</Typography>
-            </Paper>
+          <div style={{ display: "flex" }}>
+            <Typography variant="h1">Learnings</Typography>
+            <MenuBookOutlinedIcon
+              fontSize="large"
+              color="primary"
+              style={{ marginLeft: "1rem" }}
+            />
+          </div>
+          <Grid item xs={12}>
+            <Grid container spacing={2}>
+              {result.learnings.map((learning, index) => (
+                <Grid item xs={4} key={index}>
+                  <div>
+                    <div style={{ display: "flex" }}>
+                      <FormatQuoteOutlinedIcon
+                        fontSize="medium"
+                        color="secondary"
+                      />
+                      <Typography
+                        className={classes.textDescription}
+                        color="textSecondary"
+                      >
+                        {learning}
+                      </Typography>
+                      <FormatQuoteOutlinedIcon
+                        fontSize="medium"
+                        color="secondary"
+                      />
+                    </div>
+                  </div>
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
