@@ -10,7 +10,7 @@ const portfolio = [
   {
     project_id: "1",
     title: "Sun power",
-    short_desc: "A project regarding generating energy through solar panels.",
+    short_desc: "Solar energy monitoring.",
     desc:
       "The business of the company is installing solar panels on the roofs and monitoring solar energy production and consumption; in order to achieve this they have designed the hardware and software to connect panels trough a smart box that will convert DC to AC and send this data to their servers.",
     my_role: ["Ux Design", "Protoyping"],
