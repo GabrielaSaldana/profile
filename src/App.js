@@ -10,6 +10,8 @@ import Persona from "./components/Persona";
 import Index from "./components/Index";
 import ProfileImage from "./components/ProfileImage";
 import ScrollToTop from "./components/ScrollToTop";
+import { useLocation } from "react-router";
+import ArrowBackOutlinedIcon from "@material-ui/icons/ArrowBackOutlined";
 
 const Main = lazy(() => import("./components/Main"));
 const ProjectDetail = lazy(() => import("./components/ProjectDetail"));
@@ -43,8 +45,32 @@ const useStyles = makeStyles(theme => ({
   },
   toolBar: {
     minHeight: theme.spacing(1)
+  },
+  back: {
+    width: 235,
+    padding: "2rem"
   }
 }));
+
+const SideBar = ({ classes }) => {
+  let location = useLocation();
+  const { pathname } = location;
+  if (pathname.includes("projects")) {
+    return (
+      <div className={classes.back}>
+        <ArrowBackOutlinedIcon fontSize="large" />
+      </div>
+    );
+  } else {
+    return (
+      <div className={classes.paper}>
+        <ProfileImage />
+        <Index />
+        <Persona />
+      </div>
+    );
+  }
+};
 
 function App() {
   const classes = useStyles();
@@ -56,11 +82,7 @@ function App() {
           <Suspense fallback={<CircularProgress />}>
             <Grid container>
               <Grid item xs={2} className={classes.stickyMenu}>
-                <div className={classes.paper}>
-                  <ProfileImage />
-                  <Index />
-                  <Persona />
-                </div>
+                <SideBar classes={classes} />
               </Grid>
               <Grid item xs={10} className={classes.scrollableSide}>
                 <Switch>
