@@ -77,7 +77,7 @@ function Projects() {
                       {project.title}
                     </Typography>
                     <Typography component="p" style={{ textAlign: "left" }}>
-                      {project.desc}
+                      {project.short_desc}
                     </Typography>
                   </CardContent>
                 </CardActionArea>

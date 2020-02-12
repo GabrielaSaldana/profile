@@ -7,7 +7,7 @@ import TimeLine from "../TimeLine";
 import Projects from "../Projects";
 
 const useStyles = makeStyles(theme => ({
-  paper: {
+  main: {
     textAlign: "center",
     color: theme.palette.text.primary
   },
@@ -20,12 +20,12 @@ function Main() {
   const classes = useStyles();
 
   return (
-    <Paper id="main" className={classes.paper} style={{ padding: "8px" }}>
+    <div id="main" className={classes.main} style={{ padding: "8px" }}>
       <Contact />
       <About />
       <TimeLine />
       <Projects />
-    </Paper>
+    </div>
   );
 }
 
