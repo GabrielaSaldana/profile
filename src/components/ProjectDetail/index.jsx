@@ -62,7 +62,7 @@ function ProjectDetail() {
             <img
               src={result.image}
               alt={result.title}
-              style={{ maxWidth: "100%", maxHeight: "100%" }}
+              style={{ width: "1520px", maxHeight: "100%" }}
             />
           </Grid>
         </Grid>
@@ -254,20 +254,14 @@ function ProjectDetail() {
                 <Grid item xs={4} key={index}>
                   <div>
                     <div style={{ display: "flex" }}>
-                      <FormatQuoteOutlinedIcon
-                        fontSize="medium"
-                        color="secondary"
-                      />
+                      <FormatQuoteOutlinedIcon color="secondary" />
                       <Typography
                         className={classes.textDescription}
                         color="textSecondary"
                       >
                         {learning}
                       </Typography>
-                      <FormatQuoteOutlinedIcon
-                        fontSize="medium"
-                        color="secondary"
-                      />
+                      <FormatQuoteOutlinedIcon color="secondary" />
                     </div>
                   </div>
                 </Grid>
