@@ -10,8 +10,9 @@ const portfolio = [
   {
     project_id: "1",
     title: "Sun power",
+    short_desc: "A project regarding generating energy through solar panels.",
     desc:
-      "A project regarding generating energy through solar panels. The business of the company is installing solar panels on the roofs and monitoring solar energy production and consumption; in order to achieve this they have designed the hardware and software to connect panels trough a smart box that will convert DC to AC and send this data to their servers.",
+      "The business of the company is installing solar panels on the roofs and monitoring solar energy production and consumption; in order to achieve this they have designed the hardware and software to connect panels trough a smart box that will convert DC to AC and send this data to their servers.",
     my_role: ["Protoyping", "Ux Design"],
     problem:
       "They had a webtool to install this smart box on the sites, this webtool conects trough wifi or the cellular network. The problem was that this app was a legacy design and it had a lot of patches under the hood, the UI wasn't clear to the installer and there were a lot of workflows and processes duplicated. ",
@@ -77,10 +78,11 @@ const portfolio = [
     ]
   },
   {
-    project_id: "1",
-    title: "Sun power",
+    project_id: "2",
+    title: "Freelance",
+    short_desc: "A project regarding generating energy through solar panels. ",
     desc:
-      "A project regarding generating energy through solar panels. The business of the company is installing solar panels on the roofs and monitoring solar energy production and consumption; in order to achieve this they have designed the hardware and software to connect panels trough a smart box that will convert DC to AC and send this data to their servers.",
+      "The business of the company is installing solar panels on the roofs and monitoring solar energy production and consumption; in order to achieve this they have designed the hardware and software to connect panels trough a smart box that will convert DC to AC and send this data to their servers.",
     my_role: ["Protoyping", "Ux Design"],
     problem:
       "They had a webtool to install this smart box on the sites, this webtool conects trough wifi or the cellular network. The problem was that this app was a legacy design and it had a lot of patches under the hood, the UI wasn't clear to the installer and there were a lot of workflows and processes duplicated. ",
@@ -146,10 +148,11 @@ const portfolio = [
     ]
   },
   {
-    project_id: "1",
+    project_id: "3",
     title: "Sun power",
+    short_desc: "A project regarding generating energy through solar panels. ",
     desc:
-      "A project regarding generating energy through solar panels. The business of the company is installing solar panels on the roofs and monitoring solar energy production and consumption; in order to achieve this they have designed the hardware and software to connect panels trough a smart box that will convert DC to AC and send this data to their servers.",
+      "The business of the company is installing solar panels on the roofs and monitoring solar energy production and consumption; in order to achieve this they have designed the hardware and software to connect panels trough a smart box that will convert DC to AC and send this data to their servers.",
     my_role: ["Protoyping", "Ux Design"],
     problem:
       "They had a webtool to install this smart box on the sites, this webtool conects trough wifi or the cellular network. The problem was that this app was a legacy design and it had a lot of patches under the hood, the UI wasn't clear to the installer and there were a lot of workflows and processes duplicated. ",
