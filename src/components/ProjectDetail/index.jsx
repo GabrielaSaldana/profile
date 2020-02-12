@@ -10,6 +10,7 @@ import GpsFixedOutlinedIcon from "@material-ui/icons/GpsFixedOutlined";
 import Presentation from "../Presentation";
 import MenuBookOutlinedIcon from "@material-ui/icons/MenuBookOutlined";
 import FormatQuoteOutlinedIcon from "@material-ui/icons/FormatQuoteOutlined";
+import Circle from "../../icons/circleIndex.svg";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -36,6 +37,17 @@ const useStyles = makeStyles(theme => ({
     borderWidth: "1px",
     padding: theme.spacing(1),
     borderColor: "#9e9e9e"
+  },
+  circle: {
+    backgroundImage: `url(${Circle})`,
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: 50,
+    height: 50,
+    color: theme.palette.primary.main
   }
 }));
 
@@ -120,7 +132,7 @@ function ProjectDetail() {
             <Grid container spacing={2}>
               {result.goals.map((goal, index) => (
                 <Grid item xs={6} key={index}>
-                  <GpsFixedOutlinedIcon fontSize="large" color="primary" />
+                  <div className={classes.circle}>{index + 1}</div>
                   <Typography
                     className={classes.textDescription}
                     color="textSecondary"
