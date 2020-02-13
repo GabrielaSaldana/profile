@@ -9,19 +9,19 @@ import AccountTreeOutlinedIcon from "@material-ui/icons/AccountTreeOutlined";
 const portfolio = [
   {
     project_id: "1",
-    title: "Sun power",
+    title: "Sun Power",
     short_desc: "Solar energy monitoring.",
     desc:
-      "The business of the company is installing solar panels on the roofs and monitoring solar energy production and consumption; in order to achieve this they have designed the hardware and software to connect panels trough a smart box that will convert DC to AC and send this data to their servers.",
+      "SunPower installs solar panels on condominiums and monitors it's solar energy production and consumption. They have designed the hardware and software that connects panels trough a smart box converting DC into AC and sending this data to their platform.",
     my_role: ["Ux Design", "Protoyping"],
     problem:
-      "They had a webtool to install this smart box on the sites, this webtool conects trough wifi or the cellular network. The problem was that this app was a legacy design and it had a lot of patches under the hood, the UI wasn't clear to the installer and there were a lot of workflows and processes duplicated. ",
+      "Migrating from the legacy version into the new otimized version required adding two new monitoring devices in the configuration flow.",
     image: require("./images/solar/solar.jpg"),
     goals: [
-      "Re design the solar devices discovery flow and ui to be understandable for installers.",
-      "Integrate two new devices on the discovery flow",
-      "Integrate the new design flow on the already existent",
-      "Establish trust and credibility through excellent service"
+      "Re design the solar devices discovery flow and UI to be understandable for installers.",
+      "Integrate two new devices on the discovery flow.",
+      "Integrate the new design flow on the already existent.",
+      "Establish trust and credibility through excellent service."
     ],
     research: [
       {
@@ -39,9 +39,15 @@ const portfolio = [
     ],
     research_desc:
       "Without a clear idea of how does installers were currently interacting with the webtool on site, we didn't knew their pain points trough the journey of installing the monitoring system.",
+    research_img: [
+      {
+        title: "Reserach2",
+        img: require("./images/solar/6.png")
+      }
+    ],
     customer: [
       {
-        title: "I don't have great connectivity from the smart box",
+        title: "I don't have great connectivity from the smart box.",
         desc:
           "Sometimes the smart box couldn't connect to the wifi as expected, this is where celular networks gets involved."
       },
@@ -60,7 +66,7 @@ const portfolio = [
     prototyping: [
       {
         title: "Conectivity",
-        img: require("./images/solar/1.png")
+        img: require("./images/solar/4.png")
       },
       {
         title: "Configure Devices",
@@ -72,7 +78,7 @@ const portfolio = [
       },
       {
         title: "Invision",
-        img: require("./images/solar/6.png")
+        img: require("./images/solar/5.png")
       }
     ],
     learnings: [
@@ -86,10 +92,10 @@ const portfolio = [
     title: "TaxLab",
     short_desc: "Don't let your taxes drive you crazy.",
     desc:
-      "This solution generates your taxes anual report for you by syncing a bank account with your user. It also uses data analysis for separating your expenses from your incomes.",
+      "Taxlab is a startup founded by attorneys at Bismark Tax, Inc., a law firm that specializes in tax resolution cases. The startup is simplifying tax preparation for small and medium sized businesses (SMBs) through an online platform.",
     my_role: ["Ux Design", "Protoyping"],
     problem:
-      "The product owner had an idea regarding monetizing the application, but this section was missing in the final MVP.",
+      "The product owner had an idea regarding monetizing the application, I designed this payment section.",
     image: require("./images/tax/tax.jpg"),
     goals: [
       "Add the payments section.",
@@ -116,6 +122,16 @@ const portfolio = [
     ],
     research_desc:
       "Having a clear understanding of the business model helped me on the design of the payment section, working closely with the product owner was the key.",
+    research_img: [
+      {
+        title: "Research1",
+        img: require("./images/tax/5.png")
+      },
+      {
+        title: "Reserach2",
+        img: require("./images/tax/6.png")
+      }
+    ],
     customer: [
       {
         title:
@@ -207,6 +223,16 @@ const portfolio = [
     ],
     research_desc:
       "I needed to understand the service as a whole, the actors involved. I made a service blueprint aalysis, without this I wouldn't have unterstood how can I digitalize the specific step of the service regarding reports. I decided just to design for solving the reporting problem.",
+    research_img: [
+      {
+        title: "Research1",
+        img: require("./images/rysh/1.png")
+      },
+      {
+        title: "Reserach2",
+        img: require("./images/rysh/2.png")
+      }
+    ],
     customer: [
       {
         title: "I'm right now on Chihuahua right now.",
@@ -228,28 +254,20 @@ const portfolio = [
     prototyping: [
       {
         title: "Interview",
-        img: require("./images/rysh/1.png")
-      },
-      {
-        title: "Data",
-        img: require("./images/rysh/2.png")
-      },
-      {
-        title: "User Manual",
         img: require("./images/rysh/6.png")
       },
       {
-        title: "Schedule",
-        img: require("./images/rysh/3.png")
-      },
-      {
-        title: "Dashboard",
+        title: "Data",
         img: require("./images/rysh/4.png")
       },
       {
-        title: "Automatic Email",
+        title: "User Manual",
         img: require("./images/rysh/7.png")
-      }
+      },
+      {
+        title: "Schedule",
+        img: require("./images/rysh/5.png")
+      },
     ],
     learnings: [
       "Having legacy manual methods on a day to day job, generates a double work.",

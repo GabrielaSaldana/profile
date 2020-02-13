@@ -104,13 +104,31 @@ function ProjectDetail() {
             </List>
           </Grid>
           <Grid item xs={6}>
-            <div className={classes.dotted}>
-              <Typography
-                className={classes.textDescription}
-                color="textSecondary"
-              >
-                {result.desc}
+            <div>
+              <Typography variant="h3" style={{ marginBottom: "16px" }}>
+                About {result.title}
               </Typography>
+              <div className={classes.dotted}>
+                <Typography
+                  className={classes.textDescription}
+                  color="textSecondary"
+                >
+                  {result.desc}
+                </Typography>
+              </div>
+            </div>
+            <div style={{ marginTop: "16px" }}>
+              <Typography variant="h3" style={{ marginBottom: "16px" }}>
+                The Challenge
+              </Typography>
+              <div className={classes.dotted}>
+                <Typography
+                  className={classes.textDescription}
+                  color="textSecondary"
+                >
+                  {result.problem}
+                </Typography>
+              </div>
             </div>
           </Grid>
         </Grid>
@@ -121,6 +139,7 @@ function ProjectDetail() {
           xs={12}
           spacing={3}
           className={classes.redBackground}
+          style={{ height: "380px" }}
         >
           <Grid item xs={6}>
             <Typography variant="h1" gutterBottom style={{ height: "90px" }}>
@@ -187,12 +206,23 @@ function ProjectDetail() {
           </Grid>
         </Grid>
         <Grid
+          container
+          item
+          xs={12}
+          spacing={3}
+          className={classes.redBackground}
+          style={{ height: "100%" }}
+        >
+          <Presentation projects={result.research_img} />
+        </Grid>
+        <Grid
           id="customer"
           container
           item
           xs={12}
           spacing={3}
           className={classes.redBackground}
+          style={{ height: "520px" }}
         >
           <Grid item xs={4}>
             <Typography variant="h1" gutterBottom style={{ height: "90px" }}>
