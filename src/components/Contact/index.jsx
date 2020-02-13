@@ -6,7 +6,6 @@ import CloudDownloadOutlinedIcon from "@material-ui/icons/CloudDownloadOutlined"
 import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
 import PhoneAndroidOutlinedIcon from "@material-ui/icons/PhoneAndroidOutlined";
 import LinkedinOutlineIcon from "../../icons/LinkedinOutlineIcon";
-import pdf from "../../files/cv.pdf";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -33,7 +32,7 @@ function Contact() {
             <CloudDownloadOutlinedIcon fontSize="large" />
           </IconButton>
           <a
-            href={pdf}
+            href={process.env.PUBLIC_URL + "/files/cv.pdf"}
             target="_blank"
             rel="noopener noreferrer"
             download
