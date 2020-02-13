@@ -10,10 +10,11 @@ const portfolio = [
   {
     project_id: "1",
     title: "Sun Power",
+    year: "2019",
     short_desc: "Solar energy monitoring.",
     desc:
       "SunPower installs solar panels on condominiums and monitors it's solar energy production and consumption. They have designed the hardware and software that connects panels trough a smart box converting DC into AC and sending this data to their platform.",
-    my_role: ["Ux Design", "Protoyping"],
+    my_role: ["Ux Design", "Protoyping", "Front End Developer"],
     problem:
       "Migrating from the legacy version into the new otimized version required adding two new monitoring devices in the configuration flow.",
     image: require("./images/solar/solar.jpg"),
@@ -90,10 +91,11 @@ const portfolio = [
   {
     project_id: "2",
     title: "TaxLab",
+    year: "2019",
     short_desc: "Don't let your taxes drive you crazy.",
     desc:
       "Taxlab is a startup founded by attorneys at Bismark Tax, Inc., a law firm that specializes in tax resolution cases. The startup is simplifying tax preparation for small and medium sized businesses (SMBs) through an online platform.",
-    my_role: ["Ux Design", "Protoyping"],
+    my_role: ["Ux Design", "Protoyping", "Front End Developer"],
     problem:
       "The product owner had an idea regarding monetizing the application, I designed this payment section.",
     image: require("./images/tax/tax.jpg"),
@@ -178,6 +180,7 @@ const portfolio = [
   {
     project_id: "3",
     title: "Rysh",
+    year: "2018",
     short_desc: "Train's issues reporter.",
     desc:
       "Rysh Electronica offer a report and repair service for trains. Most reports are on paper. The repairments happen at any time during the day, they are spontaneous, and some of them are between 8-10 hours distance from the office.",
@@ -187,7 +190,7 @@ const portfolio = [
       "UX Design",
       "Data Architech",
       "Project Manager",
-      "Developer",
+      "Full Stack Developer",
       "Technical Writer"
     ],
     problem:
@@ -267,7 +270,7 @@ const portfolio = [
       {
         title: "Schedule",
         img: require("./images/rysh/5.png")
-      },
+      }
     ],
     learnings: [
       "Having legacy manual methods on a day to day job, generates a double work.",

@@ -89,6 +89,10 @@ function ProjectDetail() {
             <Typography variant="h1" gutterBottom style={{ height: "90px" }}>
               {result.title}
             </Typography>
+            <Typography>YEAR</Typography>
+            <Typography className={classes.textDescription} color="secondary">
+              {result.year}
+            </Typography>
             <List>
               <Typography>MY ROLE</Typography>
               {result.my_role.map((role, index) => (
