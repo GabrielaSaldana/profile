@@ -63,15 +63,15 @@ const portfolio = [
         img: require("./images/solar/1.png")
       },
       {
-        title: "z",
+        title: "Configure Devices",
         img: require("./images/solar/2.png")
       },
       {
-        title: "x",
+        title: "AC Modules",
         img: require("./images/solar/3.png")
       },
       {
-        title: "x",
+        title: "Invision",
         img: require("./images/solar/6.png")
       }
     ],
@@ -137,19 +137,19 @@ const portfolio = [
     ],
     prototyping: [
       {
-        title: "Conectivity",
+        title: "Architecture",
         img: require("./images/tax/1.png")
       },
       {
-        title: "z",
+        title: "Add Payment",
         img: require("./images/tax/2.png")
       },
       {
-        title: "x",
+        title: "Socializing",
         img: require("./images/tax/3.png")
       },
       {
-        title: "x",
+        title: "Payment Section",
         img: require("./images/tax/4.png")
       }
     ],
@@ -227,27 +227,27 @@ const portfolio = [
     ],
     prototyping: [
       {
-        title: "Conectivity",
+        title: "Interview",
         img: require("./images/rysh/1.png")
       },
       {
-        title: "z",
+        title: "Data",
         img: require("./images/rysh/2.png")
       },
       {
-        title: "x",
+        title: "User Manual",
         img: require("./images/rysh/6.png")
       },
       {
-        title: "x",
+        title: "Schedule",
         img: require("./images/rysh/3.png")
       },
       {
-        title: "x",
+        title: "Dashboard",
         img: require("./images/rysh/4.png")
       },
       {
-        title: "x",
+        title: "Automatic Email",
         img: require("./images/rysh/7.png")
       }
     ],
