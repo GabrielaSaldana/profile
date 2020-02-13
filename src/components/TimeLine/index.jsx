@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     height: theme.spacing(20),
     marginLeft: theme.spacing(2.7),
     width: "3px",
-    backgroundImage: "linear-gradient(to bottom, #ff80ab, #f8bbd0)"
+    backgroundImage: "linear-gradient(to bottom, #F2F3F7, #F2F3F7)"
   },
   timeItem: {
     height: "fit-content",
@@ -38,7 +38,8 @@ const useStyles = makeStyles(theme => ({
     marginLeft: theme.spacing(3)
   },
   description: {
-    margin: theme.spacing(2)
+    margin: theme.spacing(2),
+    color: theme.extendedPalette.pinkContrast.main
   }
 }));
 
@@ -102,10 +103,8 @@ function TimeLine() {
   return (
     <div id="timeline" className={classes.root}>
       <div className={classes.description}>
-        <Typography color="textPrimary">IMPORTANT CHECKPOINTS</Typography>
-        <Typography variant="h2" color="textPrimary">
-          TIMELINE
-        </Typography>
+        <Typography>IMPORTANT CHECKPOINTS</Typography>
+        <Typography variant="h2">TIMELINE</Typography>
       </div>
       {historyCheckpoints.map((checkpoint, index) => (
         <div key={index}>
@@ -121,7 +120,7 @@ function TimeLine() {
                   {checkpoint.date}
                 </Typography>
               </div>
-              <div className={classes.description}>{checkpoint.desc}</div>
+              <div>{checkpoint.desc}</div>
             </div>
           </div>
         </div>

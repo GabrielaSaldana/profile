@@ -13,7 +13,6 @@ const useStyles = makeStyles(theme => ({
 function Presentation(props) {
   const classes = useStyles();
   const tileData = props.projects;
-  console.log(tileData);
 
   return (
     <Grid container spacing={2}>

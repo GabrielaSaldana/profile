@@ -6,7 +6,6 @@ import portfolio from "../../portfolio";
 import { Typography } from "@material-ui/core";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import GpsFixedOutlinedIcon from "@material-ui/icons/GpsFixedOutlined";
 import Presentation from "../Presentation";
 import MenuBookOutlinedIcon from "@material-ui/icons/MenuBookOutlined";
 import FormatQuoteOutlinedIcon from "@material-ui/icons/FormatQuoteOutlined";
@@ -74,7 +73,7 @@ function ProjectDetail() {
             <img
               src={result.image}
               alt={result.title}
-              style={{ width: "1520px", maxHeight: "100%" }}
+              style={{ width: "100%", maxHeight: "100%" }}
             />
           </Grid>
         </Grid>

@@ -5,6 +5,7 @@ import { MuiThemeProvider } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import theme from "./theme";
+import { Link } from "react-router-dom";
 import routes from "./routes/routes";
 import Persona from "./components/Persona";
 import Index from "./components/Index";
@@ -49,6 +50,12 @@ const useStyles = makeStyles(theme => ({
   back: {
     width: 235,
     padding: "2rem"
+  },
+  backlink: {
+    color: "#9575cd",
+    "&:hover": {
+      color: "#00e676"
+    }
   }
 }));
 
@@ -58,7 +65,12 @@ const SideBar = ({ classes }) => {
   if (pathname.includes("projects")) {
     return (
       <div className={classes.back}>
-        <ArrowBackOutlinedIcon fontSize="large" />
+        <Link
+          className={classes.backlink}
+          to={routes.home()}
+        >
+          <ArrowBackOutlinedIcon fontSize="large" />
+        </Link>
       </div>
     );
   } else {
