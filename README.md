@@ -45,3 +45,14 @@ This application is hosted under Github Pages architecture, see more about [gith
 
 This app uses Material UI as standard for styling and layout.
 More info about: [Material UI](https://material-ui.com/)
+
+### Icons
+
+Icons made by the following authors:
+[surang](https://www.flaticon.com/authors/surang")
+[freepik](https://www.flaticon.com/authors/freepik)
+[Eucalyp](https://www.flaticon.com/authors/eucalyp)
+[geotatah](https://www.flaticon.com/authors/geotatah)
+
+[Find more](https://www.flaticon.com/)
+

@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   description: {
     textAlign: "left",
     marginBottom: theme.spacing(2),
-    color: theme.palette.text.secondary
+    color: theme.palette.secondary.main
   },
   card: {
     maxWidth: 345
@@ -33,10 +33,7 @@ const useStyles = makeStyles(theme => ({
       color: theme.extendedPalette.greenContrast.main
     }
   },
-  gradient: {
-    borderWidth: "3px",
-    borderStyle: "solid",
-    borderImage: "linear-gradient(to bottom, #26c6da, rgba(0, 0, 0, 0)) 1 100%",
+  spacing: {
     [theme.breakpoints.up("xl")]: {
       paddingLeft: theme.spacing(12)
     },
@@ -52,12 +49,10 @@ function Projects() {
   return (
     <div id="portfolio" className={classes.root}>
       <div className={classes.description}>
-        <Typography color="textPrimary">HIGHLIGHT</Typography>
-        <Typography variant="h2" color="textPrimary">
-          PROJECTS
-        </Typography>
+        <Typography>HIGHLIGHT</Typography>
+        <Typography variant="h2">PROJECTS</Typography>
       </div>
-      <div className={classes.gradient}>
+      <div className={classes.spacing}>
         <Grid container spacing={1}>
           {portfolio.map((project, index) => (
             <Grid item xs={4} key={index}>
