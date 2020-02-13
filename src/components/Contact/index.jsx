@@ -2,11 +2,11 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
-import { Link } from "react-router-dom";
 import CloudDownloadOutlinedIcon from "@material-ui/icons/CloudDownloadOutlined";
 import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
 import PhoneAndroidOutlinedIcon from "@material-ui/icons/PhoneAndroidOutlined";
 import LinkedinOutlineIcon from "../../icons/LinkedinOutlineIcon";
+import pdf from "../../files/cv.pdf";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -32,14 +32,15 @@ function Contact() {
           <IconButton aria-label="Download CV" color="primary">
             <CloudDownloadOutlinedIcon fontSize="large" />
           </IconButton>
-          <Link
-            to="/files/cv.pdf"
+          <a
+            href={pdf}
             target="_blank"
+            rel="noopener noreferrer"
             download
             className={classes.anchor}
           >
             <code>Download my CV !</code>
-          </Link>
+          </a>
         </Grid>
         <Grid item xs={3}>
           <IconButton aria-label="Email" color="primary">
