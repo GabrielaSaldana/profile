@@ -85,7 +85,7 @@ function ProjectDetail() {
           spacing={3}
           className={classes.redBackground}
         >
-          <Grid item xs={6}>
+          <Grid item xs={4}>
             <Typography variant="h1" gutterBottom style={{ height: "90px" }}>
               {result.title}
             </Typography>
@@ -107,7 +107,7 @@ function ProjectDetail() {
               ))}
             </List>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={8}>
             <div>
               <Typography variant="h3" style={{ marginBottom: "16px" }}>
                 About {result.title}
@@ -226,7 +226,6 @@ function ProjectDetail() {
           xs={12}
           spacing={3}
           className={classes.redBackground}
-          style={{ height: "520px" }}
         >
           <Grid item xs={4}>
             <Typography variant="h1" gutterBottom style={{ height: "90px" }}>
@@ -256,6 +255,30 @@ function ProjectDetail() {
           </Grid>
         </Grid>
         <Grid
+          id="solution"
+          container
+          item
+          xs={12}
+          spacing={3}
+          className={classes.redBackground}
+          style={{ height: "300px" }}
+        >
+          <Grid item xs={12}>
+            <Typography>SOLUTION</Typography>
+            <div
+              className={classes.dotted}
+              style={{ borderStyle: "dashed", borderColor: "#536dfe" }}
+            >
+              <Typography
+                className={classes.textDescription}
+                color="textSecondary"
+              >
+                {result.solution}
+              </Typography>
+            </div>
+          </Grid>
+        </Grid>
+        <Grid
           id="prototyping"
           container
           item
@@ -275,6 +298,29 @@ function ProjectDetail() {
             >
               Prototyping
             </Typography>
+          </Grid>
+        </Grid>
+        <Grid
+          id="impact"
+          container
+          item
+          xs={12}
+          spacing={3}
+          className={classes.redBackground}
+          style={{ height: "300px" }}
+        >
+          <Grid item xs={12}>
+            <Typography>IMPACT</Typography>
+            <div
+              className={classes.dotted}
+            >
+              <Typography
+                className={classes.textDescription}
+                color="textSecondary"
+              >
+                {result.solution}
+              </Typography>
+            </div>
           </Grid>
         </Grid>
         <Grid

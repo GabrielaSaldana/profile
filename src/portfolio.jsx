@@ -16,7 +16,7 @@ const portfolio = [
       "SunPower installs solar panels on condominiums and monitors it's solar energy production and consumption. They have designed the hardware and software that connects panels trough a smart box converting DC into AC and sending this data to their platform.",
     my_role: ["Ux Design", "Protoyping", "Front End Developer"],
     problem:
-      "Migrating from the legacy version into the new otimized version required adding two new monitoring devices in the configuration flow.",
+      "SunPower partnered with Wizeline to figure out a solution to migrate from the legacy version into a more intuitive interface as well as the addition of two new monitoring devices in the configuration flow. I started my process conducting in-depth stakeholder interviews to uncover the expectations they had of the project, as well as all the valuable information of the customer needs.",
     image: require("./images/solar/solar.jpg"),
     goals: [
       "Re design the solar devices discovery flow and UI to be understandable for installers.",
@@ -36,22 +36,25 @@ const portfolio = [
       {
         title: "Information Architecture",
         icon: <AccountTreeOutlinedIcon fontSize="large" color="primary" />
+      },
+      {
+        title: "On Site Visits",
+        icon: <MapOutlinedIcon fontSize="large" color="primary" />
       }
     ],
     research_desc:
-      "Without a clear idea of how does installers were currently interacting with the webtool on site, we didn't knew their pain points trough the journey of installing the monitoring system.",
+      "After having a deep sense of the way SunPower worked as a service model,and the goals SunPower as an organization wanted to accomplish (such as improving the customer service while installation), I decided to conduct collaborative sessions with my team and the stakeholders so everyone felt part of the solution. We decided to accompany the installers on siteto follow up they Journey Maps to identify potential pain points in the current experience.",
     research_img: [
       {
         title: "Reserach2",
         img: require("./images/solar/6.png")
+      },
+      {
+        title: "Installation",
+        img: require("./images/solar/7.png")
       }
     ],
     customer: [
-      {
-        title: "I don't have great connectivity from the smart box.",
-        desc:
-          "Sometimes the smart box couldn't connect to the wifi as expected, this is where celular networks gets involved."
-      },
       {
         title:
           "I don't know if every configuration change I made on the hardware is confirmed.",
@@ -61,9 +64,16 @@ const portfolio = [
       {
         title: "I need assistance with the new devices.",
         desc:
-          " The application had a step by step flow where I added the new two devices in order to don't break the installation flow."
+          " The application had a step by step flow where I added the new two devices in order to don't break the well known installation flow."
+      },
+      {
+        title: "I receive too many calls for UI assistance.",
+        desc:
+          "Sometimes the installer did not understand the UI of configuration flow and appeal to phone calls."
       }
     ],
+    solution:
+      "After exploring the problem space through different approaches, so we started ideating in a collaborative way. The team decided to divide the experience into one perspective: Installers. We decided to improve the infromation architecture for the two new devices and the disposition of the interface elemnts in order to make them easier to use for installers, since they are the only users of the application, improving the installers experience meant improving customer experience.",
     prototyping: [
       {
         title: "Conectivity",
@@ -82,9 +92,11 @@ const portfolio = [
         img: require("./images/solar/5.png")
       }
     ],
+    impact:
+      "We improved the time Installer users would spend assigning and configuring devices for a solar monitoring system.",
     learnings: [
       "I learned how difficult is to design for systems that had hardware restrictions, in this case the smart box.",
-      "Accompanying the installers is a task that needs to be done not only for user research but for measuring quality of service.",
+      "Regularly Accompanying the installers on site is a task that needs to be done not only for user experience research but for measuring quality of service.",
       "There were problems that had to with the service design per se, after going to a digital solution first, we need to analyze the service."
     ]
   },
@@ -94,7 +106,7 @@ const portfolio = [
     year: "2019",
     short_desc: "Don't let your taxes drive you crazy.",
     desc:
-      "Taxlab is a startup founded by attorneys at Bismark Tax, Inc., a law firm that specializes in tax resolution cases. The startup is simplifying tax preparation for small and medium sized businesses (SMBs) through an online platform.",
+      "Taxlab is a startup founded by attorneys at Bismark Tax, Inc., a law firm that specializes in tax resolution cases. The startup is simplifying tax preparation for small and medium sized businesses through an online platform that clasifies your incomes and expenses for you.",
     my_role: ["Ux Design", "Protoyping", "Front End Developer"],
     problem:
       "The product owner had an idea regarding monetizing the application, I designed this payment section.",
@@ -153,6 +165,8 @@ const portfolio = [
           "A Stripe integration was thought for securing the channel and integrate the payment flow. Some UI integration was made up on this."
       }
     ],
+    solution:
+      "After exploring the problem space through different approaches, so we started ideating in a collaborative way. The team decided to divide the experience into one perspective: Installers. We decided to improve the infromation architecture for the two new devices and the disposition of the interface elemnts in order to make them easier to use for installers, since they are the only users of the application, improving the installers experience meant improving customer experience.",
     prototyping: [
       {
         title: "Architecture",
@@ -171,6 +185,8 @@ const portfolio = [
         img: require("./images/tax/4.png")
       }
     ],
+    impact:
+      "We improved the time Installer users would spend assigning and configuring devices for a solar monitoring system.",
     learnings: [
       "Working closely with the client is not an option, if you want to ensure your understanding on the business.",
       "Having a freemiun plan is always a good idea for let your product join the market.",
@@ -254,6 +270,8 @@ const portfolio = [
           "People needed to look for it on a heap of papers. This why the reported got digitalized and automatic emails were sent on every creation and edition."
       }
     ],
+    solution:
+      "After exploring the problem space through different approaches, so we started ideating in a collaborative way. The team decided to divide the experience into one perspective: Installers. We decided to improve the infromation architecture for the two new devices and the disposition of the interface elemnts in order to make them easier to use for installers, since they are the only users of the application, improving the installers experience meant improving customer experience.",
     prototyping: [
       {
         title: "Interview",
@@ -272,6 +290,8 @@ const portfolio = [
         img: require("./images/rysh/5.png")
       }
     ],
+    impact:
+      "We improved the time Installer users would spend assigning and configuring devices for a solar monitoring system.",
     learnings: [
       "Having legacy manual methods on a day to day job, generates a double work.",
       "Is difficult to measure efficiency when you have distributed workers and you don't have ways of managing them virtually. A good people management tool is a must nowadays.",

@@ -49,17 +49,15 @@ function About() {
     <div id="about" className={classes.root}>
       <div className={classes.description}>
         <Typography>THINGS YOU DON'T KNOW</Typography>
-        <Typography variant="h2">
-          ABOUT ME
-        </Typography>
+        <Typography variant="h2">ABOUT ME</Typography>
       </div>
       <Grid container spacing={3}>
         <Grid item xs={4}>
           <Paper className={classes.paper}>
             <Typography className={classes.textBox}>
-              Many people know my addiction to anime, the japanese culture amaze
-              me, the order they have, teh automation they have in their public
-              services and their loyalty to their culture.
+              Few people know about my addiction to anime, the japanese culture
+              amaze me, the order they have, the automation they have in their
+              public services and their loyalty to their culture.
             </Typography>
             <Grid container style={{ alignItems: "center" }}>
               <Grid item xs={4}>
@@ -79,7 +77,7 @@ function About() {
             <Typography className={classes.textBox}>
               I'm a Software Engineer by alma mater, but curious enough to be
               interested in design, management, processes and the Software
-              environment as a whole.
+              Systems as a whole.
             </Typography>
             <Grid container style={{ alignItems: "center" }}>
               <Grid item xs={4}>
@@ -105,9 +103,9 @@ function About() {
         <Grid item xs={4}>
           <Paper className={classes.paper}>
             <Typography className={classes.textBox}>
-              If you can take care of a plant, then, you can take care of
-              yourself. My hobby is to raise my plants. If you want a succulent
-              I'll be glad of give it to you, just email me :).
+              If you can take care of a plant, you can take care of yourself. My
+              hobby is to raise my plants. If you want one I'll be glad of give
+              it to you, just email me .
             </Typography>
             <Grid container style={{ alignItems: "center" }}>
               <Grid item xs={4}>
