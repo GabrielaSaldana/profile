@@ -20,9 +20,9 @@ const portfolio = [
     image: require("./images/solar/solar.jpg"),
     goals: [
       "Re design the solar devices discovery flow and UI to be understandable for installers.",
-      "Integrate two new devices on the discovery flow.",
-      "Integrate the new design flow on the already existent.",
-      "Establish trust and credibility through excellent service."
+      "Integrate two new monitoring devices on the discovery flow.",
+      "Establish trust and credibility through excellent service.",
+      "Integrate the new design flow on the already existent."
     ],
     research: [
       {
@@ -73,7 +73,7 @@ const portfolio = [
       }
     ],
     solution:
-      "After exploring the problem space through different approaches, so we started ideating in a collaborative way. The team decided to divide the experience into one perspective: Installers. We decided to improve the infromation architecture for the two new devices and the disposition of the interface elemnts in order to make them easier to use for installers, since they are the only users of the application, improving the installers experience meant improving customer experience.",
+      "After exploring the problem space through different approaches, we started ideating in a collaborative way. The team decided to divide the experience into one perspective: Installers. We decided to improve the infromation architecture for the two new devices and the disposition of the interface elemnts in order to make them easier to use for installers, since they are the only users of the application, improving the installers experience meant improving customer experience.",
     prototyping: [
       {
         title: "Conectivity",
@@ -109,12 +109,12 @@ const portfolio = [
       "Taxlab is a startup founded by attorneys at Bismark Tax, Inc., a law firm that specializes in tax resolution cases. The startup is simplifying tax preparation for small and medium sized businesses through an online platform that clasifies your incomes and expenses for you.",
     my_role: ["Ux Design", "Protoyping", "Front End Developer"],
     problem:
-      "The product owner had an idea regarding monetizing the application, I designed this payment section.",
+      "I joined the team as Software Engeenier, and one of my first endeavors consisted on designing the payment section to enable the business model monitization, the product owner had already an idea of how payment enrollment was going to work. I decided to start empathizing with the product owner, working closely with him to materialize his ideas.",
     image: require("./images/tax/tax.jpg"),
     goals: [
-      "Add the payments section.",
-      "Add three posible payments plans including a freemiun one.",
-      "Integrate the new design flow on the already existent"
+      "Create an honest taxes classification application.",
+      "Integrate the new payments design flow on the already existent.",
+      "Materialize the business model inside the application."
     ],
     research: [
       {
@@ -135,7 +135,7 @@ const portfolio = [
       }
     ],
     research_desc:
-      "Having a clear understanding of the business model helped me on the design of the payment section, working closely with the product owner was the key.",
+      "After having a deep sense of the way TaxLab worked as a business model, the potential risks associated, and the goals TaxLab as an organization wanted, I decided to conduct collaborative next steps sessions with my team and the stakeholder. We decided to utilize the UX reserach made by the UX Lead and create the journey for selecting a plan. Taking into account that the feature required the most secure channel available we decided to integrate Stripe.",
     research_img: [
       {
         title: "Research1",
@@ -143,7 +143,7 @@ const portfolio = [
       },
       {
         title: "Reserach2",
-        img: require("./images/tax/6.png")
+        img: require("./images/tax/7.png")
       }
     ],
     customer: [
@@ -151,7 +151,7 @@ const portfolio = [
         title:
           "I would like the users to use the basic features without charging them.",
         desc:
-          "This was the freemium model, the users could subscribe without any charge, if they wanted further more they needed to purchase a plan."
+          "The users could subscribe without any charge, if they wanted further more they needed to purchase a plan."
       },
       {
         title:
@@ -162,11 +162,11 @@ const portfolio = [
       {
         title: "I want to add my card information trough a secure site.",
         desc:
-          "A Stripe integration was thought for securing the channel and integrate the payment flow. Some UI integration was made up on this."
+          "A Stripe integration was thought for securing the channel and integrate the payment flow."
       }
     ],
     solution:
-      "After exploring the problem space through different approaches, so we started ideating in a collaborative way. The team decided to divide the experience into one perspective: Installers. We decided to improve the infromation architecture for the two new devices and the disposition of the interface elemnts in order to make them easier to use for installers, since they are the only users of the application, improving the installers experience meant improving customer experience.",
+      "The big challenge when designing a apayment page is nailing trust into users that their information is secure. What is the information the audience is expecting to see? What questions do they want to answer? How can we mitigate their uncertainty and encourage them to contract the plan?To answer these questions, the team conducted competitive analysis, and ideated different structures and sequence of information, until we finally agreed on providing the most relevant information.",
     prototyping: [
       {
         title: "Architecture",
@@ -182,11 +182,11 @@ const portfolio = [
       },
       {
         title: "Payment Section",
-        img: require("./images/tax/4.png")
+        img: require("./images/tax/6.png")
       }
     ],
     impact:
-      "We improved the time Installer users would spend assigning and configuring devices for a solar monitoring system.",
+      "Leveraging design as a way to better plan, help us speed the last part of the project to accomplish the MVP.",
     learnings: [
       "Working closely with the client is not an option, if you want to ensure your understanding on the business.",
       "Having a freemiun plan is always a good idea for let your product join the market.",
@@ -199,7 +199,7 @@ const portfolio = [
     year: "2018",
     short_desc: "Train's issues reporter.",
     desc:
-      "Rysh Electronica offer a report and repair service for trains. Most reports are on paper. The repairments happen at any time during the day, they are spontaneous, and some of them are between 8-10 hours distance from the office.",
+      "Rysh Electronica is a national company that offers a report and repair service for trains 24/7. Their service works as follows; they send  a group of persons on site to repair electronical issues, this issues are wrote down into a paper report thta is sent to the manager on the central ofice.",
     my_role: [
       "UX Researcher",
       "Protoyping",
@@ -210,12 +210,12 @@ const portfolio = [
       "Technical Writer"
     ],
     problem:
-      "Since there is no control over the reports some get lost, others doesn’t arrive with the data needed, there is not enough space to store them in an ordered way, this lead to misunderstandings between the business owner and the installers that went on-site to repair the train.",
+      " The repairments happen at any time during the day, they are spontaneous, and some of them are between 8-10 hours distance from the office, since there is no control over the reports some get lost, others doesn’t arrive with the data needed and there is not enough space to store them this lead to misunderstandings.",
     image: require("./images/rysh/rysh.jpg"),
     goals: [
-      "Manage the resources needed on each report (including human resources).",
+      "Manage the resources needed on each report.",
       "Decrease the time spent manually writing, sending and storing reports.",
-      "The UI design must be simple, easy to use and undestand.",
+      "Designing a simple but functional UI.",
       "Establish trust and credibility to client's customers."
     ],
     research: [
@@ -241,7 +241,7 @@ const portfolio = [
       }
     ],
     research_desc:
-      "I needed to understand the service as a whole, the actors involved. I made a service blueprint aalysis, without this I wouldn't have unterstood how can I digitalize the specific step of the service regarding reports. I decided just to design for solving the reporting problem.",
+      "I needed to understand the service as a whole, the actors involved. I made a service blueprint aalysis, without this I wouldn't have unterstood how can I digitalize the specific step of the service regarding reports. I decided to start analizing the user journey for reporting a train issue.",
     research_img: [
       {
         title: "Research1",
@@ -256,22 +256,17 @@ const portfolio = [
       {
         title: "I'm right now on Chihuahua right now.",
         desc:
-          "Sometimes the reporter may be in the office in two days, the person just sends a photo of the paper report and some photos regarding the train issue, a person manually needs to write down the report once the information has arrived by WhatsApp. Digital creation of a report facilitate the job."
+          "The reporter is always out of office, the reporter just sends a photo of the paper report and some photos regarding the train issue. Digital creation of a report facilitate the job."
       },
       {
         title:
           "I don't know which reporters are out and where, there are many reports everyday.",
         desc:
-          "As I could see, reporting wasn't the only problem their service was having, but also managing human resources. Adding reportes to the database and providing information about them helped the manager to know which personrs were asigned to wich group and where."
-      },
-      {
-        title: "I don't know where I left that report!",
-        desc:
-          "People needed to look for it on a heap of papers. This why the reported got digitalized and automatic emails were sent on every creation and edition."
+          "Reporting wasn't the only problem their service was having, but also managing human resources. Adding the personnel to the database and providing information about them helped the manager to know which personrs were asigned to wich group and where."
       }
     ],
     solution:
-      "After exploring the problem space through different approaches, so we started ideating in a collaborative way. The team decided to divide the experience into one perspective: Installers. We decided to improve the infromation architecture for the two new devices and the disposition of the interface elemnts in order to make them easier to use for installers, since they are the only users of the application, improving the installers experience meant improving customer experience.",
+      "After exploring the problem space through different approaches, we started ideating in a collaborative way. I decided to start defining the infromation architecture that also models the datbase in a way, after having the information architecture I started to define some user journeys trought he application to define the main flows and finally using the user flows diagrams I created the mocks for creating and socilizing a report.",
     prototyping: [
       {
         title: "Interview",
@@ -291,7 +286,7 @@ const portfolio = [
       }
     ],
     impact:
-      "We improved the time Installer users would spend assigning and configuring devices for a solar monitoring system.",
+      "Having the ability to create reports in the site reduce half of the work and increased time spent on solving the actual issue.",
     learnings: [
       "Having legacy manual methods on a day to day job, generates a double work.",
       "Is difficult to measure efficiency when you have distributed workers and you don't have ways of managing them virtually. A good people management tool is a must nowadays.",

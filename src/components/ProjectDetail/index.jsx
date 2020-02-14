@@ -318,7 +318,7 @@ function ProjectDetail() {
                 className={classes.textDescription}
                 color="textSecondary"
               >
-                {result.solution}
+                {result.impact}
               </Typography>
             </div>
           </Grid>
