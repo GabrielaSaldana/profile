@@ -245,7 +245,7 @@ const portfolio = [
     research_img: [
       {
         title: "Research1",
-        img: require("./images/rysh/1.png")
+        img: require("./images/rysh/8.png")
       },
       {
         title: "Reserach2",
