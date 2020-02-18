@@ -69,13 +69,15 @@ function ProjectDetail() {
           id="mainImg"
           container
           item
+          xs={12}
+          sm={12}
           md={12}
           lg={12}
           xl={12}
           spacing={3}
           className={classes.mainImg}
         >
-          <Grid item lg={12} xl={12}>
+          <Grid item>
             <img
               src={result.image}
               alt={result.title}
@@ -87,13 +89,15 @@ function ProjectDetail() {
           id="summary"
           container
           item
+          xs={12}
+          sm={12}
           md={12}
           lg={12}
           xl={12}
           spacing={3}
           className={classes.redBackground}
         >
-          <Grid item md={12} lg={4} xl={4}>
+          <Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
             <Typography variant="h1" gutterBottom style={{ height: "90px" }}>
               {result.title}
             </Typography>
@@ -115,7 +119,7 @@ function ProjectDetail() {
               ))}
             </List>
           </Grid>
-          <Grid item md={12} lg={8} xl={8}>
+          <Grid item xs={12} sm={12} md={12} lg={8} xl={8}>
             <div>
               <Typography variant="h3" style={{ marginBottom: "16px" }}>
                 About {result.title}
@@ -148,6 +152,8 @@ function ProjectDetail() {
           id="goals"
           container
           item
+          xs={12}
+          sm={12}
           md={12}
           lg={12}
           xl={12}
@@ -155,15 +161,15 @@ function ProjectDetail() {
           className={classes.redBackground}
           style={{ minheight: "380px" }}
         >
-          <Grid item md={12} lg={6} xl={6}>
+          <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
             <Typography variant="h1" gutterBottom style={{ minheight: "90px" }}>
               Project Goals
             </Typography>
           </Grid>
-          <Grid item md={12} lg={6} xl={6}>
+          <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
             <Grid container spacing={2}>
               {result.goals.map((goal, index) => (
-                <Grid item md={6} lg={6} xl={6} key={index}>
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} key={index}>
                   <div className={classes.circle}>{index + 1}</div>
                   <Typography
                     className={classes.textDescription}
@@ -180,23 +186,25 @@ function ProjectDetail() {
           id="research"
           container
           item
+          xs={12}
+          sm={12}
           md={12}
           lg={12}
           xl={12}
           spacing={3}
           className={classes.redBackground}
         >
-          <Grid item md={12} lg={4} xl={4}>
+          <Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
             <Typography
               variant="h1"
               style={{
-                minheight: "90px",
+                minheight: "90px"
               }}
             >
               Research Methods
             </Typography>
           </Grid>
-          <Grid item md={12} lg={8} xl={8}>
+          <Grid item xs={12} sm={12} md={12} lg={8} xl={8}>
             <div className={classes.dotted} style={{ marginBottom: "2rem" }}>
               <Typography
                 className={classes.textDescription}
@@ -207,7 +215,7 @@ function ProjectDetail() {
             </div>
             <Grid container spacing={2}>
               {result.research.map((method, index) => (
-                <Grid item md={6} lg={6} xl={6} key={index}>
+                <Grid item xs={6} sm={6} md={6} lg={6} xl={6} key={index}>
                   {method.icon}
                   <Typography
                     className={classes.textDescription}
@@ -223,6 +231,8 @@ function ProjectDetail() {
         <Grid
           container
           item
+          xs={12}
+          sm={12}
           md={12}
           lg={12}
           xl={12}
@@ -236,21 +246,23 @@ function ProjectDetail() {
           id="customer"
           container
           item
+          xs={12}
+          sm={12}
           md={12}
           lg={12}
           xl={12}
           spacing={3}
           className={classes.redBackground}
         >
-          <Grid item md={12} lg={4} xl={4}>
+          <Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
             <Typography variant="h1" gutterBottom style={{ minheight: "90px" }}>
               Customer MindSet
             </Typography>
           </Grid>
-          <Grid item md={12} lg={8} xl={8}>
+          <Grid item xs={12} sm={12} md={12} lg={8} xl={8}>
             <Grid container spacing={2}>
               {result.customer.map((mindset, index) => (
-                <Grid item md={6} lg={6} xl={6} key={index}>
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} key={index}>
                   <Typography
                     variant="h3"
                     style={{ marginBottom: "2rem" }}
@@ -273,6 +285,8 @@ function ProjectDetail() {
           id="solution"
           container
           item
+          xs={12}
+          sm={12}
           md={12}
           lg={12}
           xl={12}
@@ -280,7 +294,7 @@ function ProjectDetail() {
           className={classes.redBackground}
           style={{ minheight: "300px" }}
         >
-          <Grid item md={12} lg={12} xl={12}>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <Typography>SOLUTION</Typography>
             <div
               className={classes.dotted}
@@ -299,6 +313,8 @@ function ProjectDetail() {
           id="prototyping"
           container
           item
+          xs={12}
+          sm={12}
           md={12}
           lg={12}
           xl={12}
@@ -306,16 +322,12 @@ function ProjectDetail() {
           className={classes.redBackground}
           style={{ height: "100%" }}
         >
-          <Grid item md={12} lg={3} xl={3}>
-            <Typography
-              variant="h1"
-              gutterBottom
-              style={{ minheight: "90px"}}
-            >
+          <Grid item xs={12} sm={12} md={12} lg={3} xl={3}>
+            <Typography variant="h1" gutterBottom style={{ minheight: "90px" }}>
               Prototyping
             </Typography>
           </Grid>
-          <Grid item md={12} lg={9} xl={9}>
+          <Grid item xs={12} sm={12} md={12} lg={9} xl={9}>
             <Presentation projects={result.prototyping} />
           </Grid>
         </Grid>
@@ -323,6 +335,8 @@ function ProjectDetail() {
           id="impact"
           container
           item
+          xs={12}
+          sm={12}
           md={12}
           lg={12}
           xl={12}
@@ -330,7 +344,7 @@ function ProjectDetail() {
           className={classes.redBackground}
           style={{ minheight: "300px" }}
         >
-          <Grid item md={12} lg={12} xl={12}>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <Typography>IMPACT</Typography>
             <div className={classes.dotted}>
               <Typography
@@ -346,6 +360,8 @@ function ProjectDetail() {
           id="learnings"
           container
           item
+          xs={12}
+          sm={12}
           md={12}
           lg={12}
           xl={12}
@@ -360,10 +376,10 @@ function ProjectDetail() {
               style={{ marginLeft: "1rem" }}
             />
           </div>
-          <Grid item md={12} lg={12} xl={12}>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <Grid container spacing={2}>
               {result.learnings.map((learning, index) => (
-                <Grid item md={12} lg={4} xl={4} key={index}>
+                <Grid item xs={12} sm={12} md={12} lg={4} xl={4} key={index}>
                   <div>
                     <div style={{ display: "flex" }}>
                       <FormatQuoteOutlinedIcon color="secondary" />

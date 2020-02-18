@@ -30,8 +30,8 @@ function Contact() {
 
   return (
     <div id="contact" className={classes.root}>
-      <Grid container>
-        <Grid item md={3} lg={3} xl={3}>
+      <Grid container spacing={2}>
+        <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
           <IconButton aria-label="Download CV" color="primary">
             <CloudDownloadOutlinedIcon fontSize="large" />
           </IconButton>
@@ -45,13 +45,13 @@ function Contact() {
             <Typography vriant="h3" className={classes.text}>Download my CV !</Typography>
           </a>
         </Grid>
-        <Grid item md={3} lg={3} xl={3}>
+        <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
           <IconButton aria-label="Email" color="primary">
             <EmailOutlinedIcon fontSize="large" />
           </IconButton>
           <Typography vriant="h3" className={classes.text}>gab.saldana95@gmail.com</Typography>
         </Grid>
-        <Grid item md={3} lg={3} xl={3}>
+        <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
           <IconButton aria-label="Linkedin" color="primary">
             <LinkedinOutlineIcon />
           </IconButton>
@@ -62,7 +62,7 @@ function Contact() {
             <Typography vriant="h3" className={classes.text}>My Linkedin</Typography>
           </a>
         </Grid>
-        <Grid item md={3} lg={3} xl={3}>
+        <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
           <IconButton
             className={classes.button}
             aria-label="Linkedin"

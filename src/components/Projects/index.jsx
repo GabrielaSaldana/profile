@@ -55,7 +55,7 @@ function Projects() {
       <div className={classes.spacing}>
         <Grid container spacing={1}>
           {portfolio.map((project, index) => (
-            <Grid item md={6} lg={4} xl={4} key={index}>
+            <Grid item xs={12} sm={12} md={6} lg={4} xl={4} key={index}>
               <Card className={classes.card}>
                 <CardActionArea>
                   <CardMedia

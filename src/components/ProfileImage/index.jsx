@@ -4,19 +4,25 @@ import Gabs from "../../images/me.png";
 
 const useStyles = makeStyles(theme => ({
   profileImg: {
-    weight: theme.spacing(25),
-    height: theme.spacing(25),
+    height: "8rem",
     margin: theme.spacing(1),
     backgroundColor: theme.extendedPalette.pinkContrast.main,
-    padding: theme.spacing(0.5),
-    borderRadius: 100
+    borderRadius: 100,
+    padding: theme.spacing(0.5)
+  },
+  container: {
+    padding: theme.spacing(0.5)
   }
 }));
 
 function ProfileImage() {
   const classes = useStyles();
 
-  return <img id="me" className={classes.profileImg} src={Gabs} alt="Myself" />;
+  return (
+    <div className={classes.container}>
+      <img className={classes.profileImg} id="me" src={Gabs} alt="Myself" />
+    </div>
+  );
 }
 
 export default ProfileImage;
