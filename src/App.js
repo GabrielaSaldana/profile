@@ -65,10 +65,7 @@ const SideBar = ({ classes }) => {
   if (pathname.includes("projects")) {
     return (
       <div className={classes.back}>
-        <Link
-          className={classes.backlink}
-          to={routes.home()}
-        >
+        <Link className={classes.backlink} to={routes.home()}>
           <ArrowBackOutlinedIcon fontSize="large" />
         </Link>
       </div>
@@ -93,10 +90,10 @@ function App() {
         <div className={classes.root}>
           <Suspense fallback={<CircularProgress />}>
             <Grid container>
-              <Grid item xs={2} className={classes.stickyMenu}>
+              <Grid item lg={2} xl={2} className={classes.stickyMenu}>
                 <SideBar classes={classes} />
               </Grid>
-              <Grid item xs={10} className={classes.scrollableSide}>
+              <Grid item lg={10} xl={10} className={classes.scrollableSide}>
                 <Switch>
                   <Route
                     path={routes.projectDetail({ projectId: ":projectId" })}

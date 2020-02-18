@@ -52,27 +52,27 @@ function About() {
         <Typography variant="h2">ABOUT ME</Typography>
       </div>
       <Grid container spacing={3}>
-        <Grid item xs={4}>
+        <Grid item lg={4} xl={4}>
           <Paper className={classes.paper}>
             <Typography className={classes.textBox}>
               Few people know about my addiction to anime, the japanese culture
-              amaze me, the order they have, the automation they have in their
-              public services and their loyalty to their culture.
+              amaze me, the automation they have in their public services and
+              their loyalty to their culture.
             </Typography>
             <Grid container style={{ alignItems: "center" }}>
-              <Grid item xs={4}>
+              <Grid item lg={4} xl={4}>
                 <img src={Naruto} className={classes.image} alt="naruto" />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item lg={4} xl={4}>
                 <img src={Ninja} className={classes.image} alt="ninja" />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item lg={4} xl={4}>
                 <img src={Ramen} className={classes.image} alt="ramen" />
               </Grid>
             </Grid>
           </Paper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item lg={4} xl={4}>
           <Paper className={classes.paper}>
             <Typography className={classes.textBox}>
               I'm a Software Engineer by alma mater, but curious enough to be
@@ -80,17 +80,17 @@ function About() {
               Systems as a whole.
             </Typography>
             <Grid container style={{ alignItems: "center" }}>
-              <Grid item xs={4}>
+              <Grid item lg={4} xl={4}>
                 <img
                   src={Execution}
                   className={classes.image}
                   alt="execution"
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item lg={4} xl={4}>
                 <img src={Data} className={classes.image} alt="data" />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item lg={4} xl={4}>
                 <img
                   src={Worldwide}
                   className={classes.image}
@@ -100,7 +100,7 @@ function About() {
             </Grid>
           </Paper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item lg={4} xl={4}>
           <Paper className={classes.paper}>
             <Typography className={classes.textBox}>
               If you can take care of a plant, you can take care of yourself. My
@@ -108,13 +108,13 @@ function About() {
               it to you, just email me .
             </Typography>
             <Grid container style={{ alignItems: "center" }}>
-              <Grid item xs={4}>
+              <Grid item lg={4} xl={4}>
                 <img src={Bamboo} className={classes.image} alt="bamboo" />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item lg={4} xl={4}>
                 <img src={Plant} className={classes.image} alt="plant" />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item lg={4} xl={4}>
                 <img src={Terrace} className={classes.image} alt="terrace" />
               </Grid>
             </Grid>

@@ -65,11 +65,12 @@ function ProjectDetail() {
           id="mainImg"
           container
           item
-          xs={12}
+          lg={12}
+          xl={12}
           spacing={3}
           className={classes.mainImg}
         >
-          <Grid item xs={12}>
+          <Grid item lg={12} xl={12}>
             <img
               src={result.image}
               alt={result.title}
@@ -81,11 +82,12 @@ function ProjectDetail() {
           id="summary"
           container
           item
-          xs={12}
+          lg={12}
+          xl={12}
           spacing={3}
           className={classes.redBackground}
         >
-          <Grid item xs={4}>
+          <Grid item lg={4} xl={4}>
             <Typography variant="h1" gutterBottom style={{ height: "90px" }}>
               {result.title}
             </Typography>
@@ -107,7 +109,7 @@ function ProjectDetail() {
               ))}
             </List>
           </Grid>
-          <Grid item xs={8}>
+          <Grid item lg={8} xl={8}>
             <div>
               <Typography variant="h3" style={{ marginBottom: "16px" }}>
                 About {result.title}
@@ -140,20 +142,21 @@ function ProjectDetail() {
           id="goals"
           container
           item
-          xs={12}
+          lg={12}
+          xl={12}
           spacing={3}
           className={classes.redBackground}
           style={{ height: "380px" }}
         >
-          <Grid item xs={6}>
+          <Grid item lg={6} xl={6}>
             <Typography variant="h1" gutterBottom style={{ height: "90px" }}>
               Project Goals
             </Typography>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item lg={6} xl={6}>
             <Grid container spacing={2}>
               {result.goals.map((goal, index) => (
-                <Grid item xs={6} key={index}>
+                <Grid item lg={6} xl={6} key={index}>
                   <div className={classes.circle}>{index + 1}</div>
                   <Typography
                     className={classes.textDescription}
@@ -170,11 +173,12 @@ function ProjectDetail() {
           id="research"
           container
           item
-          xs={12}
+          lg={12}
+          xl={12}
           spacing={3}
           className={classes.redBackground}
         >
-          <Grid item xs={8}>
+          <Grid item lg={8} xl={8}>
             <div className={classes.dotted} style={{ marginBottom: "2rem" }}>
               <Typography
                 className={classes.textDescription}
@@ -185,7 +189,7 @@ function ProjectDetail() {
             </div>
             <Grid container spacing={2}>
               {result.research.map((method, index) => (
-                <Grid item xs={6} key={index}>
+                <Grid item lg={6} xl={6} key={index}>
                   {method.icon}
                   <Typography
                     className={classes.textDescription}
@@ -197,7 +201,7 @@ function ProjectDetail() {
               ))}
             </Grid>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item lg={4} xl={4}>
             <Typography
               variant="h1"
               style={{
@@ -212,7 +216,8 @@ function ProjectDetail() {
         <Grid
           container
           item
-          xs={12}
+          lg={12}
+          xl={12}
           spacing={3}
           className={classes.redBackground}
           style={{ height: "100%" }}
@@ -223,19 +228,20 @@ function ProjectDetail() {
           id="customer"
           container
           item
-          xs={12}
+          lg={12}
+          xl={12}
           spacing={3}
           className={classes.redBackground}
         >
-          <Grid item xs={4}>
+          <Grid item lg={4} xl={4}>
             <Typography variant="h1" gutterBottom style={{ height: "90px" }}>
               Customer MindSet
             </Typography>
           </Grid>
-          <Grid item xs={8}>
+          <Grid item lg={8} xl={8}>
             <Grid container spacing={2}>
               {result.customer.map((mindset, index) => (
-                <Grid item xs={6} key={index}>
+                <Grid item lg={6} xl={6} key={index}>
                   <Typography
                     variant="h3"
                     style={{ marginBottom: "2rem" }}
@@ -258,12 +264,13 @@ function ProjectDetail() {
           id="solution"
           container
           item
-          xs={12}
+          lg={12}
+          xl={12}
           spacing={3}
           className={classes.redBackground}
           style={{ height: "300px" }}
         >
-          <Grid item xs={12}>
+          <Grid item lg={12} xl={12}>
             <Typography>SOLUTION</Typography>
             <div
               className={classes.dotted}
@@ -282,15 +289,16 @@ function ProjectDetail() {
           id="prototyping"
           container
           item
-          xs={12}
+          lg={12}
+          xl={12}
           spacing={3}
           className={classes.redBackground}
           style={{ height: "100%" }}
         >
-          <Grid item xs={9}>
+          <Grid item lg={9} xl={9}>
             <Presentation projects={result.prototyping} />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item lg={3} xl={3}>
             <Typography
               variant="h1"
               gutterBottom
@@ -304,16 +312,15 @@ function ProjectDetail() {
           id="impact"
           container
           item
-          xs={12}
+          lg={12}
+          xl={12}
           spacing={3}
           className={classes.redBackground}
           style={{ height: "300px" }}
         >
-          <Grid item xs={12}>
+          <Grid item lg={12} xl={12}>
             <Typography>IMPACT</Typography>
-            <div
-              className={classes.dotted}
-            >
+            <div className={classes.dotted}>
               <Typography
                 className={classes.textDescription}
                 color="textSecondary"
@@ -327,7 +334,8 @@ function ProjectDetail() {
           id="learnings"
           container
           item
-          xs={12}
+          lg={12}
+          xl={12}
           spacing={3}
           className={classes.redBackground}
         >
@@ -339,10 +347,10 @@ function ProjectDetail() {
               style={{ marginLeft: "1rem" }}
             />
           </div>
-          <Grid item xs={12}>
+          <Grid item lg={12} xl={12}>
             <Grid container spacing={2}>
               {result.learnings.map((learning, index) => (
-                <Grid item xs={4} key={index}>
+                <Grid item lg={4} xl={4} key={index}>
                   <div>
                     <div style={{ display: "flex" }}>
                       <FormatQuoteOutlinedIcon color="secondary" />

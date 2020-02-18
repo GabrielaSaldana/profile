@@ -27,7 +27,7 @@ function Contact() {
   return (
     <div id="contact" className={classes.root}>
       <Grid container>
-        <Grid item xs={3}>
+        <Grid item lg={3} xl={3}>
           <IconButton aria-label="Download CV" color="primary">
             <CloudDownloadOutlinedIcon fontSize="large" />
           </IconButton>
@@ -41,13 +41,13 @@ function Contact() {
             <code>Download my CV !</code>
           </a>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item lg={3} xl={3}>
           <IconButton aria-label="Email" color="primary">
             <EmailOutlinedIcon fontSize="large" />
           </IconButton>
           <code>gab.saldana95@gmail.com</code>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item lg={3} xl={3}>
           <IconButton aria-label="Linkedin" color="primary">
             <LinkedinOutlineIcon />
           </IconButton>
@@ -58,7 +58,7 @@ function Contact() {
             <code>My Linkedin</code>
           </a>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item lg={3} xl={3}>
           <IconButton
             className={classes.button}
             aria-label="Linkedin"

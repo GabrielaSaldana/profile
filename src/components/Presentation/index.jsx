@@ -17,7 +17,7 @@ function Presentation(props) {
   return (
     <Grid container spacing={2}>
       {tileData.map((item, index) => (
-        <Grid item xs={6} key={index}>
+        <Grid item lg={6} xl={6} key={index}>
           <img src={item.img} alt={item.title} className={classes.imagePaper} />
         </Grid>
       ))}
