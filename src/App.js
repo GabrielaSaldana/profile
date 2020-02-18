@@ -29,12 +29,19 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: theme.spacing(1.2)
   },
   stickyMenu: {
-    position: "fixed",
+    [theme.breakpoints.up("md")]: {
+      position: "fixed"
+    },
     height: "100%",
     backgroundColor: "#F2F3F7"
   },
   scrollableSide: {
-    marginLeft: "18%"
+    [theme.breakpoints.between("lg", "xl")]: {
+      marginLeft: "18%"
+    },
+    [theme.breakpoints.only("md")]: {
+      marginLeft: "25%"
+    }
   },
   fab: {
     margin: theme.spacing(1)
@@ -65,10 +72,7 @@ const SideBar = ({ classes }) => {
   if (pathname.includes("projects")) {
     return (
       <div className={classes.back}>
-        <Link
-          className={classes.backlink}
-          to={routes.home()}
-        >
+        <Link className={classes.backlink} to={routes.home()}>
           <ArrowBackOutlinedIcon fontSize="large" />
         </Link>
       </div>
@@ -93,10 +97,26 @@ function App() {
         <div className={classes.root}>
           <Suspense fallback={<CircularProgress />}>
             <Grid container>
-              <Grid item xs={2} className={classes.stickyMenu}>
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={3}
+                lg={2}
+                xl={2}
+                className={classes.stickyMenu}
+              >
                 <SideBar classes={classes} />
               </Grid>
-              <Grid item xs={10} className={classes.scrollableSide}>
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={9}
+                lg={10}
+                xl={10}
+                className={classes.scrollableSide}
+              >
                 <Switch>
                   <Route
                     path={routes.projectDetail({ projectId: ":projectId" })}

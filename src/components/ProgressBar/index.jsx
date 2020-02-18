@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: "left"
   },
   attributeLabels: {
-    textAlign: "left",
+    textAlign: "left"
   },
   backgrounBar: {
     backgroundColor: theme.palette.primary.light
@@ -50,7 +50,7 @@ function ProgressBar() {
           justify="flex-start"
           alignItems="center"
         >
-          <Grid item xs={5}>
+          <Grid item xs={5} sm={5} md={6} lg={5} xl={5}>
             <Typography
               gutterBottom
               className={classes.attributeLabels}
