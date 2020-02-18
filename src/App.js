@@ -34,7 +34,12 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#F2F3F7"
   },
   scrollableSide: {
-    marginLeft: "18%"
+    [theme.breakpoints.between("lg", "xl")]: {
+      marginLeft: "18%"
+    },
+    [theme.breakpoints.only("md")]: {
+      marginLeft: "25%"
+    }
   },
   fab: {
     margin: theme.spacing(1)
@@ -90,10 +95,16 @@ function App() {
         <div className={classes.root}>
           <Suspense fallback={<CircularProgress />}>
             <Grid container>
-              <Grid item lg={2} xl={2} className={classes.stickyMenu}>
+              <Grid item md={3} lg={2} xl={2} className={classes.stickyMenu}>
                 <SideBar classes={classes} />
               </Grid>
-              <Grid item lg={10} xl={10} className={classes.scrollableSide}>
+              <Grid
+                item
+                md={9}
+                lg={10}
+                xl={10}
+                className={classes.scrollableSide}
+              >
                 <Switch>
                   <Route
                     path={routes.projectDetail({ projectId: ":projectId" })}
