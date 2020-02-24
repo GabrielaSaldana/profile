@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#secrets
+src/secrets.js
+
+#project workspace config visual studio
+src/components/ProjectDetail/portfolio.code-workspace

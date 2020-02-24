@@ -8,6 +8,7 @@ import AccountTreeOutlinedIcon from "@material-ui/icons/AccountTreeOutlined";
 
 const portfolio = [
   {
+    protected: true,
     project_id: "1",
     title: "Sun Power",
     year: "2019",
@@ -101,6 +102,7 @@ const portfolio = [
     ]
   },
   {
+    protected: false,
     project_id: "2",
     title: "TaxLab",
     year: "2019",
@@ -194,6 +196,7 @@ const portfolio = [
     ]
   },
   {
+    protected: false,
     project_id: "3",
     title: "Rysh",
     year: "2018",
