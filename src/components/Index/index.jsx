@@ -1,6 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
+import { Link } from "react-router-dom";
+import routes from "../../routes/routes";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,21 +25,21 @@ function Index() {
 
   return (
     <div className={classes.root}>
-      <a className={classes.anchor} href="#about">
+      <Link className={classes.anchor} to={routes.home()}>
         <Typography variant="h3" gutterBottom>
           About
         </Typography>
-      </a>
-      <a className={classes.anchor} href="#timeline">
-        <Typography variant="h3" gutterBottom>
-          Timeline
-        </Typography>
-      </a>
-      <a className={classes.anchor} href="#portfolio">
+      </Link>
+      <Link className={classes.anchor} to={routes.projects()}>
         <Typography variant="h3" gutterBottom>
           Projects
         </Typography>
-      </a>
+      </Link>
+      <Link className={classes.anchor} to={routes.contact()}>
+        <Typography variant="h3" gutterBottom>
+          Contact
+        </Typography>
+      </Link>
     </div>
   );
 }

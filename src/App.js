@@ -14,8 +14,10 @@ import ScrollToTop from "./components/ScrollToTop";
 import { useLocation } from "react-router";
 import ArrowBackOutlinedIcon from "@material-ui/icons/ArrowBackOutlined";
 
-const Main = lazy(() => import("./components/Main"));
 const ProjectDetail = lazy(() => import("./components/ProjectDetail"));
+const About = lazy(() => import("./components/About"));
+const Projects = lazy(() => import("./components/Projects"));
+const Contact = lazy(() => import("./components/Contact"));
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -69,7 +71,7 @@ const useStyles = makeStyles(theme => ({
 const SideBar = ({ classes }) => {
   let location = useLocation();
   const { pathname } = location;
-  if (pathname.includes("projects")) {
+  if (pathname.includes("projects/")) {
     return (
       <div className={classes.back}>
         <Link className={classes.backlink} to={routes.home()}>
@@ -123,7 +125,9 @@ function App() {
                     exact
                     component={ProjectDetail}
                   />
-                  <Route path={routes.home()} component={Main} />
+                  <Route exact path={routes.contact()} component={Contact} />
+                  <Route exact path={routes.projects()} component={Projects} />
+                  <Route path={routes.home()} component={About} />
                 </Switch>
               </Grid>
               <ScrollToTop />
