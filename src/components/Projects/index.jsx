@@ -16,10 +16,10 @@ const useStyles = makeStyles(theme => ({
   root: {
     padding: theme.spacing(4)
   },
-  description: {
+  subTitle: {
     textAlign: "left",
     marginBottom: theme.spacing(2),
-    color: theme.palette.secondary.main
+    color: theme.extendedPalette.pinkContrast.main
   },
   card: {
     maxWidth: 345
@@ -48,9 +48,8 @@ function Projects() {
 
   return (
     <div id="portfolio" className={classes.root}>
-      <div className={classes.description}>
-        <Typography>HIGHLIGHT</Typography>
-        <Typography variant="h2">PROJECTS</Typography>
+      <div className={classes.subTitle}>
+        <Typography variant="h1">PROJECTS</Typography>
       </div>
       <div className={classes.spacing}>
         <Grid container spacing={1}>
@@ -67,11 +66,11 @@ function Projects() {
                     <Typography
                       gutterBottom
                       variant="h2"
-                      style={{ textAlign: "left" }}
+                      style={{ textAlign: "left", color: "#ff9100" }}
                     >
                       {project.title}
                     </Typography>
-                    <Typography component="p" style={{ textAlign: "left" }}>
+                    <Typography component="p" style={{ textAlign: "left", fontSize: "1rem" }}>
                       {project.short_desc}
                     </Typography>
                   </CardContent>

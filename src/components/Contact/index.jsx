@@ -3,14 +3,20 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
 import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
-import PhoneAndroidOutlinedIcon from "@material-ui/icons/PhoneAndroidOutlined";
+import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedinOutlineIcon from "../../icons/LinkedinOutlineIcon";
 import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.text.primary,
-    margin: theme.spacing(1)
+    margin: theme.spacing(1),
+    [theme.breakpoints.up("sm")]: {
+      padding: "12vh 10vh 10vh 10vh"
+    },
+    [theme.breakpoints.between("xs", "sm")]: {
+      padding: "4vh 1vh 1vh 1vh"
+    }
   },
   anchor: {
     color: theme.extendedPalette.purpleContrast.main,
@@ -20,7 +26,13 @@ const useStyles = makeStyles(theme => ({
     }
   },
   text: {
-    wordWrap: "break-word"
+    wordWrap: "break-word",
+    fontSize: "1rem"
+  },
+  subTitle: {
+    textAlign: "left",
+    marginBottom: theme.spacing(2),
+    color: theme.extendedPalette.pinkContrast.main
   }
 }));
 
@@ -29,34 +41,43 @@ function Contact() {
 
   return (
     <div id="contact" className={classes.root}>
+      <div>
+        <Typography variant="h1" gutterBottom className={classes.subTitle}>
+          SAY HELLO
+        </Typography>
+        <Typography gutterBottom style={{ fontSize: "1rem" }}>
+          I really appriciate your time spent on me, if you want to contact me I
+          leave you some places where you can find me.
+        </Typography>
+      </div>
       <Grid container spacing={2}>
         <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
           <IconButton aria-label="Email" color="primary">
             <EmailOutlinedIcon fontSize="large" />
           </IconButton>
-          <a
-            className={classes.anchor}
-            href="mailto:gab.saldana95@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Typography vriant="h3" className={classes.text}>
+          <Typography vriant="h2" className={classes.text}>
+            <a
+              className={classes.anchor}
+              href="mailto:gab.saldana95@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               gab.saldana95@gmail.com
-            </Typography>
-          </a>
+            </a>
+          </Typography>
         </Grid>
         <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
           <IconButton aria-label="Linkedin" color="primary">
             <LinkedinOutlineIcon />
           </IconButton>
-          <a
-            className={classes.anchor}
-            href="https://www.linkedin.com/in/gabriela-salda%C3%B1a-92a2b7b4"
-          >
-            <Typography vriant="h3" className={classes.text}>
+          <Typography vriant="h3" className={classes.text}>
+            <a
+              className={classes.anchor}
+              href="https://www.linkedin.com/in/gabriela-salda%C3%B1a-92a2b7b4"
+            >
               My Linkedin
-            </Typography>
-          </a>
+            </a>
+          </Typography>
         </Grid>
         <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
           <IconButton
@@ -64,10 +85,12 @@ function Contact() {
             aria-label="Linkedin"
             color="primary"
           >
-            <PhoneAndroidOutlinedIcon />
+            <TwitterIcon />
           </IconButton>
-          <Typography vriant="h3" className={classes.text}>
-            +52 5548811040
+          <Typography vriant="h4" className={classes.text}>
+            <a className={classes.anchor} href="https://twitter.com/GSaldana95">
+              GGSaldana
+            </a>
           </Typography>
         </Grid>
       </Grid>

@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.text.primary,
     margin: theme.spacing(1),
-    padding: theme.spacing(1),
+    padding: theme.spacing(2),
     textAlign: "center"
   },
   anchor: {
@@ -16,7 +16,10 @@ const useStyles = makeStyles(theme => ({
     textDecoration: "none",
     "&:hover": {
       color: theme.extendedPalette.greenContrast.main
-    }
+    },
+  },
+  text: {
+    marginBottom: theme.spacing(2)
   }
 }));
 
@@ -25,21 +28,21 @@ function Index() {
 
   return (
     <div className={classes.root}>
-      <Link className={classes.anchor} to={routes.home()}>
-        <Typography variant="h3" gutterBottom>
+      <Typography variant="h3" gutterBottom className={classes.text}>
+        <Link className={classes.anchor} to={routes.home()}>
           About
-        </Typography>
-      </Link>
-      <Link className={classes.anchor} to={routes.projects()}>
-        <Typography variant="h3" gutterBottom>
+        </Link>
+      </Typography>
+      <Typography variant="h3" gutterBottom className={classes.text}>
+        <Link className={classes.anchor} to={routes.projects()}>
           Projects
-        </Typography>
-      </Link>
-      <Link className={classes.anchor} to={routes.contact()}>
-        <Typography variant="h3" gutterBottom>
+        </Link>
+      </Typography>
+      <Typography variant="h3" gutterBottom className={classes.text}>
+        <Link className={classes.anchor} to={routes.contact()}>
           Contact
-        </Typography>
-      </Link>
+        </Link>
+      </Typography>
     </div>
   );
 }

@@ -22,9 +22,10 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
   },
-  paper: {
+  container: {
     textAlign: "center",
-    color: theme.palette.text.primary
+    color: theme.palette.text.primary,
+    margin: theme.spacing(1)
   },
   upButton: {
     paddingLeft: theme.spacing(1.2)
@@ -79,7 +80,7 @@ const SideBar = ({ classes }) => {
     );
   } else {
     return (
-      <div className={classes.paper}>
+      <div className={classes.container}>
         <ProfileImage />
         <Index />
       </div>

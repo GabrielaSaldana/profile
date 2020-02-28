@@ -8,7 +8,8 @@ import { Typography } from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.text.primary,
-    margin: theme.spacing(1)
+    margin: theme.spacing(1),
+    textAlign: "left"
   },
   anchor: {
     color: theme.extendedPalette.purpleContrast.main,
@@ -18,7 +19,8 @@ const useStyles = makeStyles(theme => ({
     }
   },
   text: {
-    wordWrap: "break-word"
+    wordWrap: "break-word",
+    fontSize: "1rem"
   }
 }));
 
@@ -26,7 +28,7 @@ function CV() {
   const classes = useStyles();
 
   return (
-    <Box>
+    <Box className={classes.root}>
       <IconButton aria-label="Download CV" color="primary">
         <CloudDownloadOutlinedIcon fontSize="large" />
       </IconButton>
@@ -37,7 +39,7 @@ function CV() {
         download
         className={classes.anchor}
       >
-        <Typography vriant="h1" className={classes.text}>
+        <Typography className={classes.text}>
           Download my CV !
         </Typography>
       </a>

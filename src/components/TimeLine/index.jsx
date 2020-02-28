@@ -41,70 +41,74 @@ const useStyles = makeStyles(theme => ({
     textAlign: "left",
     marginBottom: theme.spacing(2),
     color: theme.extendedPalette.pinkContrast.main
+  },
+  textContent: {
+    fontSize: "1.1rem !important",
   }
 }));
 
-const historyCheckpoints = [
-  {
-    title: "Designing at Wizeline",
-    date: "2020-present",
-    desc: (
-      <Typography>
-        After being a developer I decided to changed my career path to UX
-        Designer, I wanted to learn how to design for developers and users,
-        keeping a balance between each other. I have taken courses of service
-        design, ux design, and have participated in the "Gender jam" an event
-        aimed for solving gender problematics in our society.
-      </Typography>
-    )
-  },
-  {
-    title: "Developing at Wizeline",
-    date: "2018-2020",
-    desc: (
-      <Typography>
-        I started my career at Wizeline as a Software Engineer thanks to a
-        trainee program, they trained me on the nowadays ways of designing,
-        creating and delivering software using agile methodologies, I worked as
-        full-stack developer for a year and a half, mainly on the front end
-        using React.
-      </Typography>
-    )
-  },
-  {
-    title: "Freelancing",
-    date: "2017-2018",
-    desc: (
-      <Typography>
-        After getting my Bachelor in Science on Systems Engineering degree, I
-        decided to look for a job and meanwhile freelance myself, I designed and
-        developed a web Application for an train management enterprise, I
-        created a management tool for their train's reports.
-      </Typography>
-    )
-  },
-  {
-    title: "Undergraduation at IPN-ESCOM",
-    date: "2014-2018",
-    desc: (
-      <Typography>
-        I am pursuing my under-graduation studies with major in Systems
-        Engineering at the Instituto Politecnico Nacional. I was parto of the
-        algorith club studying mainly competitive programming, I joined a course
-        of IT management and risk management, finally I decided to get into deep
-        on front end development and REST APIs.
-      </Typography>
-    )
-  }
-];
 
 function TimeLine() {
   const classes = useStyles();
 
+  const historyCheckpoints = [
+    {
+      title: "Designing at Wizeline",
+      date: "2020-present",
+      desc: (
+        <Typography className={classes.textContent}>
+          After being a developer I decided to changed my career path to UX
+          Designer, I wanted to learn how to design for developers and users,
+          keeping a balance between each other. I have taken courses of service
+          design, ux design, and have participated in the "Gender jam" an event
+          aimed for solving gender problematics in our society.
+      </Typography>
+      )
+    },
+    {
+      title: "Developing at Wizeline",
+      date: "2018-2020",
+      desc: (
+        <Typography className={classes.textContent}>
+          I started my career at Wizeline as a Software Engineer thanks to a
+          trainee program, they trained me on the nowadays ways of designing,
+          creating and delivering software using agile methodologies, I worked as
+          full-stack developer for a year and a half, mainly on the front end
+          using React.
+      </Typography>
+      )
+    },
+    {
+      title: "Freelancing",
+      date: "2017-2018",
+      desc: (
+        <Typography className={classes.textContent}>
+          After getting my Bachelor in Science on Systems Engineering degree, I
+          decided to look for a job and meanwhile freelance myself, I designed and
+          developed a web Application for an train management enterprise, I
+          created a management tool for their train's reports.
+      </Typography>
+      )
+    },
+    {
+      title: "Undergraduation at IPN-ESCOM",
+      date: "2014-2018",
+      desc: (
+        <Typography className={classes.textContent}>
+          I am pursuing my under-graduation studies with major in Systems
+          Engineering at the Instituto Politecnico Nacional. I was parto of the
+          algorith club studying mainly competitive programming, I joined a course
+          of IT management and risk management, finally I decided to get into deep
+          on front end development and REST APIs.
+      </Typography>
+      )
+    }
+  ];
+
   return (
     <div id="timeline" className={classes.root}>
       <div className={classes.subTitle}>
-        <Typography variant="h2">TIMELINE</Typography>
+        <Typography variant="h1">TIMELINE</Typography>
       </div>
       {historyCheckpoints.map((checkpoint, index) => (
         <div key={index}>

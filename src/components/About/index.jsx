@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import About from "./about";
 import TimeLine from "../TimeLine";
 import Persona from "../Persona";
+import Skills from "../Skills";
 import CV from "../CV";
 
 const useStyles = makeStyles(theme => ({
@@ -12,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   },
   toolBar: {
     minHeight: theme.spacing(1)
-  }
+  },
 }));
 
 function Main() {
@@ -21,6 +22,7 @@ function Main() {
   return (
     <div id="main" className={classes.main}>
       <Persona />
+      <Skills />
       <About />
       <TimeLine />
       <CV />

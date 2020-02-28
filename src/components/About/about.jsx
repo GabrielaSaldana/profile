@@ -17,7 +17,8 @@ const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.text.primary,
     padding: theme.spacing(1),
-    textAlign: "justify"
+    textAlign: "justify",
+    marginBottom: theme.spacing(6)
   },
   image: {
     width: "60%"
@@ -27,7 +28,8 @@ const useStyles = makeStyles(theme => ({
   },
   textBox: {
     height: "fit-content",
-    margin: theme.spacing(1)
+    margin: theme.spacing(1),
+    fontSize: "1rem",
   },
   gradient: {
     borderWidth: "3px",
@@ -47,7 +49,7 @@ function About() {
   return (
     <div id="about" className={classes.root}>
       <div className={classes.subTitle}>
-        <Typography variant="h2">WHAT I LIKE</Typography>
+        <Typography variant="h1">WHAT I LIKE</Typography>
       </div>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
