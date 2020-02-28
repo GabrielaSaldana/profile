@@ -34,7 +34,16 @@ function Contact() {
           <IconButton aria-label="Email" color="primary">
             <EmailOutlinedIcon fontSize="large" />
           </IconButton>
-          <Typography vriant="h3" className={classes.text}>gab.saldana95@gmail.com</Typography>
+          <a
+            className={classes.anchor}
+            href="mailto:gab.saldana95@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Typography vriant="h3" className={classes.text}>
+              gab.saldana95@gmail.com
+            </Typography>
+          </a>
         </Grid>
         <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
           <IconButton aria-label="Linkedin" color="primary">
@@ -44,7 +53,9 @@ function Contact() {
             className={classes.anchor}
             href="https://www.linkedin.com/in/gabriela-salda%C3%B1a-92a2b7b4"
           >
-            <Typography vriant="h3" className={classes.text}>My Linkedin</Typography>
+            <Typography vriant="h3" className={classes.text}>
+              My Linkedin
+            </Typography>
           </a>
         </Grid>
         <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
@@ -55,7 +66,9 @@ function Contact() {
           >
             <PhoneAndroidOutlinedIcon />
           </IconButton>
-          <Typography vriant="h3" className={classes.text}>+52 5548811040</Typography>
+          <Typography vriant="h3" className={classes.text}>
+            +52 5548811040
+          </Typography>
         </Grid>
       </Grid>
     </div>
