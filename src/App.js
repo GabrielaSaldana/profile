@@ -7,7 +7,6 @@ import Grid from "@material-ui/core/Grid";
 import theme from "./theme";
 import { Link } from "react-router-dom";
 import routes from "./routes/routes";
-import Persona from "./components/Persona";
 import Index from "./components/Index";
 import ProfileImage from "./components/ProfileImage";
 import ScrollToTop from "./components/ScrollToTop";
@@ -39,7 +38,7 @@ const useStyles = makeStyles(theme => ({
   },
   scrollableSide: {
     [theme.breakpoints.between("lg", "xl")]: {
-      marginLeft: "18%"
+      marginLeft: "14%"
     },
     [theme.breakpoints.only("md")]: {
       marginLeft: "25%"
@@ -57,7 +56,6 @@ const useStyles = makeStyles(theme => ({
     minHeight: theme.spacing(1)
   },
   back: {
-    width: 235,
     padding: "2rem"
   },
   backlink: {
@@ -74,7 +72,7 @@ const SideBar = ({ classes }) => {
   if (pathname.includes("projects/")) {
     return (
       <div className={classes.back}>
-        <Link className={classes.backlink} to={routes.home()}>
+        <Link className={classes.backlink} to={routes.projects()}>
           <ArrowBackOutlinedIcon fontSize="large" />
         </Link>
       </div>
@@ -84,7 +82,6 @@ const SideBar = ({ classes }) => {
       <div className={classes.paper}>
         <ProfileImage />
         <Index />
-        <Persona />
       </div>
     );
   }

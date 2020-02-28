@@ -50,10 +50,11 @@ function ProgressBar() {
           justify="flex-start"
           alignItems="center"
         >
-          <Grid item xs={5} sm={5} md={6} lg={5} xl={5}>
+          <Grid item xs={5} sm={5} md={4} lg={3} xl={3}>
             <Typography
               gutterBottom
               className={classes.attributeLabels}
+              variant="h4"
               color="secondary"
             >
               {attribute.name}

@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
-import CloudDownloadOutlinedIcon from "@material-ui/icons/CloudDownloadOutlined";
 import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
 import PhoneAndroidOutlinedIcon from "@material-ui/icons/PhoneAndroidOutlined";
 import LinkedinOutlineIcon from "../../icons/LinkedinOutlineIcon";
@@ -31,27 +30,13 @@ function Contact() {
   return (
     <div id="contact" className={classes.root}>
       <Grid container spacing={2}>
-        <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
-          <IconButton aria-label="Download CV" color="primary">
-            <CloudDownloadOutlinedIcon fontSize="large" />
-          </IconButton>
-          <a
-            href={process.env.PUBLIC_URL + "/files/cv.pdf"}
-            target="_blank"
-            rel="noopener noreferrer"
-            download
-            className={classes.anchor}
-          >
-            <Typography vriant="h3" className={classes.text}>Download my CV !</Typography>
-          </a>
-        </Grid>
-        <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
+        <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
           <IconButton aria-label="Email" color="primary">
             <EmailOutlinedIcon fontSize="large" />
           </IconButton>
           <Typography vriant="h3" className={classes.text}>gab.saldana95@gmail.com</Typography>
         </Grid>
-        <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
+        <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
           <IconButton aria-label="Linkedin" color="primary">
             <LinkedinOutlineIcon />
           </IconButton>
@@ -62,7 +47,7 @@ function Contact() {
             <Typography vriant="h3" className={classes.text}>My Linkedin</Typography>
           </a>
         </Grid>
-        <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
+        <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
           <IconButton
             className={classes.button}
             aria-label="Linkedin"

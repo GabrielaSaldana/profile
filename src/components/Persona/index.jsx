@@ -11,6 +11,11 @@ const useStyles = makeStyles(theme => ({
   description: {
     textAlign: "justify",
     padding: theme.spacing(1)
+  },
+  subTitle: {
+    textAlign: "left",
+    marginBottom: theme.spacing(2),
+    color: theme.extendedPalette.pinkContrast.main
   }
 }));
 
@@ -19,6 +24,9 @@ function Persona() {
 
   return (
     <div className={classes.root}>
+      <div className={classes.subTitle}>
+        <Typography variant="h2">ABOUT ME</Typography>
+      </div>
       <Typography className={classes.description}>
         Gabriela is a hardworking person that aims to understand all the
         processes involved in Software creation and delivery.

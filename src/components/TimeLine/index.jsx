@@ -7,7 +7,7 @@ import Avatar from "@material-ui/core/Avatar";
 const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.text.primary,
-    margin: theme.spacing(1),
+    padding: theme.spacing(1),
     textAlign: "left"
   },
   timeLineContainer: {
@@ -37,8 +37,9 @@ const useStyles = makeStyles(theme => ({
     padding: "6px",
     marginLeft: theme.spacing(3)
   },
-  description: {
-    margin: theme.spacing(2),
+  subTitle: {
+    textAlign: "left",
+    marginBottom: theme.spacing(2),
     color: theme.extendedPalette.pinkContrast.main
   }
 }));
@@ -102,8 +103,7 @@ function TimeLine() {
 
   return (
     <div id="timeline" className={classes.root}>
-      <div className={classes.description}>
-        <Typography>IMPORTANT CHECKPOINTS</Typography>
+      <div className={classes.subTitle}>
         <Typography variant="h2">TIMELINE</Typography>
       </div>
       {historyCheckpoints.map((checkpoint, index) => (

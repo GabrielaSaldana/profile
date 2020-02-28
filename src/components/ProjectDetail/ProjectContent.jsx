@@ -63,7 +63,7 @@ function ProjectContent() {
   });
 
   return (
-    <div id="details">
+    <div>
       <Grid container spacing={3} className={classes.root}>
         <Grid
           id="mainImg"
