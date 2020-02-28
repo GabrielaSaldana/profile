@@ -7,23 +7,25 @@ import Grid from "@material-ui/core/Grid";
 import theme from "./theme";
 import { Link } from "react-router-dom";
 import routes from "./routes/routes";
-import Persona from "./components/Persona";
 import Index from "./components/Index";
 import ProfileImage from "./components/ProfileImage";
 import ScrollToTop from "./components/ScrollToTop";
 import { useLocation } from "react-router";
 import ArrowBackOutlinedIcon from "@material-ui/icons/ArrowBackOutlined";
 
-const Main = lazy(() => import("./components/Main"));
 const ProjectDetail = lazy(() => import("./components/ProjectDetail"));
+const About = lazy(() => import("./components/About"));
+const Projects = lazy(() => import("./components/Projects"));
+const Contact = lazy(() => import("./components/Contact"));
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
   },
-  paper: {
+  container: {
     textAlign: "center",
-    color: theme.palette.text.primary
+    color: theme.palette.text.primary,
+    margin: theme.spacing(1)
   },
   upButton: {
     paddingLeft: theme.spacing(1.2)
@@ -37,7 +39,7 @@ const useStyles = makeStyles(theme => ({
   },
   scrollableSide: {
     [theme.breakpoints.between("lg", "xl")]: {
-      marginLeft: "18%"
+      marginLeft: "14%"
     },
     [theme.breakpoints.only("md")]: {
       marginLeft: "25%"
@@ -55,7 +57,6 @@ const useStyles = makeStyles(theme => ({
     minHeight: theme.spacing(1)
   },
   back: {
-    width: 235,
     padding: "2rem"
   },
   backlink: {
@@ -69,20 +70,19 @@ const useStyles = makeStyles(theme => ({
 const SideBar = ({ classes }) => {
   let location = useLocation();
   const { pathname } = location;
-  if (pathname.includes("projects")) {
+  if (pathname.includes("projects/")) {
     return (
       <div className={classes.back}>
-        <Link className={classes.backlink} to={routes.home()}>
+        <Link className={classes.backlink} to={routes.projects()}>
           <ArrowBackOutlinedIcon fontSize="large" />
         </Link>
       </div>
     );
   } else {
     return (
-      <div className={classes.paper}>
+      <div className={classes.container}>
         <ProfileImage />
         <Index />
-        <Persona />
       </div>
     );
   }
@@ -123,7 +123,9 @@ function App() {
                     exact
                     component={ProjectDetail}
                   />
-                  <Route path={routes.home()} component={Main} />
+                  <Route exact path={routes.contact()} component={Contact} />
+                  <Route exact path={routes.projects()} component={Projects} />
+                  <Route path={routes.home()} component={About} />
                 </Switch>
               </Grid>
               <ScrollToTop />

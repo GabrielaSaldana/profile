@@ -1,12 +1,14 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
+import { Link } from "react-router-dom";
+import routes from "../../routes/routes";
 
 const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.text.primary,
     margin: theme.spacing(1),
-    padding: theme.spacing(1),
+    padding: theme.spacing(2),
     textAlign: "center"
   },
   anchor: {
@@ -14,7 +16,10 @@ const useStyles = makeStyles(theme => ({
     textDecoration: "none",
     "&:hover": {
       color: theme.extendedPalette.greenContrast.main
-    }
+    },
+  },
+  text: {
+    marginBottom: theme.spacing(2)
   }
 }));
 
@@ -23,21 +28,21 @@ function Index() {
 
   return (
     <div className={classes.root}>
-      <a className={classes.anchor} href="#about">
-        <Typography variant="h3" gutterBottom>
+      <Typography variant="h3" gutterBottom className={classes.text}>
+        <Link className={classes.anchor} to={routes.home()}>
           About
-        </Typography>
-      </a>
-      <a className={classes.anchor} href="#timeline">
-        <Typography variant="h3" gutterBottom>
-          Timeline
-        </Typography>
-      </a>
-      <a className={classes.anchor} href="#portfolio">
-        <Typography variant="h3" gutterBottom>
+        </Link>
+      </Typography>
+      <Typography variant="h3" gutterBottom className={classes.text}>
+        <Link className={classes.anchor} to={routes.projects()}>
           Projects
-        </Typography>
-      </a>
+        </Link>
+      </Typography>
+      <Typography variant="h3" gutterBottom className={classes.text}>
+        <Link className={classes.anchor} to={routes.contact()}>
+          Contact
+        </Link>
+      </Typography>
     </div>
   );
 }

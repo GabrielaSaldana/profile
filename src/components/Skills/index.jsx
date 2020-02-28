@@ -7,9 +7,9 @@ import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.text.primary,
-    margin: theme.spacing(1),
     padding: theme.spacing(1),
-    textAlign: "left"
+    textAlign: "left",
+    marginBottom: theme.spacing(6)
   },
   attributeLabels: {
     textAlign: "left"
@@ -19,6 +19,14 @@ const useStyles = makeStyles(theme => ({
   },
   mainColorBar: {
     backgroundColor: theme.palette.primary.main
+  },
+  subTitle: {
+    textAlign: "left",
+    marginBottom: theme.spacing(2),
+    color: theme.extendedPalette.pinkContrast.main
+  },
+  bar: {
+    width: "50%"
   }
 }));
 
@@ -34,7 +42,19 @@ const myAttributes = [
   {
     name: "methodical",
     value: 90
-  }
+  },
+  {
+    name: "programming",
+    value: 90
+  },
+  {
+    name: "design thinking",
+    value: 80
+  },
+  {
+    name: "product design",
+    value: 50
+  },
 ];
 
 function ProgressBar() {
@@ -42,6 +62,9 @@ function ProgressBar() {
 
   return (
     <div className={classes.root}>
+      <div className={classes.subTitle}>
+        <Typography variant="h1">SKILLS</Typography>
+      </div>
       {myAttributes.map((attribute, index) => (
         <Grid
           container
@@ -50,16 +73,17 @@ function ProgressBar() {
           justify="flex-start"
           alignItems="center"
         >
-          <Grid item xs={5} sm={5} md={6} lg={5} xl={5}>
+          <Grid item xs={5} sm={5} md={4} lg={3} xl={3}>
             <Typography
               gutterBottom
               className={classes.attributeLabels}
+              variant="h4"
               color="secondary"
             >
               {attribute.name}
             </Typography>
           </Grid>
-          <Grid item xs>
+          <Grid item xs={5} sm={5} md={4} lg={3} xl={3}>
             <LinearProgress
               variant="determinate"
               value={attribute.value}
