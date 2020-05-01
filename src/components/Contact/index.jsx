@@ -5,6 +5,7 @@ import IconButton from "@material-ui/core/IconButton";
 import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedinOutlineIcon from "../../icons/LinkedinOutlineIcon";
+import MediumIcon from "../../icons/MediumIcon";
 import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
@@ -51,7 +52,7 @@ function Contact() {
         </Typography>
       </div>
       <Grid container spacing={2}>
-        <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
+        <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
           <IconButton aria-label="Email" color="primary">
             <EmailOutlinedIcon fontSize="large" />
           </IconButton>
@@ -66,7 +67,7 @@ function Contact() {
             </a>
           </Typography>
         </Grid>
-        <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
+        <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
           <IconButton aria-label="Linkedin" color="primary">
             <LinkedinOutlineIcon />
           </IconButton>
@@ -79,7 +80,7 @@ function Contact() {
             </a>
           </Typography>
         </Grid>
-        <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
+        <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
           <IconButton
             className={classes.button}
             aria-label="Linkedin"
@@ -90,6 +91,19 @@ function Contact() {
           <Typography vriant="h4" className={classes.text}>
             <a className={classes.anchor} href="https://twitter.com/GSaldana95">
               GGSaldana
+            </a>
+          </Typography>
+        </Grid>
+        <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
+          <IconButton aria-label="Medium" color="primary">
+            <MediumIcon />
+          </IconButton>
+          <Typography vriant="h3" className={classes.text}>
+            <a
+              className={classes.anchor}
+              href="https://medium.com/@gab.saldana95"
+            >
+              My Medium
             </a>
           </Typography>
         </Grid>

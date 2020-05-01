@@ -24,7 +24,8 @@ const useStyles = makeStyles(theme => ({
     width: "60%"
   },
   paper: {
-    padding: theme.spacing(1)
+    padding: theme.spacing(1),
+
   },
   textBox: {
     height: "fit-content",
@@ -53,7 +54,7 @@ function About() {
       </div>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
-          <Paper className={classes.paper}>
+          <div className={classes.paper}>
             <Typography className={classes.textBox}>
               Few people know about my addiction to anime, the japanese culture
               amaze me, the automation they have in their public services and
@@ -70,10 +71,10 @@ function About() {
                 <img src={Ramen} className={classes.image} alt="ramen" />
               </Grid>
             </Grid>
-          </Paper>
+          </div>
         </Grid>
         <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
-          <Paper className={classes.paper}>
+          <div className={classes.paper}>
             <Typography className={classes.textBox}>
               I'm a Software Engineer by alma mater, but curious enough to be
               interested in design, management, processes and the Software
@@ -98,10 +99,10 @@ function About() {
                 />
               </Grid>
             </Grid>
-          </Paper>
+          </div>
         </Grid>
         <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
-          <Paper className={classes.paper}>
+          <div className={classes.paper}>
             <Typography className={classes.textBox}>
               If you can take care of a plant, you can take care of yourself. My
               hobby is to raise my plants. If you want one I'll be glad of give
@@ -118,7 +119,7 @@ function About() {
                 <img src={Terrace} className={classes.image} alt="terrace" />
               </Grid>
             </Grid>
-          </Paper>
+          </div>
         </Grid>
       </Grid>
     </div>

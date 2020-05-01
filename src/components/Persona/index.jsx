@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
   },
   description: {
     textAlign: "justify",
-    padding: theme.spacing(1),
+    padding: theme.spacing(2),
     fontSize: "1.1rem",
   },
   subTitle: {

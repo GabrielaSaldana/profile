@@ -1,18 +1,19 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
-import IconButton from "@material-ui/core/IconButton";
 import CloudDownloadOutlinedIcon from "@material-ui/icons/CloudDownloadOutlined";
 import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.text.primary,
-    margin: theme.spacing(1),
+    display: "flex",
+    margin: theme.spacing(2),
     textAlign: "left"
   },
   anchor: {
     color: theme.extendedPalette.purpleContrast.main,
+    paddingLeft: theme.spacing(1),
     textDecoration: "none",
     "&:hover": {
       color: theme.extendedPalette.greenContrast.main
@@ -20,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   },
   text: {
     wordWrap: "break-word",
-    fontSize: "1rem"
+    fontSize: "1.5rem"
   }
 }));
 
@@ -29,9 +30,7 @@ function CV() {
 
   return (
     <Box className={classes.root}>
-      <IconButton aria-label="Download CV" color="primary">
-        <CloudDownloadOutlinedIcon fontSize="large" />
-      </IconButton>
+      <CloudDownloadOutlinedIcon fontSize="large" color="primary"/>
       <a
         href={process.env.PUBLIC_URL + "/files/cv.pdf"}
         target="_blank"
@@ -40,7 +39,7 @@ function CV() {
         className={classes.anchor}
       >
         <Typography className={classes.text}>
-          Download my CV !
+          Click here to download my CV !
         </Typography>
       </a>
     </Box>
