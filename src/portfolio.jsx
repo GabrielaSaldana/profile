@@ -62,11 +62,11 @@ const portfolio = [
     ],
     research_img: [
       {
-        title: "Brand destillation",
+        title: "Project canvas from Atlassian",
         img: require("./images/better/6.png"),
       },
       {
-        title: "Project canvas",
+        title: "Brand destillation",
         img: require("./images/better/7.png"),
       },
     ],
@@ -97,23 +97,23 @@ const portfolio = [
       we validate them with developers and stakeholders to start prototyping and estimating the effort into stories.`,
     prototyping: [
       {
-        title: "Experience map",
+        title: "Experience and Journey mapping",
         img: require("./images/better/1.png"),
       },
       {
-        title: "Protopersonas",
+        title: "Proto-personas",
         img: require("./images/better/2.png"),
       },
       {
-        title: "Interview Script",
+        title: "User interview script",
         img: require("./images/better/3.png"),
       },
       {
-        title: "Concept testing",
+        title: "Remote concept testing due to COVID-19",
         img: require("./images/better/4.png"),
       },
       {
-        title: "Persona",
+        title: "Wireframing",
         img: require("./images/better/5.png"),
       },
     ],
@@ -166,11 +166,11 @@ const portfolio = [
       "After having a deep sense of the way TaxLab worked as a business model, the potential risks associated, and the goals TaxLab as an organization wanted, I decided to conduct collaborative next steps sessions with my team and the stakeholder. We decided to utilize the UX reserach made by the UX Lead and create the journey for selecting a plan. Taking into account that the feature required the most secure channel available we decided to integrate Stripe.",
     research_img: [
       {
-        title: "Research1",
+        title: "Designing the billing model ",
         img: require("./images/tax/5.png"),
       },
       {
-        title: "Reserach2",
+        title: "Online payment ntegration",
         img: require("./images/tax/7.png"),
       },
     ],
@@ -197,19 +197,19 @@ const portfolio = [
       "The big challenge when designing a apayment page is nailing trust into users that their information is secure. What is the information the audience is expecting to see? What questions do they want to answer? How can we mitigate their uncertainty and encourage them to contract the plan?To answer these questions, the team conducted competitive analysis, and ideated different structures and sequence of information, until we finally agreed on providing the most relevant information.",
     prototyping: [
       {
-        title: "Architecture",
+        title: "Software architecture",
         img: require("./images/tax/1.png"),
       },
       {
-        title: "Add Payment",
+        title: "Add a payment method",
         img: require("./images/tax/2.png"),
       },
       {
-        title: "Socializing",
+        title: "Socializing designs with stakeholders",
         img: require("./images/tax/3.png"),
       },
       {
-        title: "Payment Section",
+        title: "Begining of the user journey",
         img: require("./images/tax/6.png"),
       },
     ],
@@ -274,11 +274,11 @@ const portfolio = [
       "I needed to understand the service as a whole, the actors involved. I made a service blueprint aalysis, without this I wouldn't have unterstood how can I digitalize the specific step of the service regarding reports. I decided to start analizing the user journey for reporting a train issue.",
     research_img: [
       {
-        title: "Research1",
+        title: "",
         img: require("./images/rysh/8.png"),
       },
       {
-        title: "Reserach2",
+        title: "List of possible issues and their acronyms",
         img: require("./images/rysh/2.png"),
       },
     ],
@@ -299,19 +299,19 @@ const portfolio = [
       "After exploring the problem space through different approaches, we started ideating in a collaborative way. I decided to start defining the infromation architecture that also models the datbase in a way, after having the information architecture I started to define some user journeys trought he application to define the main flows and finally using the user flows diagrams I created the mocks for creating and socilizing a report.",
     prototyping: [
       {
-        title: "Interview",
+        title: "Final deliverable with user's guide",
         img: require("./images/rysh/6.png"),
       },
       {
-        title: "Data",
+        title: "Admin user's dashboard",
         img: require("./images/rysh/4.png"),
       },
       {
-        title: "User Manual",
+        title: "Example of an email with a report included",
         img: require("./images/rysh/7.png"),
       },
       {
-        title: "Schedule",
+        title: "Creating a report",
         img: require("./images/rysh/5.png"),
       },
     ],

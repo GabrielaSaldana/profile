@@ -19,6 +19,9 @@ function Presentation(props) {
       {tileData.map((item, index) => (
         <Grid item xs={12} sm={12} md={6} lg={6} xl={6} key={index}>
           <img src={item.img} alt={item.title} className={classes.imagePaper} />
+          <br />
+          <br />
+          <i>{item.title}</i>
         </Grid>
       ))}
     </Grid>
