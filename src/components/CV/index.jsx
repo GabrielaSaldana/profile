@@ -4,25 +4,25 @@ import Box from "@material-ui/core/Box";
 import CloudDownloadOutlinedIcon from "@material-ui/icons/CloudDownloadOutlined";
 import { Typography } from "@material-ui/core";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    color: theme.palette.text.primary,
+    color: theme.extendedPalette.pinkContrast.main,
     display: "flex",
     margin: theme.spacing(2),
-    textAlign: "left"
+    textAlign: "left",
   },
   anchor: {
-    color: theme.extendedPalette.purpleContrast.main,
+    color: theme.extendedPalette.pinkContrast.main,
     paddingLeft: theme.spacing(1),
     textDecoration: "none",
     "&:hover": {
-      color: theme.extendedPalette.greenContrast.main
-    }
+      color: theme.extendedPalette.greenContrast.main,
+    },
   },
   text: {
     wordWrap: "break-word",
-    fontSize: "1.5rem"
-  }
+    fontSize: "1.5rem",
+  },
 }));
 
 function CV() {
@@ -30,7 +30,7 @@ function CV() {
 
   return (
     <Box className={classes.root}>
-      <CloudDownloadOutlinedIcon fontSize="large" color="primary"/>
+      <CloudDownloadOutlinedIcon fontSize="large" />
       <a
         href={process.env.PUBLIC_URL + "/files/cv.pdf"}
         target="_blank"

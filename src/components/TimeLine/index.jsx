@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#ffffff",
     borderStyle: "solid",
     borderWidth: "3px",
-    borderColor: theme.extendedPalette.pinkContrast.main
+    borderColor: theme.extendedPalette.greyContrast.main
   },
   date: {
     padding: "6px",
@@ -40,7 +40,7 @@ const useStyles = makeStyles(theme => ({
   subTitle: {
     textAlign: "left",
     marginBottom: theme.spacing(2),
-    color: theme.extendedPalette.pinkContrast.main
+    color: theme.palette.text.secondary
   },
   textContent: {
     fontSize: "1.1rem !important",

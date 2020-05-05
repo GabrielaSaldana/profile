@@ -22,8 +22,8 @@ function Main() {
   return (
     <div id="main" className={classes.main}>
       <Persona />
-      <Skills />
       <About />
+      <Skills />
       <TimeLine />
       <CV />
     </div>
