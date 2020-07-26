@@ -8,14 +8,24 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import IconButton from "@material-ui/core/IconButton";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-import FormHelperText from '@material-ui/core/FormHelperText';
+import FormHelperText from "@material-ui/core/FormHelperText";
 import pwd from "../../secrets";
 import ProjectContent from "./ProjectContent";
+import { Typography } from "@material-ui/core";
+import OOps from "../../images/oops.png";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  OOpsImg: {
+    width: "20rem",
+  },
+}));
 
 function ProjectDetail() {
   const { projectId } = useParams();
+  const classes = useStyles();
 
-  const result = portfolio.find(obj => {
+  const result = portfolio.find((obj) => {
     return obj.project_id === projectId;
   });
 
@@ -23,10 +33,10 @@ function ProjectDetail() {
     password: "",
     showPassword: false,
     identified: false,
-    validationError: false
+    validationError: false,
   });
 
-  const handleChange = prop => event => {
+  const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
   };
 
@@ -34,11 +44,11 @@ function ProjectDetail() {
     setValues({ ...values, showPassword: !values.showPassword });
   };
 
-  const handleMouseDownPassword = event => {
+  const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
 
-  const handleKeyPress = () => event => {
+  const handleKeyPress = () => (event) => {
     if (event.key === "Enter") {
       if (event.target.value === pwd) {
         setValues({ ...values, identified: !values.identified });
@@ -52,6 +62,19 @@ function ProjectDetail() {
     <div id="details">
       {result.protected ? (
         <>
+          <Typography gutterbottom style={{ fontSize: "2rem" }}>
+            <b style={{ color: "#F780AB" }}>OOPS! </b>
+            looks like you need access to see this project, please contact me,
+            I'll be happy to give it to you.
+          </Typography>
+          <div>
+            <img
+              className={classes.OOpsImg}
+              src={OOps}
+              alt="OOps you need access"
+              title="Open doodles by Paco Stanley"
+            />
+          </div>
           {!values.identified ? (
             <FormControl>
               <InputLabel htmlFor="standard-adornment-password">
@@ -74,20 +97,25 @@ function ProjectDetail() {
                       {values.showPassword ? (
                         <Visibility fontSize="small" />
                       ) : (
-                          <VisibilityOff fontSize="small" />
-                        )}
+                        <VisibilityOff fontSize="small" />
+                      )}
                     </IconButton>
                   </InputAdornment>
                 }
               />
-              {values.validationError && (<FormHelperText>Invalid Password</FormHelperText>)}
+              {values.validationError && (
+                <FormHelperText>Invalid Password</FormHelperText>
+              )}
             </FormControl>
-          ) : (<ProjectContent />)}
+          ) : (
+            <ProjectContent />
+          )}
         </>
-      ) : (<ProjectContent />)}
+      ) : (
+        <ProjectContent />
+      )}
     </div>
   );
 }
 
 export default ProjectDetail;
-  

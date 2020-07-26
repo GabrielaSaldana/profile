@@ -1,3 +1,4 @@
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -5,7 +6,7 @@ code {
 
 @keyframes mymove {
   from {
-    transform: scale(.8);
+    transform: scale(0.8);
   }
   to {
     transform: scale(1);

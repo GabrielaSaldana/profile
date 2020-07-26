@@ -4,23 +4,23 @@ import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 import routes from "../../routes/routes";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     color: theme.palette.text.primary,
     margin: theme.spacing(1),
     padding: theme.spacing(2),
-    textAlign: "center"
+    textAlign: "center",
   },
   anchor: {
     color: theme.extendedPalette.purpleContrast.main,
     textDecoration: "none",
     "&:hover": {
-      color: theme.extendedPalette.greenContrast.main
+      color: theme.extendedPalette.greenContrast.main,
     },
   },
   text: {
-    marginBottom: theme.spacing(2)
-  }
+    marginBottom: theme.spacing(2),
+  },
 }));
 
 function Index() {
@@ -35,7 +35,7 @@ function Index() {
       </Typography>
       <Typography variant="h3" gutterBottom className={classes.text}>
         <Link className={classes.anchor} to={routes.projects()}>
-          Projects
+          Portfolio
         </Link>
       </Typography>
       <Typography variant="h3" gutterBottom className={classes.text}>

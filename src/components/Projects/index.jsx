@@ -12,35 +12,35 @@ import VisibilityOutlinedIcon from "@material-ui/icons/VisibilityOutlined";
 import routes from "../../routes/routes";
 import portfolio from "../../portfolio";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    padding: theme.spacing(4)
+    padding: theme.spacing(4),
   },
   subTitle: {
     textAlign: "left",
     marginBottom: theme.spacing(2),
-    color: theme.extendedPalette.pinkContrast.main
+    color: theme.extendedPalette.pinkContrast.main,
   },
   card: {
-    maxWidth: 345
+    maxWidth: 345,
   },
   media: {
-    height: 140
+    height: 140,
   },
   seeMore: {
     color: theme.extendedPalette.purpleContrast.main,
     "&:hover": {
-      color: theme.extendedPalette.greenContrast.main
-    }
+      color: theme.extendedPalette.greenContrast.main,
+    },
   },
   spacing: {
     [theme.breakpoints.up("xl")]: {
-      paddingLeft: theme.spacing(12)
+      paddingLeft: theme.spacing(12),
     },
     [theme.breakpoints.down("lg")]: {
-      paddingLeft: theme.spacing(1)
-    }
-  }
+      paddingLeft: theme.spacing(1),
+    },
+  },
 }));
 
 function Projects() {
@@ -49,7 +49,7 @@ function Projects() {
   return (
     <div id="portfolio" className={classes.root}>
       <div className={classes.subTitle}>
-        <Typography variant="h1">PROJECTS</Typography>
+        <Typography variant="h1">PORTFOLIO</Typography>
       </div>
       <div className={classes.spacing}>
         <Grid container spacing={1}>
@@ -70,7 +70,10 @@ function Projects() {
                     >
                       {project.title}
                     </Typography>
-                    <Typography component="p" style={{ textAlign: "left", fontSize: "1rem" }}>
+                    <Typography
+                      component="p"
+                      style={{ textAlign: "left", fontSize: "1rem" }}
+                    >
                       {project.short_desc}
                     </Typography>
                   </CardContent>
@@ -79,7 +82,7 @@ function Projects() {
                   <Link
                     className={classes.seeMore}
                     to={routes.projectDetail({
-                      projectId: project.project_id
+                      projectId: project.project_id,
                     })}
                   >
                     <VisibilityOutlinedIcon fontSize="large" />

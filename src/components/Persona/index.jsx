@@ -27,8 +27,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       fontSize: "2rem",
     },
-    fontSize: "1.2rem"
-  }
+    fontSize: "1.2rem",
+  },
 }));
 
 function Persona() {
@@ -53,19 +53,16 @@ function Persona() {
         <b style={{ color: "#F780AB" }}>
           I’m passionate about knowledge in all forms
         </b>
-        , especially when you combine technology and human behaviors. I like to design the way people
-        and technology interact improving their daily experiences. I'm such an inquisitive and friendly
-        person that wants to help people by collecting ideas from everything around me, understanding
-        their culture, pain points, happiness, and traditions wherever I am. My
-        daily work includes empathy, strategy, logic, strategy, and common sense
-        and willingness to help people get their goals. I have a background in
-        software engineering but I've been actively seeking new roles in my
-        life.
-        <b style={{ color: "#F780AB" }}>
-          {" "}
-          I'm just a problem solver who likes knowing the big picture, holistic
-          is the only way to be inclusive from our own perspective.
-        </b>
+        , especially when you combine technology and human behaviors. I like to
+        design the way people and technology interact improving their daily
+        experiences. I'm such an inquisitive and friendly person that wants to
+        help people by collecting ideas from everything around me.
+      </Typography>
+      <Typography gutterBottom className={classes.description}>
+        My daily work includes empathy, strategy, logic, strategy, and common
+        sense and willingness to help people get their goals. I have a
+        background in software engineering but I've been actively seeking new
+        roles in my life.
       </Typography>
     </div>
   );

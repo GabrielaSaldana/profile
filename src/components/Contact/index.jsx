@@ -5,36 +5,37 @@ import IconButton from "@material-ui/core/IconButton";
 import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedinOutlineIcon from "../../icons/LinkedinOutlineIcon";
+import StorefrontIcon from "@material-ui/icons/Storefront";
 import MediumIcon from "../../icons/MediumIcon";
 import { Typography } from "@material-ui/core";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     color: theme.palette.text.primary,
     margin: theme.spacing(1),
     [theme.breakpoints.up("sm")]: {
-      padding: "12vh 10vh 10vh 10vh"
+      padding: "12vh 10vh 10vh 10vh",
     },
     [theme.breakpoints.between("xs", "sm")]: {
-      padding: "4vh 1vh 1vh 1vh"
-    }
+      padding: "4vh 1vh 1vh 1vh",
+    },
   },
   anchor: {
     color: theme.extendedPalette.purpleContrast.main,
     textDecoration: "none",
     "&:hover": {
-      color: theme.extendedPalette.greenContrast.main
-    }
+      color: theme.extendedPalette.greenContrast.main,
+    },
   },
   text: {
     wordWrap: "break-word",
-    fontSize: "1rem"
+    fontSize: "1rem",
   },
   subTitle: {
     textAlign: "left",
     marginBottom: theme.spacing(2),
-    color: theme.extendedPalette.pinkContrast.main
-  }
+    color: theme.extendedPalette.pinkContrast.main,
+  },
 }));
 
 function Contact() {
@@ -62,8 +63,9 @@ function Contact() {
               href="mailto:gab.saldana95@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
+              title="gab.saldana95@gmail.com"
             >
-              gab.saldana95@gmail.com
+              My email
             </a>
           </Typography>
         </Grid>
@@ -75,6 +77,7 @@ function Contact() {
             <a
               className={classes.anchor}
               href="https://www.linkedin.com/in/gabriela-salda%C3%B1a-92a2b7b4"
+              title="gabriela-salda%C3%B1a-92a2b7b4"
             >
               My Linkedin
             </a>
@@ -89,7 +92,11 @@ function Contact() {
             <TwitterIcon />
           </IconButton>
           <Typography vriant="h4" className={classes.text}>
-            <a className={classes.anchor} href="https://twitter.com/GSaldana95">
+            <a
+              className={classes.anchor}
+              href="https://twitter.com/GSaldana95"
+              title="twitter.com/GSaldana95"
+            >
               GGSaldana
             </a>
           </Typography>
@@ -102,8 +109,27 @@ function Contact() {
             <a
               className={classes.anchor}
               href="https://medium.com/@gab.saldana95"
+              title="@gab.saldana95"
             >
               My Medium
+            </a>
+          </Typography>
+        </Grid>
+        <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
+          <IconButton
+            className={classes.button}
+            aria-label="MyStore"
+            color="primary"
+          >
+            <StorefrontIcon />
+          </IconButton>
+          <Typography vriant="h4" className={classes.text}>
+            <a
+              className={classes.anchor}
+              href="https://sites.google.com/view/gabshands/inicio"
+              title="gabshands"
+            >
+              My eco-store
             </a>
           </Typography>
         </Grid>
