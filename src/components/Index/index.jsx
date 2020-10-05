@@ -1,5 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import Divider from "@material-ui/core/Divider";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 import routes from "../../routes/routes";
@@ -12,10 +15,10 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   anchor: {
-    color: theme.extendedPalette.purpleContrast.main,
+    color: theme.palette.text.primary,
     textDecoration: "none",
     "&:hover": {
-      color: theme.extendedPalette.greenContrast.main,
+      color: theme.extendedPalette.cyanContrast.main,
     },
   },
   text: {
@@ -27,23 +30,31 @@ function Index() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Typography variant="h3" gutterBottom className={classes.text}>
-        <Link className={classes.anchor} to={routes.home()}>
-          About
-        </Link>
-      </Typography>
-      <Typography variant="h3" gutterBottom className={classes.text}>
-        <Link className={classes.anchor} to={routes.projects()}>
-          Portfolio
-        </Link>
-      </Typography>
-      <Typography variant="h3" gutterBottom className={classes.text}>
-        <Link className={classes.anchor} to={routes.contact()}>
-          Contact
-        </Link>
-      </Typography>
-    </div>
+    <List component="nav" className={classes.root} aria-label="index">
+      <ListItem button>
+        <Typography variant="h3" gutterBottom className={classes.text}>
+          <Link className={classes.anchor} to={routes.home()}>
+            About
+          </Link>
+        </Typography>
+      </ListItem>
+      <Divider light />
+      <ListItem button>
+        <Typography variant="h3" gutterBottom className={classes.text}>
+          <Link className={classes.anchor} to={routes.projects()}>
+            Portfolio
+          </Link>
+        </Typography>
+      </ListItem>
+      <Divider light />
+      <ListItem button>
+        <Typography variant="h3" gutterBottom className={classes.text}>
+          <Link className={classes.anchor} to={routes.contact()}>
+            Contact
+          </Link>
+        </Typography>
+      </ListItem>
+    </List>
   );
 }
 
