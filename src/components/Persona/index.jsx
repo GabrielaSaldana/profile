@@ -5,12 +5,10 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles((theme) => ({
   root: {
     color: theme.palette.text.primary,
-    padding: theme.spacing(1),
-    marginBottom: theme.spacing(6),
+    padding: theme.spacing(5), // This padding is used to separate teh nav-bar from the content
   },
   description: {
     textAlign: "justify",
-    padding: theme.spacing(2),
     fontSize: "1.1rem",
   },
   titleBox: {
@@ -19,15 +17,16 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     [theme.breakpoints.up("md")]: {
-      fontSize: "6rem",
+      fontSize: "5rem",
     },
     fontSize: "2rem",
   },
   subtitle: {
     [theme.breakpoints.up("md")]: {
-      fontSize: "2rem",
+      fontSize: "1rem",
     },
     fontSize: "1.2rem",
+    fontStyle: "italic",
   },
 }));
 
@@ -50,7 +49,7 @@ function Persona() {
         </Typography>
       </div>
       <Typography gutterBottom className={classes.description}>
-        <b style={{ color: "#F780AB" }}>
+        <b style={{ color: "#ff9100" }}>
           I’m passionate about knowledge in all forms
         </b>
         , especially when you combine technology and human behaviors. I like to
@@ -59,10 +58,10 @@ function Persona() {
         help people by collecting ideas from everything around me.
       </Typography>
       <Typography gutterBottom className={classes.description}>
-        My daily work includes empathy, strategy, logic, strategy, and common
-        sense and willingness to help people get their goals. I have a
-        background in software engineering but I've been actively seeking new
-        roles in my life.
+        My daily work includes empathy, strategy, logic, and common sense and
+        willingness to help people get their goals. I have a background in
+        software engineering but I've been actively seeking new roles in my
+        life.
       </Typography>
     </div>
   );

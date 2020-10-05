@@ -7,9 +7,8 @@ import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles((theme) => ({
   root: {
     color: theme.palette.text.primary,
-    padding: theme.spacing(1),
+    padding: theme.spacing(5), // This padding is used to separate teh nav-bar from the content
     textAlign: "left",
-    marginBottom: theme.spacing(6),
   },
   attributeLabels: {
     textAlign: "left",
@@ -74,7 +73,7 @@ function ProgressBar() {
               gutterBottom
               className={classes.attributeLabels}
               variant="h3"
-              color="secondary"
+              color="text"
             >
               {attribute.name}
             </Typography>

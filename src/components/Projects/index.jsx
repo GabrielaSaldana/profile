@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   subTitle: {
     textAlign: "left",
     marginBottom: theme.spacing(2),
-    color: theme.extendedPalette.pinkContrast.main,
+    color: theme.palette.text.primary,
   },
   card: {
     maxWidth: 345,
@@ -28,10 +28,7 @@ const useStyles = makeStyles((theme) => ({
     height: 140,
   },
   seeMore: {
-    color: theme.extendedPalette.purpleContrast.main,
-    "&:hover": {
-      color: theme.extendedPalette.greenContrast.main,
-    },
+    color: theme.palette.primary.main,
   },
   spacing: {
     [theme.breakpoints.up("xl")]: {
@@ -49,7 +46,7 @@ function Projects() {
   return (
     <div id="portfolio" className={classes.root}>
       <div className={classes.subTitle}>
-        <Typography variant="h1">PORTFOLIO</Typography>
+        <Typography variant="h1">Portfolio</Typography>
       </div>
       <div className={classes.spacing}>
         <Grid container spacing={1}>
@@ -57,16 +54,23 @@ function Projects() {
             <Grid item xs={12} sm={12} md={6} lg={4} xl={4} key={index}>
               <Card className={classes.card}>
                 <CardActionArea>
-                  <CardMedia
-                    className={classes.media}
-                    image={project.image}
-                    title={project.title}
-                  />
+                  <Link
+                    className={classes.seeMore}
+                    to={routes.projectDetail({
+                      projectId: project.project_id,
+                    })}
+                  >
+                    <CardMedia
+                      className={classes.media}
+                      image={project.image}
+                      title={project.title}
+                    />
+                  </Link>
                   <CardContent>
                     <Typography
                       gutterBottom
                       variant="h2"
-                      style={{ textAlign: "left", color: "#ff9100" }}
+                      style={{ textAlign: "left"}}
                     >
                       {project.title}
                     </Typography>

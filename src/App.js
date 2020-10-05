@@ -60,9 +60,9 @@ const useStyles = makeStyles((theme) => ({
     padding: "2rem",
   },
   backlink: {
-    color: "#9575cd",
+    color: theme.palette.text.primary,
     "&:hover": {
-      color: "#00e676",
+      color: "#26c6da",
     },
   },
 }));

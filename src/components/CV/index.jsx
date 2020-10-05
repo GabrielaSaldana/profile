@@ -6,17 +6,17 @@ import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    color: theme.extendedPalette.pinkContrast.main,
+    color: theme.palette.primary.main,
     display: "flex",
-    margin: theme.spacing(2),
+    paddingLeft: theme.spacing(5), // This padding is used to separate teh nav-bar from the content
     textAlign: "left",
   },
   anchor: {
-    color: theme.extendedPalette.pinkContrast.main,
+    color: theme.palette.text.primary,
     paddingLeft: theme.spacing(1),
     textDecoration: "none",
     "&:hover": {
-      color: theme.extendedPalette.greenContrast.main,
+      color: theme.extendedPalette.cyanContrast.main,
     },
   },
   text: {
