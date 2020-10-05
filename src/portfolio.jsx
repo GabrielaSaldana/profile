@@ -227,7 +227,7 @@ const portfolio = [
     title: "Rysh",
     year: "2018",
     company: "Rysh Electronics",
-    short_desc: "Freelancing lkie a unicorn of unicorn's.",
+    short_desc: "Freelancing like a unicorn of unicorn's.",
     desc:
       "Rysh Electronica is a national company that offers a report and repair service for trains 24/7. Their service works as follows; they send  a group of persons on site to repair electronical issues, this issues are wrote down into a paper report thta is sent to the manager on the central ofice.",
     my_role: [
@@ -313,6 +313,202 @@ const portfolio = [
       {
         title: "Creating a report",
         img: require("./images/rysh/5.png"),
+      },
+    ],
+    impact:
+      "Having the ability to create reports in the site reduce half of the work and increased time spent on solving the actual issue.",
+    learnings: [
+      "Having legacy manual methods on a day to day job, generates a double work.",
+      "Is difficult to measure efficiency when you have distributed workers and you don't have ways of managing them virtually. A good people management tool is a must nowadays.",
+      "Having reports digitized was the best thing they have used until today.",
+    ],
+  },
+  {
+    protected: false,
+    project_id: "4",
+    title: "soaps",
+    year: "2020",
+    company: "FactSet",
+    short_desc: "Freelancing like a unicorn of unicorn's.",
+    desc:
+      "Rysh Electronica is a national company that offers a report and repair service for trains 24/7. Their service works as follows; they send  a group of persons on site to repair electronical issues, this issues are wrote down into a paper report thta is sent to the manager on the central ofice.",
+    my_role: [
+      "UX Researcher",
+      "Protoyping",
+      "UX Design",
+      "Data Architech",
+      "Project Manager",
+      "Full Stack Developer",
+      "Technical Writer",
+    ],
+    problem:
+      " The repairments happen at any time during the day, they are spontaneous, and some of them are between 8-10 hours distance from the office, since there is no control over the reports some get lost, others doesn’t arrive with the data needed and there is not enough space to store them this lead to misunderstandings.",
+    image: require("./images/factset/factset.png"),
+    goals: [
+      "Manage the resources needed on each report.",
+      "Decrease the time spent manually writing, sending and storing reports.",
+      "Designing a simple but functional UI.",
+      "Establish trust and credibility to client's customers.",
+    ],
+    research: [
+      {
+        title: "Customer interviews",
+        icon: <GroupOutlinedIcon fontSize="large" color="primary" />,
+      },
+      {
+        title: "Prototype testing",
+        icon: <PhoneIphoneOutlinedIcon fontSize="large" color="primary" />,
+      },
+      {
+        title: "Information Architecture",
+        icon: <AccountTreeOutlinedIcon fontSize="large" color="primary" />,
+      },
+      {
+        title: "Customer Journey",
+        icon: <MapOutlinedIcon fontSize="large" color="primary" />,
+      },
+      {
+        title: "Persona",
+        icon: <AssignmentIndOutlinedIcon fontSize="large" color="primary" />,
+      },
+    ],
+    research_desc:
+      "I needed to understand the service as a whole, the actors involved. I made a service blueprint aalysis, without this I wouldn't have unterstood how can I digitalize the specific step of the service regarding reports. I decided to start analizing the user journey for reporting a train issue.",
+    research_img: [
+      {
+        title: "List of possible issues and their acronyms",
+        img: require("./images/factset/2.png"),
+      },
+    ],
+    customer: [
+      {
+        title: "I'm right now on Chihuahua right now.",
+        desc:
+          "The reporter is always out of office, the reporter just sends a photo of the paper report and some photos regarding the train issue. Digital creation of a report facilitate the job.",
+      },
+      {
+        title:
+          "I don't know which reporters are out and where, there are many reports everyday.",
+        desc:
+          "Reporting wasn't the only problem their service was having, but also managing human resources. Adding the personnel to the database and providing information about them helped the manager to know which personrs were asigned to wich group and where.",
+      },
+    ],
+    solution:
+      "After exploring the problem space through different approaches, we started ideating in a collaborative way. I decided to start defining the infromation architecture that also models the datbase in a way, after having the information architecture I started to define some user journeys trought he application to define the main flows and finally using the user flows diagrams I created the mocks for creating and socilizing a report.",
+    prototyping: [
+      {
+        title: "Final deliverable with user's guide",
+        img: require("./images/factset/6.png"),
+      },
+      {
+        title: "Admin user's dashboard",
+        img: require("./images/factset/4.png"),
+      },
+      {
+        title: "Example of an email with a report included",
+        img: require("./images/factset/7.png"),
+      },
+      {
+        title: "Creating a report",
+        img: require("./images/factset/5.png"),
+      },
+    ],
+    impact:
+      "Having the ability to create reports in the site reduce half of the work and increased time spent on solving the actual issue.",
+    learnings: [
+      "Having legacy manual methods on a day to day job, generates a double work.",
+      "Is difficult to measure efficiency when you have distributed workers and you don't have ways of managing them virtually. A good people management tool is a must nowadays.",
+      "Having reports digitized was the best thing they have used until today.",
+    ],
+  },
+  {
+    protected: false,
+    project_id: "5",
+    title: "My soap brand",
+    year: "2020",
+    company: "Gabs",
+    short_desc: "Freelancing like a unicorn of unicorn's.",
+    desc:
+      "Rysh Electronica is a national company that offers a report and repair service for trains 24/7. Their service works as follows; they send  a group of persons on site to repair electronical issues, this issues are wrote down into a paper report thta is sent to the manager on the central ofice.",
+    my_role: [
+      "UX Researcher",
+      "Protoyping",
+      "UX Design",
+      "Data Architech",
+      "Project Manager",
+      "Full Stack Developer",
+      "Technical Writer",
+    ],
+    problem:
+      " The repairments happen at any time during the day, they are spontaneous, and some of them are between 8-10 hours distance from the office, since there is no control over the reports some get lost, others doesn’t arrive with the data needed and there is not enough space to store them this lead to misunderstandings.",
+    image: require("./images/soaps/soaps.jpg"),
+    goals: [
+      "Manage the resources needed on each report.",
+      "Decrease the time spent manually writing, sending and storing reports.",
+      "Designing a simple but functional UI.",
+      "Establish trust and credibility to client's customers.",
+    ],
+    research: [
+      {
+        title: "Customer interviews",
+        icon: <GroupOutlinedIcon fontSize="large" color="primary" />,
+      },
+      {
+        title: "Prototype testing",
+        icon: <PhoneIphoneOutlinedIcon fontSize="large" color="primary" />,
+      },
+      {
+        title: "Information Architecture",
+        icon: <AccountTreeOutlinedIcon fontSize="large" color="primary" />,
+      },
+      {
+        title: "Customer Journey",
+        icon: <MapOutlinedIcon fontSize="large" color="primary" />,
+      },
+      {
+        title: "Persona",
+        icon: <AssignmentIndOutlinedIcon fontSize="large" color="primary" />,
+      },
+    ],
+    research_desc:
+      "I needed to understand the service as a whole, the actors involved. I made a service blueprint aalysis, without this I wouldn't have unterstood how can I digitalize the specific step of the service regarding reports. I decided to start analizing the user journey for reporting a train issue.",
+    research_img: [
+      {
+        title: "List of possible issues and their acronyms",
+        img: require("./images/soaps/2.jpg"),
+      },
+    ],
+    customer: [
+      {
+        title: "I'm right now on Chihuahua right now.",
+        desc:
+          "The reporter is always out of office, the reporter just sends a photo of the paper report and some photos regarding the train issue. Digital creation of a report facilitate the job.",
+      },
+      {
+        title:
+          "I don't know which reporters are out and where, there are many reports everyday.",
+        desc:
+          "Reporting wasn't the only problem their service was having, but also managing human resources. Adding the personnel to the database and providing information about them helped the manager to know which personrs were asigned to wich group and where.",
+      },
+    ],
+    solution:
+      "After exploring the problem space through different approaches, we started ideating in a collaborative way. I decided to start defining the infromation architecture that also models the datbase in a way, after having the information architecture I started to define some user journeys trought he application to define the main flows and finally using the user flows diagrams I created the mocks for creating and socilizing a report.",
+    prototyping: [
+      {
+        title: "Final deliverable with user's guide",
+        img: require("./images/soaps/6.jpg"),
+      },
+      {
+        title: "Admin user's dashboard",
+        img: require("./images/soaps/4.jpg"),
+      },
+      {
+        title: "Example of an email with a report included",
+        img: require("./images/soaps/7.jpg"),
+      },
+      {
+        title: "Creating a report",
+        img: require("./images/soaps/5.jpg"),
       },
     ],
     impact:
