@@ -46,7 +46,7 @@ function Contact() {
     <div id="contact" className={classes.root}>
       <div>
         <Typography variant="h1" gutterBottom className={classes.subTitle}>
-          SAY HELLO
+          Say hello
         </Typography>
         <Typography gutterBottom style={{ fontSize: "1rem" }}>
           I really appriciate your time spent on me, if you want to contact me I

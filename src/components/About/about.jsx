@@ -39,7 +39,7 @@ function About() {
   return (
     <div id="about" className={classes.root}>
       <div className={classes.subTitle}>
-        <Typography variant="h1">I DEFINE MYSELF AS...</Typography>
+        <Typography variant="h1">I define myself as...</Typography>
       </div>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
