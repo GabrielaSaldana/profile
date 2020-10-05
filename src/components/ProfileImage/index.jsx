@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Gabs from "../../images/me.png";
+import Gabs from "../../images/me.jpg";
 
 const useStyles = makeStyles((theme) => ({
   profileImg: {
