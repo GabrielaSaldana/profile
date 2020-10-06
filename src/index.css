@@ -4,19 +4,6 @@ code {
     monospace;
 }
 
-@keyframes mymove {
-  from {
-    transform: scale(0.8);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-#me {
-  animation: mymove 1s linear;
-}
-
 html {
   scroll-behavior: smooth;
 }

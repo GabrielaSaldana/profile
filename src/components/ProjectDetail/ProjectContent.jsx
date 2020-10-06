@@ -9,37 +9,39 @@ import ListItem from "@material-ui/core/ListItem";
 import Presentation from "../Presentation";
 import MenuBookOutlinedIcon from "@material-ui/icons/MenuBookOutlined";
 import FormatQuoteOutlinedIcon from "@material-ui/icons/FormatQuoteOutlined";
+import IdeaIcon from "@material-ui/icons/EmojiObjects";
+import ImpactIcon from "@material-ui/icons/EmojiPeople";
 import Circle from "../../icons/circleIndex.svg";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: "12px",
     width: "auto",
     marginLeft: theme.spacing(1),
-    color: theme.palette.text.primary
+    color: theme.palette.text.primary,
   },
   mainImg: {
     minheight: theme.spacing(70),
-    backgroundColor: theme.extendedPalette.redContrast.light
+    backgroundColor: theme.extendedPalette.redContrast.light,
   },
   redBackground: {
     [theme.breakpoints.up("lg")]: {
-      padding: "100px !important"
+      padding: "100px !important",
     },
     [theme.breakpoints.only("md")]: {
-      padding: "60px !important"
+      padding: "60px !important",
     },
-    backgroundColor: theme.extendedPalette.redContrast.light
+    backgroundColor: theme.extendedPalette.redContrast.light,
   },
   textDescription: {
-    textAlign: "justify",
-    fontSize: "1rem"
+    textAlign: "left",
+    fontSize: "1.2rem",
   },
   dotted: {
     borderStyle: "dotted",
     borderWidth: "1px",
     padding: theme.spacing(1),
-    borderColor: "#9e9e9e"
+    borderColor: "#9e9e9e",
   },
   circle: {
     backgroundImage: `url(${Circle})`,
@@ -50,15 +52,15 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     width: 50,
     height: 50,
-    color: theme.palette.primary.main
-  }
+    color: theme.palette.primary.main,
+  },
 }));
 
 function ProjectContent() {
   const classes = useStyles();
   const { projectId } = useParams();
 
-  const result = portfolio.find(obj => {
+  const result = portfolio.find((obj) => {
     return obj.project_id === projectId;
   });
 
@@ -106,7 +108,7 @@ function ProjectContent() {
               {result.year}
             </Typography>
             <List>
-              <Typography>MY ROLE</Typography>
+              <Typography>MY CONTRIBUTION</Typography>
               {result.my_role.map((role, index) => (
                 <ListItem key={index}>
                   <Typography
@@ -122,7 +124,7 @@ function ProjectContent() {
           <Grid item xs={12} sm={12} md={12} lg={8} xl={8}>
             <div>
               <Typography variant="h3" style={{ marginBottom: "16px" }}>
-                About {result.title}
+                About the company
               </Typography>
               <div className={classes.dotted}>
                 <Typography
@@ -135,7 +137,7 @@ function ProjectContent() {
             </div>
             <div style={{ marginTop: "16px" }}>
               <Typography variant="h3" style={{ marginBottom: "16px" }}>
-                The Challenge
+                The challenge
               </Typography>
               <div className={classes.dotted}>
                 <Typography
@@ -161,16 +163,17 @@ function ProjectContent() {
           className={classes.redBackground}
           style={{ minheight: "380px" }}
         >
-          <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
+          <Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
             <Typography variant="h1" gutterBottom style={{ minheight: "90px" }}>
               Project Goals
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-            <Grid container spacing={2}>
+          <Grid item xs={12} sm={12} md={12} lg={8} xl={8}>
+            <Grid container spacing={3}>
               {result.goals.map((goal, index) => (
                 <Grid item xs={12} sm={12} md={6} lg={6} xl={6} key={index}>
                   <div className={classes.circle}>{index + 1}</div>
+                  <br />
                   <Typography
                     className={classes.textDescription}
                     color="textSecondary"
@@ -198,10 +201,10 @@ function ProjectContent() {
             <Typography
               variant="h1"
               style={{
-                minheight: "90px"
+                minheight: "90px",
               }}
             >
-              Research Methods
+              Research
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={8} xl={8}>
@@ -256,7 +259,7 @@ function ProjectContent() {
         >
           <Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
             <Typography variant="h1" gutterBottom style={{ minheight: "90px" }}>
-              Customer MindSet
+              Opportunities Discovery
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={8} xl={8}>
@@ -295,7 +298,10 @@ function ProjectContent() {
           style={{ minheight: "300px" }}
         >
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-            <Typography>SOLUTION</Typography>
+            <Typography variant="h1" gutterBottom>
+              Solution
+              <IdeaIcon color="primary" />
+            </Typography>
             <div
               className={classes.dotted}
               style={{ borderStyle: "dashed", borderColor: "#536dfe" }}
@@ -324,11 +330,11 @@ function ProjectContent() {
         >
           <Grid item xs={12} sm={12} md={12} lg={3} xl={3}>
             <Typography variant="h1" gutterBottom style={{ minheight: "90px" }}>
-              Prototyping
+              Development
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={9} xl={9}>
-            <Presentation projects={result.prototyping} />
+            <Presentation projects={result.development} />
           </Grid>
         </Grid>
         <Grid
@@ -342,17 +348,36 @@ function ProjectContent() {
           xl={12}
           spacing={3}
           className={classes.redBackground}
-          style={{ minheight: "300px" }}
+          style={{ minheight: "200px" }}
         >
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-            <Typography>IMPACT</Typography>
-            <div className={classes.dotted}>
-              <Typography
-                className={classes.textDescription}
-                color="textSecondary"
-              >
-                {result.impact}
-              </Typography>
+          <Grid
+            id="impact"
+            container
+            item
+            spacing={3}
+            xs={12}
+            sm={12}
+            md={12}
+            lg={12}
+            xl={12}
+          >
+            <Typography variant="h1" gutterBottom>
+              Impact
+              <ImpactIcon color="primary" />
+            </Typography>
+            <div>
+              <ul>
+                {result.impact.map((impact, index) => (
+                  <li key={index}>
+                    <Typography
+                      className={classes.textDescription}
+                      color="textSecondary"
+                    >
+                      {impact}
+                    </Typography>
+                  </li>
+                ))}
+              </ul>
             </div>
           </Grid>
         </Grid>
@@ -369,7 +394,7 @@ function ProjectContent() {
           className={classes.redBackground}
         >
           <div style={{ display: "flex" }}>
-            <Typography variant="h1">Learnings</Typography>
+            <Typography variant="h1">Takeaways</Typography>
             <MenuBookOutlinedIcon
               fontSize="large"
               color="primary"

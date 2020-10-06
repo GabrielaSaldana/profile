@@ -5,8 +5,9 @@ import IconButton from "@material-ui/core/IconButton";
 import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedinOutlineIcon from "../../icons/LinkedinOutlineIcon";
-import StorefrontIcon from "@material-ui/icons/Storefront";
+import EcoIcon from "@material-ui/icons/Eco";
 import MediumIcon from "../../icons/MediumIcon";
+import InstagramIcon from "@material-ui/icons/Instagram";
 import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -21,10 +22,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   anchor: {
-    color: theme.extendedPalette.purpleContrast.main,
+    color: theme.palette.text.primary,
     textDecoration: "none",
     "&:hover": {
-      color: theme.extendedPalette.greenContrast.main,
+      color: theme.extendedPalette.cyanContrast.main,
     },
   },
   text: {
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   subTitle: {
     textAlign: "left",
     marginBottom: theme.spacing(2),
-    color: theme.extendedPalette.pinkContrast.main,
+    color: theme.palette.text.primary,
   },
 }));
 
@@ -45,7 +46,7 @@ function Contact() {
     <div id="contact" className={classes.root}>
       <div>
         <Typography variant="h1" gutterBottom className={classes.subTitle}>
-          SAY HELLO
+          Say hello
         </Typography>
         <Typography gutterBottom style={{ fontSize: "1rem" }}>
           I really appriciate your time spent on me, if you want to contact me I
@@ -65,7 +66,7 @@ function Contact() {
               rel="noopener noreferrer"
               title="gab.saldana95@gmail.com"
             >
-              My email
+              Send me an email
             </a>
           </Typography>
         </Grid>
@@ -79,7 +80,7 @@ function Contact() {
               href="https://www.linkedin.com/in/gabriela-salda%C3%B1a-92a2b7b4"
               title="gabriela-salda%C3%B1a-92a2b7b4"
             >
-              My Linkedin
+              Gabriela Saldaña
             </a>
           </Typography>
         </Grid>
@@ -111,17 +112,17 @@ function Contact() {
               href="https://medium.com/@gab.saldana95"
               title="@gab.saldana95"
             >
-              My Medium
+              Read me
             </a>
           </Typography>
         </Grid>
         <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
           <IconButton
             className={classes.button}
-            aria-label="MyStore"
+            aria-label="MyPersonalProject"
             color="primary"
           >
-            <StorefrontIcon />
+            <EcoIcon />
           </IconButton>
           <Typography vriant="h4" className={classes.text}>
             <a
@@ -129,7 +130,21 @@ function Contact() {
               href="https://sites.google.com/view/gabshands/inicio"
               title="gabshands"
             >
-              My eco-store
+              Personal project
+            </a>
+          </Typography>
+        </Grid>
+        <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
+          <IconButton aria-label="Instagram" color="primary">
+            <InstagramIcon />
+          </IconButton>
+          <Typography vriant="h3" className={classes.text}>
+            <a
+              className={classes.anchor}
+              href="https://www.instagram.com/gabs_hands/?hl=es-la"
+              title="@gabs_hands"
+            >
+              @gabs_hands
             </a>
           </Typography>
         </Grid>

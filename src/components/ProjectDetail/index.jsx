@@ -60,10 +60,10 @@ function ProjectDetail() {
 
   return (
     <div id="details">
-      {result.protected ? (
+      {result.protected && values.identified === false ? (
         <>
           <Typography gutterbottom style={{ fontSize: "2rem" }}>
-            <b style={{ color: "#F780AB" }}>OOPS! </b>
+            <b style={{ color: "#ff9100" }}>OOPS! </b>
             looks like you need access to see this project, please contact me,
             I'll be happy to give it to you.
           </Typography>
@@ -75,41 +75,37 @@ function ProjectDetail() {
               title="Open doodles by Paco Stanley"
             />
           </div>
-          {!values.identified ? (
-            <FormControl>
-              <InputLabel htmlFor="standard-adornment-password">
-                Password
-              </InputLabel>
-              <Input
-                id="standard-adornment-password"
-                type={values.showPassword ? "text" : "password"}
-                value={values.password}
-                onChange={handleChange("password")}
-                onKeyPress={handleKeyPress()}
-                error={values.validationError}
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={handleClickShowPassword}
-                      onMouseDown={handleMouseDownPassword}
-                    >
-                      {values.showPassword ? (
-                        <Visibility fontSize="small" />
-                      ) : (
-                        <VisibilityOff fontSize="small" />
-                      )}
-                    </IconButton>
-                  </InputAdornment>
-                }
-              />
-              {values.validationError && (
-                <FormHelperText>Invalid Password</FormHelperText>
-              )}
-            </FormControl>
-          ) : (
-            <ProjectContent />
-          )}
+          <FormControl>
+            <InputLabel htmlFor="standard-adornment-password">
+              Password
+            </InputLabel>
+            <Input
+              id="standard-adornment-password"
+              type={values.showPassword ? "text" : "password"}
+              value={values.password}
+              onChange={handleChange("password")}
+              onKeyPress={handleKeyPress()}
+              error={values.validationError}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowPassword}
+                    onMouseDown={handleMouseDownPassword}
+                  >
+                    {values.showPassword ? (
+                      <Visibility fontSize="small" />
+                    ) : (
+                      <VisibilityOff fontSize="small" />
+                    )}
+                  </IconButton>
+                </InputAdornment>
+              }
+            />
+            {values.validationError && (
+              <FormHelperText>Invalid Password</FormHelperText>
+            )}
+          </FormControl>
         </>
       ) : (
         <ProjectContent />

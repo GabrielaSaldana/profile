@@ -4,49 +4,48 @@ import Typography from "@material-ui/core/Typography";
 import PlaceIcon from "@material-ui/icons/Place";
 import Avatar from "@material-ui/core/Avatar";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     color: theme.palette.text.primary,
-    padding: theme.spacing(1),
-    textAlign: "left"
+    padding: theme.spacing(5), // This padding is used to separate teh nav-bar from the content
+    textAlign: "left",
   },
   timeLineContainer: {
-    display: "flex"
+    display: "flex",
   },
   lineBox: {
     height: theme.spacing(20),
     marginLeft: theme.spacing(2.7),
     width: "3px",
-    backgroundImage: "linear-gradient(to bottom, #F2F3F7, #F2F3F7)"
+    backgroundImage: "linear-gradient(to bottom, #F2F3F7, #F2F3F7)",
   },
   timeItem: {
     height: "fit-content",
     width: "80%",
     backgroundColor: theme.extendedPalette.greyContrast.main,
     marginLeft: theme.spacing(3),
-    padding: theme.spacing(2)
+    padding: theme.spacing(2),
   },
   checkPoint: {
     color: theme.palette.primary.main,
     backgroundColor: "#ffffff",
     borderStyle: "solid",
     borderWidth: "3px",
-    borderColor: theme.extendedPalette.greyContrast.main
+    borderColor: theme.extendedPalette.greyContrast.main,
   },
   date: {
     padding: "6px",
-    marginLeft: theme.spacing(3)
+    marginLeft: theme.spacing(3),
   },
   subTitle: {
     textAlign: "left",
     marginBottom: theme.spacing(2),
-    color: theme.palette.text.secondary
+    color: theme.palette.text.secondary,
   },
   textContent: {
     fontSize: "1.1rem !important",
-  }
+  },
 }));
-
 
 function TimeLine() {
   const classes = useStyles();
@@ -57,13 +56,13 @@ function TimeLine() {
       date: "2020-present",
       desc: (
         <Typography className={classes.textContent}>
-          After being a developer I decided to changed my career path to UX
+          After being a developer I decided to change my career path to UX
           Designer, I wanted to learn how to design for developers and users,
-          keeping a balance between each other. I have taken courses of service
-          design, ux design, and have participated in the "Gender jam" an event
-          aimed for solving gender problematics in our society.
-      </Typography>
-      )
+          keeping a balance between each other. I have taken courses in service
+          design, UX design, and have participated in the "Gender jam" an event
+          aimed for solving gender problems in our society.
+        </Typography>
+      ),
     },
     {
       title: "Developing at Wizeline",
@@ -72,43 +71,43 @@ function TimeLine() {
         <Typography className={classes.textContent}>
           I started my career at Wizeline as a Software Engineer thanks to a
           trainee program, they trained me on the nowadays ways of designing,
-          creating and delivering software using agile methodologies, I worked as
-          full-stack developer for a year and a half, mainly on the front end
+          creating and delivering software using agile methodologies, I worked
+          as full-stack developer for a year and a half, mainly on the front end
           using React.
-      </Typography>
-      )
+        </Typography>
+      ),
     },
     {
       title: "Freelancing",
       date: "2017-2018",
       desc: (
         <Typography className={classes.textContent}>
-          After getting my Bachelor in Science on Systems Engineering degree, I
-          decided to look for a job and meanwhile freelance myself, I designed and
-          developed a web Application for an train management enterprise, I
+          After getting my Bachelor in Science in Systems Engineering degree, I
+          decided to look for a job, and meanwhile freelance myself, I designed
+          and developed a web application for a train management enterprise, I
           created a management tool for their train's reports.
-      </Typography>
-      )
+        </Typography>
+      ),
     },
     {
       title: "Undergraduation at IPN-ESCOM",
       date: "2014-2018",
       desc: (
         <Typography className={classes.textContent}>
-          I am pursuing my under-graduation studies with major in Systems
-          Engineering at the Instituto Politecnico Nacional. I was parto of the
-          algorith club studying mainly competitive programming, I joined a course
-          of IT management and risk management, finally I decided to get into deep
-          on front end development and REST APIs.
-      </Typography>
-      )
-    }
+          I am pursuing my under-graduation studies with a major in Systems
+          Engineering at the Instituto Politecnico Nacional. I was part of the
+          algorithm club studying mainly competitive programming, I joined a
+          course of IT management and risk management, finally, I decided to get
+          into deep on front end development and REST APIs.
+        </Typography>
+      ),
+    },
   ];
 
   return (
     <div id="timeline" className={classes.root}>
       <div className={classes.subTitle}>
-        <Typography variant="h1">TIMELINE</Typography>
+        <Typography variant="h1">Experience</Typography>
       </div>
       {historyCheckpoints.map((checkpoint, index) => (
         <div key={index}>

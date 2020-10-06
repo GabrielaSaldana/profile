@@ -18,53 +18,53 @@ const About = lazy(() => import("./components/About"));
 const Projects = lazy(() => import("./components/Projects"));
 const Contact = lazy(() => import("./components/Contact"));
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   container: {
     textAlign: "center",
     color: theme.palette.text.primary,
-    margin: theme.spacing(1)
+    margin: theme.spacing(1),
   },
   upButton: {
-    paddingLeft: theme.spacing(1.2)
+    paddingLeft: theme.spacing(1.2),
   },
   stickyMenu: {
     [theme.breakpoints.up("md")]: {
-      position: "fixed"
+      position: "fixed",
     },
     height: "100%",
-    backgroundColor: "#F2F3F7"
+    backgroundColor: "#F9F9F9",
   },
   scrollableSide: {
     [theme.breakpoints.between("lg", "xl")]: {
-      marginLeft: "14%"
+      marginLeft: "14%",
     },
     [theme.breakpoints.only("md")]: {
-      marginLeft: "25%"
-    }
+      marginLeft: "25%",
+    },
   },
   fab: {
-    margin: theme.spacing(1)
+    margin: theme.spacing(1),
   },
   linkButton: {
     color: "#ffffff",
     textDecoration: "none",
-    fontSize: "1.5rem"
+    fontSize: "1.5rem",
   },
   toolBar: {
-    minHeight: theme.spacing(1)
+    minHeight: theme.spacing(1),
   },
   back: {
-    padding: "2rem"
+    padding: "2rem",
   },
   backlink: {
-    color: "#9575cd",
+    color: theme.palette.text.primary,
     "&:hover": {
-      color: "#00e676"
-    }
-  }
+      color: "#26c6da",
+    },
+  },
 }));
 
 const SideBar = ({ classes }) => {

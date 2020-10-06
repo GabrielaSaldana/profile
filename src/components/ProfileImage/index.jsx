@@ -4,7 +4,7 @@ import Gabs from "../../images/me.jpg";
 
 const useStyles = makeStyles((theme) => ({
   profileImg: {
-    height: "8rem",
+    height: "11rem",
     margin: theme.spacing(1),
     borderRadius: 100,
     padding: theme.spacing(0.5),
