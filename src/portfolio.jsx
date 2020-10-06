@@ -231,7 +231,7 @@ const portfolio = [
   {
     protected: false,
     project_id: "3",
-    title: "Rysh",
+    title: "My first job",
     year: "2018",
     company: "Rysh Electronics",
     short_desc: "Freelancing like a unicorn of unicorn's.",

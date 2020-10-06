@@ -107,7 +107,7 @@ function TimeLine() {
   return (
     <div id="timeline" className={classes.root}>
       <div className={classes.subTitle}>
-        <Typography variant="h1">Timeline</Typography>
+        <Typography variant="h1">Experience</Typography>
       </div>
       {historyCheckpoints.map((checkpoint, index) => (
         <div key={index}>
