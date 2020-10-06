@@ -56,11 +56,11 @@ function TimeLine() {
       date: "2020-present",
       desc: (
         <Typography className={classes.textContent}>
-          After being a developer I decided to changed my career path to UX
+          After being a developer I decided to change my career path to UX
           Designer, I wanted to learn how to design for developers and users,
-          keeping a balance between each other. I have taken courses of service
-          design, ux design, and have participated in the "Gender jam" an event
-          aimed for solving gender problematics in our society.
+          keeping a balance between each other. I have taken courses in service
+          design, UX design, and have participated in the "Gender jam" an event
+          aimed for solving gender problems in our society.
         </Typography>
       ),
     },
@@ -82,9 +82,9 @@ function TimeLine() {
       date: "2017-2018",
       desc: (
         <Typography className={classes.textContent}>
-          After getting my Bachelor in Science on Systems Engineering degree, I
-          decided to look for a job and meanwhile freelance myself, I designed
-          and developed a web Application for an train management enterprise, I
+          After getting my Bachelor in Science in Systems Engineering degree, I
+          decided to look for a job, and meanwhile freelance myself, I designed
+          and developed a web application for a train management enterprise, I
           created a management tool for their train's reports.
         </Typography>
       ),
@@ -94,10 +94,10 @@ function TimeLine() {
       date: "2014-2018",
       desc: (
         <Typography className={classes.textContent}>
-          I am pursuing my under-graduation studies with major in Systems
-          Engineering at the Instituto Politecnico Nacional. I was parto of the
-          algorith club studying mainly competitive programming, I joined a
-          course of IT management and risk management, finally I decided to get
+          I am pursuing my under-graduation studies with a major in Systems
+          Engineering at the Instituto Politecnico Nacional. I was part of the
+          algorithm club studying mainly competitive programming, I joined a
+          course of IT management and risk management, finally, I decided to get
           into deep on front end development and REST APIs.
         </Typography>
       ),
