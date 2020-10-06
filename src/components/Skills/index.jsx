@@ -73,7 +73,6 @@ function ProgressBar() {
               gutterBottom
               className={classes.attributeLabels}
               variant="h3"
-              color="text"
             >
               {attribute.name}
             </Typography>
