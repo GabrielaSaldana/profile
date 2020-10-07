@@ -9,6 +9,7 @@ import EcoIcon from "@material-ui/icons/Eco";
 import MediumIcon from "../../icons/MediumIcon";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import { Typography } from "@material-ui/core";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -87,7 +88,7 @@ function Contact() {
         <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
           <IconButton
             className={classes.button}
-            aria-label="Linkedin"
+            aria-label="Twitter"
             color="primary"
           >
             <TwitterIcon />
@@ -145,6 +146,20 @@ function Contact() {
               title="@gabs_hands"
             >
               @gabs_hands
+            </a>
+          </Typography>
+        </Grid>
+        <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
+          <IconButton aria-label="GitHub" color="primary">
+            <GitHubIcon />
+          </IconButton>
+          <Typography vriant="h3" className={classes.text}>
+            <a
+              className={classes.anchor}
+              href="https://github.com/GabrielaSaldana"
+              title="@Gabs"
+            >
+              @Gabs
             </a>
           </Typography>
         </Grid>
