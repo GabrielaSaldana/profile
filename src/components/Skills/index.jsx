@@ -39,7 +39,7 @@ const myAttributes = [
     value: 100,
   },
   {
-    name: "methodical",
+    name: "critical thinking",
     value: 100,
   },
   {
@@ -47,7 +47,7 @@ const myAttributes = [
     value: 90,
   },
   {
-    name: "strategic",
+    name: "strategic thinking",
     value: 80,
   },
   {
@@ -56,6 +56,10 @@ const myAttributes = [
   },
   {
     name: "friendly",
+    value: 100,
+  },
+  {
+    name: "enthusiactic",
     value: 100,
   },
 ];

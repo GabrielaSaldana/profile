@@ -57,10 +57,12 @@ function TimeLine() {
       desc: (
         <Typography className={classes.textContent}>
           After being a developer I decided to change my career path to UX
-          Designer, I wanted to learn how to design for developers and users,
-          keeping a balance between each other. I have taken courses in service
-          design, UX design, and have participated in the "Gender jam" an event
-          aimed for solving gender problems in our society.
+          Desig, since I wanted to learn product design. I have applied my dev
+          knowledge to syncronize better designers and developers efforts, while
+          keeping user in the center. I have taken courses in Service design, UX
+          design, , Product management, UI design, and have participated in the
+          "Gender jam" an event aimed for solving gender problems in our
+          society.
         </Typography>
       ),
     },
@@ -69,11 +71,13 @@ function TimeLine() {
       date: "2018-2020",
       desc: (
         <Typography className={classes.textContent}>
-          I started my career at Wizeline as a Software Engineer thanks to a
-          trainee program, they trained me on the nowadays ways of designing,
-          creating and delivering software using agile methodologies, I worked
-          as full-stack developer for a year and a half, mainly on the front end
-          using React.
+          I started my career at Wizeline as a Software Engineer trainee.
+          Wizeline trained me on the nowadays ways of designing, developing,
+          managing, and delivering software using agile methodologies. I worked
+          as full-stack developer for 1.6 years, mainly on the front end using
+          React. During my developer time, I worked on 5 different projects
+          developing on many verticals such as: Automotive, Renewable Energy,
+          Finantial, Sports, and Transportation.
         </Typography>
       ),
     },
@@ -83,9 +87,13 @@ function TimeLine() {
       desc: (
         <Typography className={classes.textContent}>
           After getting my Bachelor in Science in Systems Engineering degree, I
-          decided to look for a job, and meanwhile freelance myself, I designed
-          and developed a web application for a train management enterprise, I
-          created a management tool for their train's reports.
+          decided to look for my first job, this was a freelance. I designed and
+          developed a web application for a train management enterprise with
+          help of my brother. I created a management tool for their internal
+          reports; they could create reports right on site and send them via
+          internet to their direct managers in this way they avoided using the
+          old fashioned paper way, they incremented data veracity, and
+          decremented time spent on managing phisical reports.
         </Typography>
       ),
     },
@@ -94,11 +102,13 @@ function TimeLine() {
       date: "2014-2018",
       desc: (
         <Typography className={classes.textContent}>
-          I am pursuing my under-graduation studies with a major in Systems
-          Engineering at the Instituto Politecnico Nacional. I was part of the
-          algorithm club studying mainly competitive programming, I joined a
-          course of IT management and risk management, finally, I decided to get
-          into deep on front end development and REST APIs.
+          I pursued my BS in Systems Engineering at the Instituto Politecnico
+          Nacional (ESCOM). I was part of the algorithm club studying mainly
+          competitive programming. I like to study management so I joined a
+          course of IT management and risk management. For my tesis project I
+          created a tele-medicine health-monitor application. This app monitored
+          the vital signs of an elder person and gave alerts to their primary
+          care physician via internet.
         </Typography>
       ),
     },

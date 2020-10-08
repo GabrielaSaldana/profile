@@ -45,7 +45,7 @@ function About() {
         <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
           <div className={classes.paper}>
             <Typography className={classes.textBox}>
-              Japanese culture and ramen lover!
+              Japanese culture and ramen fan!
             </Typography>
             <Grid container style={{ alignItems: "center" }}>
               <Grid item xs={4} sm={4} md={4} lg={4} xl={4}></Grid>
@@ -65,7 +65,7 @@ function About() {
         <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
           <div className={classes.paper}>
             <Typography className={classes.textBox}>
-              Curiosity is my second name
+              Experimentation is my second name.
             </Typography>
             <Grid container style={{ alignItems: "center" }}>
               <Grid item xs={4} sm={4} md={4} lg={4} xl={4}></Grid>
@@ -85,7 +85,7 @@ function About() {
         <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
           <div className={classes.paper}>
             <Typography className={classes.textBox}>
-              Nature lover, I have lots of plants
+              Nature and sustaintability lover.
             </Typography>
             <Grid container style={{ alignItems: "center" }}>
               <Grid item xs={4} sm={4} md={4} lg={4} xl={4}></Grid>

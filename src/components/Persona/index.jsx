@@ -59,9 +59,11 @@ function Persona() {
       </Typography>
       <Typography gutterBottom className={classes.description}>
         My daily work includes empathy, strategy, logic, and common sense and
-        willingness to help people get their goals. I have a background in
-        software engineering but I've been actively seeking new roles in my
-        life.
+        willingness to help people get their goals. I'm a software engineer that
+        works as a UX designer, this background has helped me to understand the
+        whole life cycle of a digital product from it's ideation to it's
+        delivery. I love to have the big picture in mind and to work at that
+        level.
       </Typography>
     </div>
   );
