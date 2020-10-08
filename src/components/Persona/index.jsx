@@ -39,9 +39,6 @@ function Persona() {
         <Typography className={classes.title}>
           Hello, I am Gabriela. I enjoy helping people solving problems of all
           kinds trough my own learning.
-          <span role="img" aria-label="nerd">
-            🤓
-          </span>
         </Typography>
         <Typography className={classes.subtitle}>
           Bachelor of Science degree in Computer Systems Engineering from ESCOM
@@ -64,6 +61,14 @@ function Persona() {
         whole life cycle of a digital product from it's ideation to it's
         delivery. I love to have the big picture in mind and to work at that
         level.
+      </Typography>
+      <br/>
+      <Typography gutterBottom className={classes.description}>
+        <b>Funny Fact: </b>This web site was created and designed by me, go to
+        teh section "Contact" to refer to my github project.
+        <span role="img" aria-label="nerd">
+          🤓
+        </span>
       </Typography>
     </div>
   );
