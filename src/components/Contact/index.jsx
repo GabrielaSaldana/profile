@@ -2,9 +2,9 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
-import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
+import MailIcon from "@material-ui/icons/Mail";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import LinkedinOutlineIcon from "../../icons/LinkedinOutlineIcon";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EcoIcon from "@material-ui/icons/Eco";
 import MediumIcon from "../../icons/MediumIcon";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -57,7 +57,7 @@ function Contact() {
       <Grid container spacing={2}>
         <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
           <IconButton aria-label="Email" color="primary">
-            <EmailOutlinedIcon fontSize="large" />
+            <MailIcon fontSize="large" />
           </IconButton>
           <Typography vriant="h2" className={classes.text}>
             <a
@@ -73,7 +73,7 @@ function Contact() {
         </Grid>
         <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
           <IconButton aria-label="Linkedin" color="primary">
-            <LinkedinOutlineIcon />
+            <LinkedInIcon />
           </IconButton>
           <Typography vriant="h3" className={classes.text}>
             <a

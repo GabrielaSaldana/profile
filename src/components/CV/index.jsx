@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
-import CloudDownloadOutlinedIcon from "@material-ui/icons/CloudDownloadOutlined";
+import CloudDownloadIcon from "@material-ui/icons/CloudDownload";
 import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
   text: {
     wordWrap: "break-word",
     fontSize: "1.5rem",
+    color: theme.palette.primary.main,
   },
 }));
 
@@ -30,7 +31,7 @@ function CV() {
 
   return (
     <Box className={classes.root}>
-      <CloudDownloadOutlinedIcon fontSize="large" />
+      <CloudDownloadIcon fontSize="large" />
       <a
         href={process.env.PUBLIC_URL + "/files/cv.pdf"}
         target="_blank"
